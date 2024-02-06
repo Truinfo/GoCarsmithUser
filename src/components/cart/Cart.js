@@ -72,6 +72,7 @@ const Cart = ( { cartItems, onDelete, onApplyCoupon }) => {
 
     fetchCoupons();
     getCartItems();
+   
   }, [userId]);
 
   let totalAmount = 0;
@@ -154,9 +155,7 @@ const Cart = ( { cartItems, onDelete, onApplyCoupon }) => {
         `https://gocarsmithbackend.onrender.com/api/removeCartItemBy/${userId}/${itemId}`
       );
       if (response.status === 200) {
-        const userString = localStorage.getItem("user");
-        const user = JSON.parse(userString);
-        const userId = user?._id;
+       
         try {
           const response = await axios.get(
             `https://gocarsmithbackend.onrender.com/api/getUserCartBy/${userId}`
@@ -182,6 +181,7 @@ const Cart = ( { cartItems, onDelete, onApplyCoupon }) => {
 
 
   return (
+    
     <div style={{ margin: "20px", display: "flex" }}>
       <div style={{ flex: 1 }}>
         <Typography variant="h4">Shopping Cart</Typography>

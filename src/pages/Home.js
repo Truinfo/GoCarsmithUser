@@ -14,7 +14,7 @@ import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link ,useLocation} from "react-router-dom";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import Tab from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";
@@ -34,19 +34,7 @@ import "slick-carousel/slick/slick-theme.css";
 import TimeToLeaveIcon from "@mui/icons-material/TimeToLeave";
 import Modal from "../components/StickyBox/Modal";
 import "ol/ol.css";
-import { Map, View } from "ol";
-import TileLayer from "ol/layer/Tile";
-import { OSM, TileWMS } from "ol/source";
-import Feature from "ol/Feature";
-import Point from "ol/geom/Point";
-import Col from "react-bootstrap/Col";
-import { Style, Icon } from "ol/style";
-import VectorSource from "ol/source/Vector";
-import VectorLayer from "ol/layer/Vector";
-import Overlay from "ol/Overlay";
-import { fromLonLat } from "ol/proj";
-import Dropdown from "react-bootstrap/Dropdown";
-import axios from "axios";
+
 
 const userString1 = localStorage.getItem("user");
 const user = JSON.parse(userString1);
@@ -58,18 +46,14 @@ const usermodelName= userCars?.[0]?.modelName;
 const userfuelType = userCars?.[0]?.fuelType;
 const userBrandId = userCars?.[0]?.BrandId;
 const userBrandName = userCars?.[0]?.brandName;
-const currentModelId = localStorage.getItem("modelId");
 const currentfuelType = localStorage.getItem("fuelType");
-const currentBrandId = localStorage.getItem("BrandId");
 const currentBrandName = localStorage.getItem("BrandName");
 const currentmodelName = localStorage.getItem('modelName')
-const modelId = currentModelId  || usermodelId;
 const fuelType = currentfuelType  || userfuelType;
-const BrandId = currentBrandId || userBrandId;
 const BrandName = currentBrandName || userBrandName;
 const modelName = currentmodelName || usermodelName;
 const locationName = localStorage.getItem("locationName");
-const location = localStorage.getItem("location");
+
 
 const accordionData = [
   {
@@ -463,7 +447,11 @@ const Home = () => {
     console.log(`Clicked on ${option.label}`);
     handleClose();
   };
- 
+  const locations = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top of the page on route change
+  }, [locations.pathname]);
+
 
   const options = [
     { label: "Profile", link: "/profile" },
@@ -486,7 +474,7 @@ const Home = () => {
     const userValuesPresent = [usermodelId, usermodelName, userfuelType, userBrandId, userBrandName].some((value) => value);
     if (requiredValues.every((value) => localStorage.getItem(value)) || userValuesPresent) {
       // All required values are present, navigate to the page
-      navigate(card.link);
+      navigate(card);
       window.location.reload();
     } else {
       // Display alert when values are missing
@@ -506,6 +494,16 @@ const Home = () => {
     }
   };
 
+
+  const handleCardClick2 = (card) => {
+    if (userValuesPresent) {
+      // All required user-related values are present, navigate to the page
+      navigate(card.link);
+    } else {
+      // Display alert when user-related values are missing
+      window.alert("Please Login...");
+    }
+  };
   return (
   
     <div style={{ textAlign: "center" }}>
@@ -614,7 +612,7 @@ const Home = () => {
               justifyContent: "start",cursor:"pointer",marginLeft:"35px"}}> <img
               src="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Website/Warranty/miles.png"
               alt="miles"
-              onClick={()=>handleCardClick1({link:"/membership"})}
+              onClick={()=>handleCardClick2({link:"/membership"})}
             />
             </div>
           

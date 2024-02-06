@@ -24,10 +24,16 @@ import { useNavigate,useLocation } from "react-router-dom";
 import axios from "axios";
 
 const Membership = () => {
+
+
   const locations = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0); // Scroll to the top of the page on route change
   }, [locations.pathname]);
+ 
+
+
+
   const modelName= localStorage.getItem("modelName");
   const BrandName= localStorage.getItem("BrandName");
   const [checked, setChecked] = React.useState(true);
@@ -320,7 +326,7 @@ useEffect(()=>{
   return (
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
     <div style={{ flex: '1' }}>
-    <Paper style={{ backgroundColor: "#16191b", padding: 2 }}>
+    <Paper style={{ backgroundColor: "#16191b", padding: 2,borderRadius: "0px"  }}>
       <Paper style={{ backgroundColor: "#292c2e", borderRadius: "8px" }}>
         <Paper
           style={{
@@ -331,11 +337,7 @@ useEffect(()=>{
             borderRadius: "30px",
           }}
         >
-          {/* <img
-            src="https://gomechprod.blob.core.windows.net/websiteasset/New%20Website/components/amcPage/miles_logo.png"
-            alt="Membership Image"
-            style={{ maxWidth: "100%", height: "auto" }}
-          /> */}
+          
           <Typography variant="h1" color={"white"}>
             Annual Membership
           </Typography>
