@@ -780,12 +780,14 @@ export default function CheckoutPage() {
 
     setTotalAmount(total);
   };
+
   useEffect(() => {
     const getCarrtDetails = async () => {
       try {
         const response = await axios.get(
           `https://gocarsmithbackend.onrender.com/api/getUserCartBy/${userId}`
         );
+
         if (response.status === 200) {
           const data = response.data;
           setCartData(data);
@@ -824,7 +826,6 @@ export default function CheckoutPage() {
   // const carModel = localStorage.getItem("modelName");
   // const fuelType = localStorage.getItem("fuelType");
   // const Brand = localStorage.getItem("BrandName");
- const imagePath = localStorage.getItem("imagePath");
 
   const userStrings = localStorage.getItem("userCars");
   const userCars = JSON.parse(userStrings);
@@ -833,6 +834,9 @@ export default function CheckoutPage() {
   const userfuelType = userCars?.[0]?.fuelType;
   const userBrandId = userCars?.[0]?.BrandId;
   const userBrandName = userCars?.[0]?.brandName;
+  
+ const imagePath = localStorage.getItem("imagePath") || userCars?.[0]?.modelImage;
+
   const currentModelId = localStorage.getItem("modelId");
   const currentfuelType = localStorage.getItem("fuelType");
   const currentBrandId = localStorage.getItem("BrandId");
@@ -857,7 +861,7 @@ export default function CheckoutPage() {
         // Form is invalid, show error messages
         console.log('Form validation failed');
       }
-    }else if (activeStep === steps.length - 1) {
+    }if (activeStep === steps.length - 1) {
       // If it's the last step, handle place order or pay now based on the selected payment method
       if (paymentMethod === "payCash") {
         // Handle place order logic for Pay Cash
@@ -871,11 +875,11 @@ export default function CheckoutPage() {
         setOpenPayment(true);
       }
     } 
-    // else {
-    //   // If it's not the last step, proceed to the next step
-    //   setActiveStep(activeStep + 1);
+    else {
+      // If it's not the last step, proceed to the next step
+      setActiveStep(activeStep +1);
 
-    // }
+    }
   };
   const orderDetails = {
     formData,

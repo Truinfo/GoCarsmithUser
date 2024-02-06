@@ -54,10 +54,13 @@ import ForgottPassword from "./auth/passwordForgot";
 import Passwordchanging from "./auth/changingPassword";
 import HealthInsuranceForm from "./Customers/HealthInsuranceForm";
 const App = () => {
+
   return (
+
     <BrowserRouter>
       <Header />
       <Token />
+      
       <Routes>
         <Route path="/faq" element={<Faqs />} />
         <Route path="/Contact" element={<Contact />} />

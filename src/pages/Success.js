@@ -6,7 +6,7 @@ import Col from "react-bootstrap/Col";
 import { BiCheckCircle } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import { Button } from "bootstrap";
-import FeedbackForm from "../components/checkout/FeedbackForm";
+
 const Success = () => {
   return (
     <Container
@@ -62,7 +62,7 @@ const Success = () => {
               alignItems: "center", marginTop: "20px"
             }}>
             
-              <FeedbackForm/>
+             
             
           </div>
           <div style={{
