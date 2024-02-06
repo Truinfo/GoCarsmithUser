@@ -154,7 +154,7 @@ const MyCars = () => {
           modelImage:
             models
               .find((model) => model._id === selectedModel)
-              ?.modelImage.replace(/^http:\/\/localhost:2000/, "") || "",
+              ?.modelImage.replace(/^https:\/\/gocarsmithbackend.onrender.com/, "") || "",
           fuelType: selectedFuelType,
           registrationNumber,
           year,
@@ -384,7 +384,7 @@ const MyCars = () => {
             <CardMedia
               component="img"
               height="200"
-              image={`${car.modelImage}`}
+              image={`https://gocarsmithbackend.onrender.com${car.modelImage}`}
               alt={car.modelName}
             />
             <CardContent>

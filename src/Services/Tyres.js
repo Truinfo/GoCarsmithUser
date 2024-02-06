@@ -566,7 +566,6 @@ const Tyres = () => {
 </Typography>
         )}
 
-      <h1 style={{ marginLeft: "80px" }}>Apollo</h1>
       {/* first card */}
       {data.APOLLO_ALNAC_4GS_SIZE_185_65_R15_88H && data.APOLLO_ALNAC_4GS_SIZE_185_65_R15_88H.price !== null ? (
         <Card ref={apolloAlnac4GSRef} className={addBlinkClass('Apollo Alnac 4GS')} style={{padding:"20px" , boxShadow:"none" ,marginTop:"10px"}}>
@@ -736,7 +735,6 @@ const Tyres = () => {
           </Card>
         </Card>
       ) : null}
-      <h1 style={{ marginLeft: "80px" }}>MRF</h1>
       {/* third card */}
       {data.MRF_SIZE_165_80_R14_85TL && data.MRF_SIZE_165_80_R14_85TL.price !== null ? (
         <Card ref={mrfZLXRef} className={addBlinkClass('MRF ZLX')} style={{padding:"20px" , boxShadow:"none" ,marginTop:"10px"}}>
@@ -1080,7 +1078,6 @@ const Tyres = () => {
       ) : null}
 
       {/* seventh card */}
-      <h1 style={{marginLeft:"80px"}}>JK</h1>
       {data.JK_UX_ROYALE_SIZE_165_80_R14 && data.JK_UX_ROYALE_SIZE_165_80_R14.price !== null ? (
         <Card ref={jkUXRoyaleRef} className={addBlinkClass('JK UX ROYALE')} style={{padding:"20px" , boxShadow:"none" ,marginTop:"10px"}}>
         <Card
@@ -1166,7 +1163,6 @@ const Tyres = () => {
       ) : null}
 
       {/* eighth card */}
-      <h1 style={{marginLeft:"80px"}}>Bridgestone</h1>
       {data.BRIDGESTONE_B290_SIZE_165_80_R14_81S && data.BRIDGESTONE_B290_SIZE_165_80_R14_81S.price !== null ? (
         <Card ref={bridgestoneB290Ref} className={addBlinkClass('BRIDGESTONE B290')} style={{padding:"20px" , boxShadow:"none" ,marginTop:"10px"}}>
         <Card
@@ -1420,7 +1416,6 @@ const Tyres = () => {
       ) : null}
 
       {/* eleventh card */}
-      <h1 style={{marginLeft:"80px"}}>CEAT</h1>
       {data.CEAT_MILAZE_SIZE_165_80_R14_85S && data.CEAT_MILAZE_SIZE_165_80_R14_85S.price !== null ? (
         <Card ref={ceatMilazeSizeRef} className={addBlinkClass('CEAT MILAZE SIZE')} style={{padding:"20px" , boxShadow:"none" ,marginTop:"10px"}}>
         <Card

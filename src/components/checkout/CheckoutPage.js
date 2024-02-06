@@ -76,6 +76,16 @@ export default function CheckoutPage() {
   });
   const [cartData, setCartData] = useState([]);
   // Event handler for input changes
+  const [errors, setErrors] = useState({
+    firstName: '',
+    lastName: '',
+    address1: '',
+    phoneNumber: '',
+    city: '',
+    state: '',
+    zip: '',
+    country: '',
+  });
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
 
@@ -84,7 +94,52 @@ export default function CheckoutPage() {
       ...formData,
       [name]: type === "checkbox" ? checked : value,
     });
+    setErrors((prevErrors) => ({
+      ...prevErrors,
+      [name]: '', // Clear the error when the user starts typing
+    }));
   };
+
+  const validateForm = () => {
+    const newErrors = {};
+
+    // Add your validation rules here
+    if (formData.firstName.trim() === '') {
+      newErrors.firstName = 'First name is required';
+    }
+
+    if (formData.lastName.trim() === '') {
+      newErrors.lastName = 'Last name is required';
+    }
+
+    if (formData.address1.trim() === '') {
+      newErrors.address1 = 'Address line 1 is required';
+    }
+
+    if (formData.phoneNumber.trim() === '') {
+      newErrors.phoneNumber = 'Phone number is required';
+    } else if (!/^\d+$/.test(formData.phoneNumber)) {
+      newErrors.phoneNumber = 'Invalid phone number';
+    }
+
+    if (formData.city.trim() === '') {
+      newErrors.city = 'City is required';
+    }
+
+    if (formData.zip.trim() === '') {
+      newErrors.zip = 'Zip code is required';
+    }
+
+    if (formData.country.trim() === '') {
+      newErrors.country = 'Country is required';
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0; // Return true if there are no errors
+  };
+
+
+
   const [coins,setCoins]=useState({})
   //appointment
 
@@ -173,153 +228,174 @@ export default function CheckoutPage() {
     // navigate("/payment");
   };
 
+ 
+
+
+
+  
   const getStepContent = (step) => {
     switch (step) {
       case 0:
         // return <AddressForm />;
         return (
           <React.Fragment>
-            <Typography variant="h6" gutterBottom>
-              Shipping address
-            </Typography>
-
-            <Grid container item spacing={3}>
-              <Grid item xs={12} sm={6}>
-                <TextField
-                  required
-                  id="firstName"
-                  name="firstName"
-                  label="First name"
-                  fullWidth
-                  autoComplete="given-name"
-                  variant="standard"
-                  value={formData.firstName}
-                  onChange={handleInputChange}
-                />
-              </Grid>
-
-              <Grid item xs={12} sm={6}>
-                <TextField
-                  required
-                  id="lastName"
-                  name="lastName"
-                  label="Last name"
-                  fullWidth
-                  autoComplete="family-name"
-                  variant="standard"
-                  value={formData.lastName}
-                  onChange={handleInputChange}
-                />
-              </Grid>
-              <Grid item xs={12}>
-                <TextField
-                  required
-                  id="address1"
-                  name="address1"
-                  label="Address line 1"
-                  fullWidth
-                  autoComplete="shipping address-line1"
-                  variant="standard"
-                  value={formData.address1}
-                  onChange={handleInputChange}
-                />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <TextField
-                  id="address2"
-                  name="address2"
-                  label="Address line 2"
-                  fullWidth
-                  autoComplete="shipping address-line2"
-                  variant="standard"
-                  value={formData.address2}
-                  onChange={handleInputChange}
-                />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <TextField
-                  required
-                  id="phoneNumber"
-                  name="phoneNumber"
-                  label="phone Number"
-                  fullWidth
-                  autoComplete="given-name"
-                  variant="standard"
-                  value={formData.phoneNumber}
-                  onChange={handleInputChange}
-                />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <TextField
-                  required
-                  id="city"
-                  name="city"
-                  label="City"
-                  fullWidth
-                  autoComplete="shipping address-level2"
-                  variant="standard"
-                  value={formData.city}
-                  onChange={handleInputChange}
-                />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <TextField
-                  id="state"
-                  name="state"
-                  label="State/Province/Region"
-                  fullWidth
-                  variant="standard"
-                  value={formData.state}
-                  onChange={handleInputChange}
-                />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <TextField
-                  required
-                  id="zip"
-                  name="zip"
-                  label="Zip / Postal code"
-                  fullWidth
-                  autoComplete="shipping postal-code"
-                  variant="standard"
-                  value={formData.zip}
-                  onChange={handleInputChange}
-                />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <TextField
-                  required
-                  id="country"
-                  name="country"
-                  label="Country"
-                  fullWidth
-                  autoComplete="shipping country"
-                  variant="standard"
-                  value={formData.country}
-                  onChange={handleInputChange}
-                />
-              </Grid>
-
-              <Grid item xs={12}>
-                <FormControlLabel
-                  control={
-                    <Checkbox
-                      color="secondary"
-                      name="saveAddress"
-                      checked={formData.saveAddress}
-                      onChange={handleInputChange}
-                    />
-                  }
-                  label="Use this address for payment details"
-                />
-              </Grid>
+          <Typography variant="h6" gutterBottom >
+            Shipping address
+          </Typography>
+    
+          <Grid container item spacing={3}>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                required
+                id="firstName"
+                name="firstName"
+                label="First name"
+                fullWidth
+                autoComplete="given-name"
+                variant="standard"
+                value={formData.firstName}
+                onChange={handleInputChange}
+                error={!!errors.firstName}
+                helperText={errors.firstName}
+              />
             </Grid>
-
-            {/* Display formData for demonstration purposes */}
-            {/* <Typography variant="body2" color="textSecondary">
-            {JSON.stringify(formData, null, 2)}
-          </Typography> */}
-          </React.Fragment>
+    
+            <Grid item xs={12} sm={6}>
+              <TextField
+                required
+                id="lastName"
+                name="lastName"
+                label="Last name"
+                fullWidth
+                autoComplete="family-name"
+                variant="standard"
+                value={formData.lastName}
+                onChange={handleInputChange}
+                error={!!errors.lastName}
+                helperText={errors.lastName}
+              />
+            </Grid>
+    
+            <Grid item xs={12}>
+              <TextField
+                required
+                id="address1"
+                name="address1"
+                label="Address line 1"
+                fullWidth
+                autoComplete="shipping address-line1"
+                variant="standard"
+                value={formData.address1}
+                onChange={handleInputChange}
+                error={!!errors.address1}
+                helperText={errors.address1}
+              />
+            </Grid>
+    
+            <Grid item xs={12} sm={6}>
+              <TextField
+                id="address2"
+                name="address2"
+                label="Address line 2"
+                fullWidth
+                autoComplete="shipping address-line2"
+                variant="standard"
+                value={formData.address2}
+                onChange={handleInputChange}
+              />
+            </Grid>
+    
+            <Grid item xs={12} sm={6}>
+              <TextField
+                required
+                id="phoneNumber"
+                name="phoneNumber"
+                label="Phone Number"
+                fullWidth
+                autoComplete="tel"
+                variant="standard"
+                value={formData.phoneNumber}
+                onChange={handleInputChange}
+                error={!!errors.phoneNumber}
+                helperText={errors.phoneNumber}
+              />
+            </Grid>
+    
+            <Grid item xs={12} sm={6}>
+              <TextField
+                required
+                id="city"
+                name="city"
+                label="City"
+                fullWidth
+                autoComplete="shipping address-level2"
+                variant="standard"
+                value={formData.city}
+                onChange={handleInputChange}
+                error={!!errors.city}
+                helperText={errors.city}
+              />
+            </Grid>
+    
+            <Grid item xs={12} sm={6}>
+              <TextField
+                id="state"
+                name="state"
+                label="State/Province/Region"
+                fullWidth
+                variant="standard"
+                value={formData.state}
+                onChange={handleInputChange}
+              />
+            </Grid>
+    
+            <Grid item xs={12} sm={6}>
+              <TextField
+                required
+                id="zip"
+                name="zip"
+                label="Zip / Postal code"
+                fullWidth
+                autoComplete="shipping postal-code"
+                variant="standard"
+                value={formData.zip}
+                onChange={handleInputChange}
+                error={!!errors.zip}
+                helperText={errors.zip}
+              />
+            </Grid>
+    
+            <Grid item xs={12} sm={6}>
+              <TextField
+                required
+                id="country"
+                name="country"
+                label="Country"
+                fullWidth
+                autoComplete="shipping country"
+                variant="standard"
+                value={formData.country}
+                onChange={handleInputChange}
+                error={!!errors.country}
+                helperText={errors.country}
+              />
+            </Grid>
+    
+            <Grid item xs={12}>
+              <FormControlLabel
+                control={
+                  <Checkbox
+                    color="secondary"
+                    name="saveAddress"
+                    checked={formData.saveAddress}
+                    onChange={handleInputChange}
+                  />
+                }
+                label="Use this address for payment details"
+              />
+            </Grid>
+          </Grid>
+        </React.Fragment>
         );
 
       case 1:
@@ -577,23 +653,6 @@ export default function CheckoutPage() {
                 </Typography>
               </Grid>
 
-              {/* <Grid item container direction="column" xs={12} sm={6}>
-              <Typography variant="h6" gutterBottom sx={{ mt: 2 }}>
-                Payment details
-              </Typography>
-              <Grid container item>
-                {payments.map((payment) => (
-                  <React.Fragment key={payment._id}>
-                    <Grid item xs={6}>
-                      <Typography gutterBottom>{payment.name}</Typography>
-                    </Grid>
-                    <Grid item xs={6}>
-                      <Typography gutterBottom>{payment.detail}</Typography>
-                    </Grid>
-                  </React.Fragment>
-                ))}
-              </Grid>
-            </Grid> */}
             </Grid>
           </React.Fragment>
         );
@@ -790,8 +849,15 @@ export default function CheckoutPage() {
 
 
   const handleNext = () => {
-    setActiveStep(activeStep + 1);
-    if (activeStep === steps.length - 1) {
+    if(validateForm()) {
+      if (validateForm()) {
+        // Form is valid, proceed with form submission
+        setActiveStep(activeStep + 1);
+      } else {
+        // Form is invalid, show error messages
+        console.log('Form validation failed');
+      }
+    }else if (activeStep === steps.length - 1) {
       // If it's the last step, handle place order or pay now based on the selected payment method
       if (paymentMethod === "payCash") {
         // Handle place order logic for Pay Cash
@@ -804,10 +870,12 @@ export default function CheckoutPage() {
         // Handle pay now logic for Pay Online
         setOpenPayment(true);
       }
-    } else {
-      // If it's not the last step, proceed to the next step
-      setActiveStep(activeStep + 1);
-    }
+    } 
+    // else {
+    //   // If it's not the last step, proceed to the next step
+    //   setActiveStep(activeStep + 1);
+
+    // }
   };
   const orderDetails = {
     formData,

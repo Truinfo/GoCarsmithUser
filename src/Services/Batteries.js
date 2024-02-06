@@ -333,7 +333,7 @@ const Batteries = () => {
 
     fetchData();
   }, [location, BrandId]);
-  const navigate=useNavigate()
+   const navigate=useNavigate()
   const userString = localStorage.getItem("user");
   const user = JSON.parse(userString);
   const userId = user?._id;
@@ -572,7 +572,7 @@ const Batteries = () => {
         )}
 
 
-      <h1 style={{ marginLeft: "80px" }}>AMARON</h1>
+      
       {/* first card */}
       {data.AMARON_44_MONTHS_WARRANTY && data.AMARON_44_MONTHS_WARRANTY.price !== null ? (
         <Card ref={amaron44MonthsWarrantyRef} className={addBlinkClass('Amaron (44 Months Warranty)')} style={{padding:"20px" , boxShadow:"none" ,marginTop:"10px"}}>
@@ -844,7 +844,7 @@ const Batteries = () => {
           </Card>
         </Card>
       ) : null}
- <h1 style={{ marginLeft: "80px" }}>Exide</h1>
+
 
       {/* fourth card */}
       {data.EXIDE_44_MONTHS_WARRANTY && data.EXIDE_44_MONTHS_WARRANTY.price !== null ? (
@@ -1118,7 +1118,7 @@ const Batteries = () => {
         </Card>
       ) : null}
 
-<h1 style={{ marginLeft: "80px" }}>Livguard</h1>
+
       {/* seventh card */}
       {data.LIVGUARD_60_MONTHS_WARRANTY && data.LIVGUARD_60_MONTHS_WARRANTY.price !== null ? (
         <Card ref={livguard60MonthsWarrantyRef} className={addBlinkClass('Livguard (60 Months Warranty)')} style={{padding:"20px" , boxShadow:"none" ,marginTop:"10px"}}>
@@ -1301,7 +1301,7 @@ const Batteries = () => {
           </Card>
         </Card>
       ) : null}
-<h1 style={{ marginLeft: "80px" }}>Alternator</h1>
+
       {/* Ninth Card */}
       {data.Alternator_Replacement && data.Alternator_Replacement.price !== null ? (
         <Card ref={alternatorReplacementRef} className={addBlinkClass('Alternator Replacement')} style={{padding:"20px" , boxShadow:"none" ,marginTop:"10px"}}>
