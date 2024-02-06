@@ -21,7 +21,7 @@ import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import Paper from '@mui/material/Paper';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import classNames from 'classnames';
 import './styles.css';
 import {
@@ -317,29 +317,35 @@ const Tyres = () => {
   const userId = user?._id;
   const [cartItems, setCartItems] = useState([]);
 
+  const navigate=useNavigate()
   const addToCart = async (items) => {
     setCartItems([...cartItems, ...items]);
-
-    try {
-      const response = await fetch('https://gocarsmithbackend.onrender.com/api/AddToCart', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ // Replace with the actual user ID
-          userId,
-          listOfServices: [...cartItems, ...items], // Send the updated cart to the backend
-        }),
-      });
-
-      if (response.ok) {
-        console.log('Items added to the cart on the server successfully.');
-      } else {
-        console.error('Failed to add items to the cart on the server.');
+    if(userId){
+      try {
+        const response = await fetch('https://gocarsmithbackend.onrender.com/api/AddToCart', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ // Replace with the actual user ID
+            userId,
+            listOfServices: [...cartItems, ...items], // Send the updated cart to the backend
+          }),
+        });
+  
+        if (response.ok) {
+         navigate('/cart')
+          
+        } else {
+          console.error('Failed to add items to the cart on the server.');
+        }
+      } catch (error) {
+        console.error('Error adding items to the cart on the server:', error);
       }
-    } catch (error) {
-      console.error('Error adding items to the cart on the server:', error);
+    }else{
+      navigate("/login")
     }
+    
   };
   useEffect(() => {
     const fetchKeySpecs = async () => {
@@ -631,14 +637,14 @@ const Tyres = () => {
                   </h6>
                 </Grid>
                 <Grid item xs={12} sm={2}>
-                  <Link to='/cart'>
+                  
                     <Button variant="outlined" color="error"
                       onClick={() => addToCart([data.APOLLO_ALNAC_4GS_SIZE_185_65_R15_88H])}
                       style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                     >
                       Add to Cart
                     </Button>
-                  </Link>
+                
                 </Grid>
               </Grid>
             </Grid>
@@ -716,14 +722,14 @@ const Tyres = () => {
                   </h6>
                 </Grid>
                 <Grid item xs={12} sm={2}>
-                  <Link to='/cart'>
+                  
                     <Button variant="outlined" color="error"
                       onClick={() => addToCart([data.APOLLO_AMAZER_4G_LIFE_SIZE_185_65_R15_88T])}
                       style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                     >
                       Add to Cart
                     </Button>
-                  </Link>
+                
                 </Grid>
               </Grid>
             </Grid>
@@ -801,14 +807,14 @@ const Tyres = () => {
                   </h6>
                 </Grid>
                 <Grid item xs={12} sm={2}>
-                  <Link to='/cart'>
+                  
                     <Button variant="outlined" color="error"
                       onClick={() => addToCart([data.MRF_SIZE_165_80_R14_85TL])}
                       style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                     >
                       Add to Cart
                     </Button>
-                  </Link>
+                
                 </Grid>
               </Grid>
             </Grid>
@@ -886,14 +892,14 @@ const Tyres = () => {
                   </h6>
                 </Grid>
                 <Grid item xs={12} sm={2}>
-                  <Link to='/cart'>
+                  
                     <Button variant="outlined" color="error"
                       onClick={() => addToCart([data.MRF_ZLX_SIZE_165_80_R14_TL])}
                       style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                     >
                       Add to Cart
                     </Button>
-                  </Link>
+                
                 </Grid>
               </Grid>
             </Grid>
@@ -971,14 +977,14 @@ const Tyres = () => {
                   </h6>
                 </Grid>
                 <Grid item xs={12} sm={2}>
-                  <Link to='/cart'>
+                  
                     <Button variant="outlined" color="error"
                       onClick={() => addToCart([data.MRF_ZVTS_Size_155_80_R13_79TL])}
                       style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                     >
                       Add to Cart
                     </Button>
-                  </Link>
+                
                 </Grid>
               </Grid>
             </Grid>
@@ -1058,14 +1064,14 @@ const Tyres = () => {
                   </h6>
                 </Grid>
                 <Grid item xs={12} sm={2}>
-                  <Link to='/cart'>
+                  
                     <Button variant="outlined" color="error"
                       onClick={() => addToCart([data.MRF_ZVTY_SIZE_185_65_R15_88TL])}
                       style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                     >
                       Add to Cart
                     </Button>
-                  </Link>
+                
                 </Grid>
               </Grid>
             </Grid>
@@ -1144,14 +1150,14 @@ const Tyres = () => {
                   </h6>
                 </Grid>
                 <Grid item xs={12} sm={2}>
-                  <Link to='/cart'>
+                  
                     <Button variant="outlined" color="error"
                       onClick={() => addToCart([data.JK_UX_ROYALE_SIZE_165_80_R14])}
                       style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                     >
                       Add to Cart
                     </Button>
-                  </Link>
+                
                 </Grid>
               </Grid>
             </Grid>
@@ -1230,14 +1236,14 @@ const Tyres = () => {
                   </h6>
                 </Grid>
                 <Grid item xs={12} sm={2}>
-                  <Link to='/cart'>
+                  
                     <Button variant="outlined" color="error"
                       onClick={() => addToCart([data.BRIDGESTONE_B290_SIZE_165_80_R14_81S])}
                       style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                     >
                       Add to Cart
                     </Button>
-                  </Link>
+                
                 </Grid>
               </Grid>
             </Grid>
@@ -1398,14 +1404,14 @@ const Tyres = () => {
                   </h6>
                 </Grid>
                 <Grid item xs={12} sm={2}>
-                  <Link to='/cart'>
+                  
                     <Button variant="outlined" color="error"
                       onClick={() => addToCart([data.BRIDGESTONE_B290_Size_155_80_R13_79S])}
                       style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                     >
                       Add to Cart
                     </Button>
-                  </Link>
+                
                 </Grid>
               </Grid>
             </Grid>
@@ -1484,14 +1490,14 @@ const Tyres = () => {
                   </h6>
                 </Grid>
                 <Grid item xs={12} sm={2}>
-                  <Link to='/cart'>
+                  
                     <Button variant="outlined" color="error"
                       onClick={() => addToCart([data.CEAT_MILAZE_SIZE_165_80_R14_85S])}
                       style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                     >
                       Add to Cart
                     </Button>
-                  </Link>
+                
                 </Grid>
               </Grid>
             </Grid>
@@ -1569,14 +1575,14 @@ const Tyres = () => {
                   </h6>
                 </Grid>
                 <Grid item xs={12} sm={2}>
-                  <Link to='/cart'>
+                  
                     <Button variant="outlined" color="error"
                       onClick={() => addToCart([data.CEAT_MILAZE_X3__SIZE_165_65_R15])}
                       style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                     >
                       Add to Cart
                     </Button>
-                  </Link>
+                
                 </Grid>
               </Grid>
             </Grid>
@@ -1654,14 +1660,14 @@ const Tyres = () => {
                   </h6>
                 </Grid>
                 <Grid item xs={12} sm={2}>
-                  <Link to='/cart'>
+                  
                     <Button variant="outlined" color="error"
                       onClick={() => addToCart([data.CEAT_MILAZE_Size_155_80_R13])}
                       style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                     >
                       Add to Cart
                     </Button>
-                  </Link>
+                
                 </Grid>
               </Grid>
             </Grid>
@@ -1742,14 +1748,14 @@ const Tyres = () => {
                   </h6>
                 </Grid>
                 <Grid item xs={12} sm={2}>
-                  <Link to='/cart'>
+                  
                     <Button variant="outlined" color="error"
                       onClick={() => addToCart([data.COMPLETE_WHEEL_CARE])}
                       style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                     >
                       Add to Cart
                     </Button>
-                  </Link>
+                
                 </Grid>
               </Grid>
             </Grid>
@@ -1830,14 +1836,14 @@ const Tyres = () => {
                   </h6>
                 </Grid>
                 <Grid item xs={12} sm={2}>
-                  <Link to='/cart'>
+                  
                     <Button variant="outlined" color="error"
                       onClick={() => addToCart([data.MUD_FLAPS])}
                       style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                     >
                       Add to Cart
                     </Button>
-                  </Link>
+                
                 </Grid>
               </Grid>
             </Grid>

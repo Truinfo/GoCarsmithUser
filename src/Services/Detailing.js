@@ -17,7 +17,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
 import Paper from '@mui/material/Paper';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import classNames from 'classnames';
 import './styles.css';
 import {
@@ -317,30 +317,35 @@ const userString = localStorage.getItem("user");
 const user = JSON.parse(userString);
 const userId = user?._id;
 const [cartItems, setCartItems] = useState([]);
-
+const navigate=useNavigate()
 const addToCart = async (items) => {
- setCartItems([...cartItems, ...items]);
+  setCartItems([...cartItems, ...items]);
+  if(userId){
+    try {
+      const response = await fetch('https://gocarsmithbackend.onrender.com/api/AddToCart', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ // Replace with the actual user ID
+          userId,
+          listOfServices: [...cartItems, ...items], // Send the updated cart to the backend
+        }),
+      });
 
- try {
-   const response = await fetch('https://gocarsmithbackend.onrender.com/api/AddToCart', {
-     method: 'POST',
-     headers: {
-       'Content-Type': 'application/json',
-     },
-     body: JSON.stringify({ // Replace with the actual user ID
-       userId,
-       listOfServices: [...cartItems, ...items], // Send the updated cart to the backend
-     }),
-   });
-
-   if (response.ok) {
-     console.log('Items added to the cart on the server successfully.');
-   } else {
-     console.error('Failed to add items to the cart on the server.');
-   }
- } catch (error) {
-   console.error('Error adding items to the cart on the server:', error);
- }
+      if (response.ok) {
+       navigate('/cart')
+        
+      } else {
+        console.error('Failed to add items to the cart on the server.');
+      }
+    } catch (error) {
+      console.error('Error adding items to the cart on the server:', error);
+    }
+  }else{
+    navigate("/login")
+  }
+  
 };
 useEffect(() => {
   const fetchKeySpecs = async () => {
@@ -588,14 +593,14 @@ return (<>
               <b style={{ fontSize: '25px', color: 'black' }}>₹ {data._3M_CAR_RUBBING_POLISHING.price}/-</b>
             </h6>
           </Grid>
-          <Grid item xs={12} sm={2}><Link to='/cart'>
+          <Grid item xs={12} sm={2}>
             <Button variant="outlined" color="error"
                style={{ fontSize: "16px", border: "3px solid red", fontWeight:"700" }}
               onClick={() => addToCart([data._3M_CAR_RUBBING_POLISHING])}
             >
               Add to Cart
             </Button>
-            </Link>
+           
           </Grid>
         </Grid>
       </Grid>
@@ -677,14 +682,14 @@ return (<>
               <b style={{ fontSize: '25px', color: 'black' }}>₹ {data.CERAMIC_COATING.price}/-</b>
             </h6>
           </Grid>
-          <Grid item xs={12} sm={2}><Link to='/cart'>
+          <Grid item xs={12} sm={2}>
             <Button variant="outlined" color="error"
              style={{ fontSize: "16px", border: "3px solid red", fontWeight:"700" }}
               onClick={() => addToCart([data.CERAMIC_COATING])}
             >
               Add to Cart
             </Button>
-            </Link>
+           
           </Grid>
         </Grid>
       </Grid>
@@ -763,14 +768,14 @@ return (<>
               <b style={{ fontSize: '25px', color: 'black' }}>₹ {data.MEGUIARS_CERAMIC_COATING.price}/-</b>
             </h6>
           </Grid>
-          <Grid item xs={12} sm={2}><Link to='/cart'>
+          <Grid item xs={12} sm={2}>
             <Button variant="outlined" color="error"
                style={{ fontSize: "16px", border: "3px solid red", fontWeight:"700" }}
               onClick={() => addToCart([data.MEGUIARS_CERAMIC_COATING])}
             >
               Add to Cart
             </Button>
-            </Link>
+           
           </Grid>
         </Grid>
       </Grid>
@@ -843,14 +848,14 @@ return (<>
               <b style={{ fontSize: '25px', color: 'black' }}>₹ {data._3M_TEFLON_COATING.price}/-</b>
             </h6>
           </Grid>
-          <Grid item xs={12} sm={2}><Link to='/cart'>
+          <Grid item xs={12} sm={2}>
             <Button variant="outlined" color="error"
                style={{ fontSize: "16px", border: "3px solid red", fontWeight:"700" }}
               onClick={() => addToCart([data._3M_TEFLON_COATING])}
             >
               Add to Cart
             </Button>
-            </Link>
+           
           </Grid>
         </Grid>
       </Grid>
@@ -925,14 +930,14 @@ return (<>
               <b style={{ fontSize: '25px', color: 'black' }}>₹ {data.MEGUIARS_TEFLON_COATING.price}/-</b>
             </h6>
           </Grid>
-          <Grid item xs={12} sm={2}><Link to='/cart'>
+          <Grid item xs={12} sm={2}>
             <Button variant="outlined" color="error"
                style={{ fontSize: "16px", border: "3px solid red", fontWeight:"700" }}
               onClick={() => addToCart([data.MEGUIARS_TEFLON_COATING])}
             >
               Add to Cart
             </Button>
-            </Link>
+           
           </Grid>
         </Grid>
       </Grid>
@@ -1006,14 +1011,14 @@ return (<>
               <b style={{ fontSize: '25px', color: 'black' }}>₹ {data.PPF_PAINT_PROTECTION_FILM.price}/-</b>
             </h6>
           </Grid>
-          <Grid item xs={12} sm={2}><Link to='/cart'>
+          <Grid item xs={12} sm={2}>
             <Button variant="outlined" color="error"
              style={{ fontSize: "16px", border: "3px solid red", fontWeight:"700" }}
               onClick={() => addToCart([data.PPF_PAINT_PROTECTION_FILM])}
             >
               Add to Cart
             </Button>
-            </Link>
+           
           </Grid>
         </Grid>
       </Grid>
@@ -1088,14 +1093,14 @@ return (<>
               <b style={{ fontSize: '25px', color: 'black' }}>₹ {data.ANTI_RUST_UNDERBODY_COATING.price}/-</b>
             </h6>
           </Grid>
-          <Grid item xs={12} sm={2}><Link to='/cart'>
+          <Grid item xs={12} sm={2}>
             <Button variant="outlined" color="error"
                style={{ fontSize: "16px", border: "3px solid red", fontWeight:"700" }}
               onClick={() => addToCart([data.ANTI_RUST_UNDERBODY_COATING])}
             >
               Add to Cart
             </Button>
-            </Link>
+           
           </Grid>
         </Grid>
       </Grid>
@@ -1168,14 +1173,14 @@ return (<>
               <b style={{ fontSize: '25px', color: 'black' }}>₹ {data.SILENCER_COATING.price}/-</b>
             </h6>
           </Grid>
-          <Grid item xs={12} sm={2}><Link to='/cart'>
+          <Grid item xs={12} sm={2}>
             <Button variant="outlined" color="error"
                style={{ fontSize: "16px", border: "3px solid red", fontWeight:"700" }}
               onClick={() => addToCart([data.SILENCER_COATING])}
             >
               Add to Cart
             </Button>
-            </Link>
+           
           </Grid>
         </Grid>
       </Grid>

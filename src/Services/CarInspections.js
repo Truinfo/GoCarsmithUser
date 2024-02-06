@@ -337,30 +337,35 @@ const CarInspections = () => {
   const userId = user?._id;
   const [cartItems, setCartItems] = useState([]);
 
+
   const addToCart = async (items) => {
     setCartItems([...cartItems, ...items]);
-
-    try {
-      const response = await fetch('https://gocarsmithbackend.onrender.com/api/AddToCart', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ // Replace with the actual user ID
-          userId,
-          listOfServices: [...cartItems, ...items], // Send the updated cart to the backend
-        }),
-      });
-
-      if (response.ok) {
-        navigate('/cart')
-        console.log('Items added to the cart on the server successfully.');
-      } else {
-        console.error('Failed to add items to the cart on the server.');
+    if(userId){
+      try {
+        const response = await fetch('https://gocarsmithbackend.onrender.com/api/AddToCart', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ // Replace with the actual user ID
+            userId,
+            listOfServices: [...cartItems, ...items], // Send the updated cart to the backend
+          }),
+        });
+  
+        if (response.ok) {
+         navigate('/cart')
+          
+        } else {
+          console.error('Failed to add items to the cart on the server.');
+        }
+      } catch (error) {
+        console.error('Error adding items to the cart on the server:', error);
       }
-    } catch (error) {
-      console.error('Error adding items to the cart on the server:', error);
+    }else{
+      navigate("/login")
     }
+    
   };
   useEffect(() => {
     const fetchKeySpecs = async () => {

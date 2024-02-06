@@ -24,7 +24,7 @@ import { Accordion, AccordionSummary, AccordionDetails } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Header from "./Header";
 import Carousel from "./Carousel";
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
 import { useParams } from 'react-router-dom';
 import classNames from 'classnames';
@@ -361,29 +361,35 @@ const WindSheilds = () => {
   const userId = user?._id;
   const [cartItems, setCartItems] = useState([]);
 
+  const navigate=useNavigate()
   const addToCart = async (items) => {
     setCartItems([...cartItems, ...items]);
-
-    try {
-      const response = await fetch('https://gocarsmithbackend.onrender.com/api/AddToCart', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ // Replace with the actual user ID
-          userId,
-          listOfServices: [...cartItems, ...items], // Send the updated cart to the backend
-        }),
-      });
-
-      if (response.ok) {
-        console.log('Items added to the cart on the server successfully.');
-      } else {
-        console.error('Failed to add items to the cart on the server.');
+    if(userId){
+      try {
+        const response = await fetch('https://gocarsmithbackend.onrender.com/api/AddToCart', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ // Replace with the actual user ID
+            userId,
+            listOfServices: [...cartItems, ...items], // Send the updated cart to the backend
+          }),
+        });
+  
+        if (response.ok) {
+         navigate('/cart')
+          
+        } else {
+          console.error('Failed to add items to the cart on the server.');
+        }
+      } catch (error) {
+        console.error('Error adding items to the cart on the server:', error);
       }
-    } catch (error) {
-      console.error('Error adding items to the cart on the server:', error);
+    }else{
+      navigate("/login")
     }
+    
   };
   useEffect(() => {
     const fetchKeySpecs = async () => {
@@ -657,7 +663,7 @@ const WindSheilds = () => {
                     </h6>
                   </Grid>
                   <Grid item xs={12} sm={2}>
-                    <Link to='/cart'>
+                   
                       <Button
                         variant="outlined"
                         color="error"
@@ -666,7 +672,7 @@ const WindSheilds = () => {
                       >
                         Add to Cart
                       </Button>
-                    </Link>
+                   
                   </Grid>
                 </Grid>
               </Grid>
@@ -776,7 +782,7 @@ const WindSheilds = () => {
                     </h6>
                   </Grid>
                   <Grid item xs={12} sm={2}>
-                    <Link to='/cart'>
+                   
                       <Button
                         variant="outlined"
                         color="error"
@@ -785,7 +791,7 @@ const WindSheilds = () => {
                       >
                         Add to Cart
                       </Button>
-                    </Link>
+                   
                   </Grid>
                 </Grid>
               </Grid>
@@ -895,7 +901,7 @@ const WindSheilds = () => {
                     </h6>
                   </Grid>
                   <Grid item xs={12} sm={2}>
-                    <Link to='/cart'>
+                   
                       <Button
                         variant="outlined"
                         color="error"
@@ -904,7 +910,7 @@ const WindSheilds = () => {
                       >
                         Add to Cart
                       </Button>
-                    </Link>
+                   
                   </Grid>
                 </Grid>
               </Grid>
@@ -1008,7 +1014,7 @@ const WindSheilds = () => {
                     </h6>
                   </Grid>
                   <Grid item xs={12} sm={2}>
-                    <Link to='/cart'>
+                   
                       <Button
                         variant="outlined"
                         color="error"
@@ -1017,7 +1023,7 @@ const WindSheilds = () => {
                       >
                         Add to Cart
                       </Button>
-                    </Link>
+                   
                   </Grid>
                 </Grid>
               </Grid>
@@ -1125,7 +1131,7 @@ const WindSheilds = () => {
                     </h6>
                   </Grid>
                   <Grid item xs={12} sm={2}>
-                    <Link to='/cart'>
+                   
                       <Button
                         variant="outlined"
                         color="error"
@@ -1134,7 +1140,7 @@ const WindSheilds = () => {
                       >
                         Add to Cart
                       </Button>
-                    </Link>
+                   
                   </Grid>
                 </Grid>
               </Grid>
@@ -1242,7 +1248,7 @@ const WindSheilds = () => {
                     </h6>
                   </Grid>
                   <Grid item xs={12} sm={2}>
-                    <Link to='/cart'>
+                   
                       <Button
                         variant="outlined"
                         color="error"
@@ -1251,7 +1257,7 @@ const WindSheilds = () => {
                       >
                         Add to Cart
                       </Button>
-                    </Link>
+                   
                   </Grid>
                 </Grid>
               </Grid>
@@ -1363,7 +1369,7 @@ const WindSheilds = () => {
                     </h6>
                   </Grid>
                   <Grid item xs={12} sm={2}>
-                    <Link to='/cart'>
+                   
                       <Button
                         variant="outlined"
                         color="error"
@@ -1372,7 +1378,7 @@ const WindSheilds = () => {
                       >
                         Add to Cart
                       </Button>
-                    </Link>
+                   
                   </Grid>
                 </Grid>
               </Grid>

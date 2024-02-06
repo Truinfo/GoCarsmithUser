@@ -9,7 +9,7 @@ import Checkbox from "@mui/material/Checkbox";
 import ScheduleIcon from "@mui/icons-material/Schedule";
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
 import Button from "@mui/material/Button";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useParams } from 'react-router-dom';
 import classNames from 'classnames';
 import './styles.css';
@@ -398,30 +398,39 @@ const PeriodicService = () => {
     const userId = user?._id;
     const [cartItems, setCartItems] = useState([]);
 
+    const navigate=useNavigate()
     const addToCart = async (items) => {
-        setCartItems([...cartItems, ...items]);
-
+      setCartItems([...cartItems, ...items]);
+      if(userId){
         try {
-            const response = await fetch('https://gocarsmithbackend.onrender.com/api/AddToCart', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ // Replace with the actual user ID
-                    userId,
-                    listOfServices: [...cartItems, ...items], // Send the updated cart to the backend
-                }),
-            });
-
-            if (response.ok) {
-                console.log('Items added to the cart on the server successfully.');
-            } else {
-                console.error('Failed to add items to the cart on the server.');
-            }
+          const response = await fetch("https://gocarsmithbackend.onrender.com/api/AddToCart", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              // Replace with the actual user ID
+              userId,
+              listOfServices: [...cartItems, ...items], // Send the updated cart to the backend
+            }),
+          });
+    
+          if (response.ok) {
+            navigate('/cart')
+          //  window.location.reload(false)
+          } else {
+            console.error("Failed to add items to the cart on the server.");
+          }
         } catch (error) {
-            console.error('Error adding items to the cart on the server:', error);
+          console.error("Error adding items to the cart on the server:", error);
         }
+      }else{
+        navigate("/login")
+      }
     };
+
+
+
     useEffect(() => {
         const fetchKeySpecs = async () => {
             try {
@@ -700,7 +709,7 @@ const PeriodicService = () => {
                                         </h6>
                                     </Grid>
                                     <Grid item xs={12} sm={2}>
-                                        <Link to="/cart">
+                                       
                                             <Button
                                                 variant="outlined"
                                                 color="error"
@@ -709,7 +718,7 @@ const PeriodicService = () => {
                                             >
                                                 Add to Cart
                                             </Button>
-                                        </Link>
+                                        
                                     </Grid>
                                 </Grid>
                             </Grid>
@@ -836,7 +845,7 @@ const PeriodicService = () => {
                                         </h6>
                                     </Grid>
                                     <Grid item xs={12} sm={2}>
-                                        <Link to="/cart">
+                                       
                                             <Button
                                                 variant="outlined"
                                                 color="error"
@@ -845,7 +854,7 @@ const PeriodicService = () => {
                                             >
                                                 Add to Cart
                                             </Button>
-                                        </Link>
+                                        
                                     </Grid>
                                 </Grid>
                             </Grid>

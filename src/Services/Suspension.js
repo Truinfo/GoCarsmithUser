@@ -17,7 +17,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import classNames from 'classnames';
 import './styles.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -367,29 +367,35 @@ const Suspension = () => {
   const userId = user?._id;
   const [cartItems, setCartItems] = useState([]);
 
+  const navigate=useNavigate()
   const addToCart = async (items) => {
     setCartItems([...cartItems, ...items]);
-
-    try {
-      const response = await fetch("https://gocarsmithbackend.onrender.com/api/AddToCart", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          userId,
-          listOfServices: [...cartItems, ...items], // Send the updated cart to the backend
-        }),
-      });
-
-      if (response.ok) {
-        console.log("Items added to the cart on the server successfully.");
-      } else {
-        console.error("Failed to add items to the cart on the server.");
+    if(userId){
+      try {
+        const response = await fetch('https://gocarsmithbackend.onrender.com/api/AddToCart', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ // Replace with the actual user ID
+            userId,
+            listOfServices: [...cartItems, ...items], // Send the updated cart to the backend
+          }),
+        });
+  
+        if (response.ok) {
+         navigate('/cart')
+          
+        } else {
+          console.error('Failed to add items to the cart on the server.');
+        }
+      } catch (error) {
+        console.error('Error adding items to the cart on the server:', error);
       }
-    } catch (error) {
-      console.error("Error adding items to the cart on the server:", error);
+    }else{
+      navigate("/login")
     }
+    
   };
   useEffect(() => {
     const fetchKeySpecs = async () => {
@@ -815,7 +821,7 @@ const Suspension = () => {
                     </h6>
                   </Grid>
                   <Grid item xs={12} sm={2}>
-                    <Link to="/cart">
+                   
                       <Button
                         variant="outlined"
                         color="error"
@@ -828,7 +834,7 @@ const Suspension = () => {
                       >
                         Add to Cart
                       </Button>
-                    </Link>
+                   
                   </Grid>
                 </Grid>
               </Grid>
@@ -944,7 +950,7 @@ const Suspension = () => {
                     </h6>
                   </Grid>
                   <Grid item xs={12} sm={2}>
-                    <Link to="/cart">
+                   
                       <Button
                         variant="outlined"
                         color="error"
@@ -957,7 +963,7 @@ const Suspension = () => {
                       >
                         Add to Cart
                       </Button>
-                    </Link>
+                   
                   </Grid>
                 </Grid>
               </Grid>
@@ -1081,7 +1087,7 @@ const Suspension = () => {
                     </h6>
                   </Grid>
                   <Grid item xs={12} sm={2}>
-                    <Link to="/cart">
+                   
                       <Button
                         variant="outlined"
                         color="error"
@@ -1096,7 +1102,7 @@ const Suspension = () => {
                       >
                         Add to Cart
                       </Button>
-                    </Link>
+                   
                   </Grid>
                 </Grid>
               </Grid>
@@ -1220,7 +1226,7 @@ const Suspension = () => {
                     </h6>
                   </Grid>
                   <Grid item xs={12} sm={2}>
-                    <Link to="/cart">
+                   
                       <Button
                         variant="outlined"
                         color="error"
@@ -1235,7 +1241,7 @@ const Suspension = () => {
                       >
                         Add to Cart
                       </Button>
-                    </Link>
+                   
                   </Grid>
                 </Grid>
               </Grid>
@@ -1348,7 +1354,7 @@ const Suspension = () => {
                     </h6>
                   </Grid>
                   <Grid item xs={12} sm={2}>
-                    <Link to="/cart">
+                   
                       <Button
                         variant="outlined"
                         color="error"
@@ -1363,7 +1369,7 @@ const Suspension = () => {
                       >
                         Add to Cart
                       </Button>
-                    </Link>
+                   
                   </Grid>
                 </Grid>
               </Grid>
@@ -1478,7 +1484,7 @@ const Suspension = () => {
                     </h6>
                   </Grid>
                   <Grid item xs={12} sm={2}>
-                    <Link to="/cart">
+                   
                       <Button
                         variant="outlined"
                         color="error"
@@ -1491,7 +1497,7 @@ const Suspension = () => {
                       >
                         Add to Cart
                       </Button>
-                    </Link>
+                   
                   </Grid>
                 </Grid>
               </Grid>
@@ -1608,7 +1614,7 @@ const Suspension = () => {
                     </h6>
                   </Grid>
                   <Grid item xs={12} sm={2}>
-                    <Link to="/cart">
+                   
                       <Button
                         variant="outlined"
                         color="error"
@@ -1621,7 +1627,7 @@ const Suspension = () => {
                       >
                         Add to Cart
                       </Button>
-                    </Link>
+                   
                   </Grid>
                 </Grid>
               </Grid>
@@ -1730,7 +1736,7 @@ const Suspension = () => {
                     </h6>
                   </Grid>
                   <Grid item xs={12} sm={2}>
-                    <Link to="/cart">
+                   
                       <Button
                         variant="outlined"
                         color="error"
@@ -1745,7 +1751,7 @@ const Suspension = () => {
                       >
                         Add to Cart
                       </Button>
-                    </Link>
+                   
                   </Grid>
                 </Grid>
               </Grid>
@@ -1875,7 +1881,7 @@ const Suspension = () => {
                     </h6>
                   </Grid>
                   <Grid item xs={12} sm={2}>
-                    <Link to="/cart">
+                   
                       <Button
                         variant="outlined"
                         color="error"
@@ -1890,7 +1896,7 @@ const Suspension = () => {
                       >
                         Add to Cart
                       </Button>
-                    </Link>
+                   
                   </Grid>
                 </Grid>
               </Grid>
@@ -2006,7 +2012,7 @@ const Suspension = () => {
                     </h6>
                   </Grid>
                   <Grid item xs={12} sm={2}>
-                    <Link to="/cart">
+                   
                       <Button
                         variant="outlined"
                         color="error"
@@ -2019,7 +2025,7 @@ const Suspension = () => {
                       >
                         Add to Cart
                       </Button>
-                    </Link>
+                   
                   </Grid>
                 </Grid>
               </Grid>
@@ -2128,7 +2134,7 @@ const Suspension = () => {
                     </h6>
                   </Grid>
                   <Grid item xs={12} sm={2}>
-                    <Link to="/cart">
+                   
                       <Button
                         variant="outlined"
                         color="error"
@@ -2141,7 +2147,7 @@ const Suspension = () => {
                       >
                         Add to Cart
                       </Button>
-                    </Link>
+                   
                   </Grid>
                 </Grid>
               </Grid>
@@ -2257,7 +2263,7 @@ const Suspension = () => {
                     </h6>
                   </Grid>
                   <Grid item xs={12} sm={2}>
-                    <Link to="/cart">
+                   
                       <Button
                         variant="outlined"
                         color="error"
@@ -2270,7 +2276,7 @@ const Suspension = () => {
                       >
                         Add to Cart
                       </Button>
-                    </Link>
+                   
                   </Grid>
                 </Grid>
               </Grid>
@@ -2379,7 +2385,7 @@ const Suspension = () => {
                     </h6>
                   </Grid>
                   <Grid item xs={12} sm={2}>
-                    <Link to="/cart">
+                   
                       <Button
                         variant="outlined"
                         color="error"
@@ -2394,7 +2400,7 @@ const Suspension = () => {
                       >
                         Add to Cart
                       </Button>
-                    </Link>
+                   
                   </Grid>
                 </Grid>
               </Grid>
@@ -2503,7 +2509,7 @@ const Suspension = () => {
                     </h6>
                   </Grid>
                   <Grid item xs={12} sm={2}>
-                    <Link to="/cart">
+                   
                       <Button
                         variant="outlined"
                         color="error"
@@ -2518,7 +2524,7 @@ const Suspension = () => {
                       >
                         Add to Cart
                       </Button>
-                    </Link>
+                   
                   </Grid>
                 </Grid>
               </Grid>
@@ -2630,7 +2636,7 @@ const Suspension = () => {
                     </h6>
                   </Grid>
                   <Grid item xs={12} sm={2}>
-                    <Link to="/cart">
+                   
                       <Button
                         variant="outlined"
                         color="error"
@@ -2645,7 +2651,7 @@ const Suspension = () => {
                       >
                         Add to Cart
                       </Button>
-                    </Link>
+                   
                   </Grid>
                 </Grid>
               </Grid>
@@ -2758,7 +2764,7 @@ const Suspension = () => {
                     </h6>
                   </Grid>
                   <Grid item xs={12} sm={2}>
-                    <Link to="/cart">
+                   
                       <Button
                         variant="outlined"
                         color="error"
@@ -2771,7 +2777,7 @@ const Suspension = () => {
                       >
                         Add to Cart
                       </Button>
-                    </Link>
+                   
                   </Grid>
                 </Grid>
               </Grid>
@@ -2881,7 +2887,7 @@ const Suspension = () => {
                     </h6>
                   </Grid>
                   <Grid item xs={12} sm={2}>
-                    <Link to="/cart">
+                   
                       <Button
                         variant="outlined"
                         color="error"
@@ -2894,7 +2900,7 @@ const Suspension = () => {
                       >
                         Add to Cart
                       </Button>
-                    </Link>
+                   
                   </Grid>
                 </Grid>
               </Grid>
@@ -3005,7 +3011,7 @@ const Suspension = () => {
                     </h6>
                   </Grid>
                   <Grid item xs={12} sm={2}>
-                    <Link to="/cart">
+                   
                       <Button
                         variant="outlined"
                         color="error"
@@ -3018,7 +3024,7 @@ const Suspension = () => {
                       >
                         Add to Cart
                       </Button>
-                    </Link>
+                   
                   </Grid>
                 </Grid>
               </Grid>
@@ -3117,7 +3123,7 @@ const Suspension = () => {
                     </h6>
                   </Grid>
                   <Grid item xs={12} sm={2}>
-                    <Link to="/cart">
+                   
                       <Button
                         variant="outlined"
                         color="error"
@@ -3130,7 +3136,7 @@ const Suspension = () => {
                       >
                         Add to Cart
                       </Button>
-                    </Link>
+                   
                   </Grid>
                 </Grid>
               </Grid>
@@ -3234,7 +3240,7 @@ const Suspension = () => {
                     </h6>
                   </Grid>
                   <Grid item xs={12} sm={2}>
-                    <Link to="/cart">
+                   
                       <Button
                         variant="outlined"
                         color="error"
@@ -3249,7 +3255,7 @@ const Suspension = () => {
                       >
                         Add to Cart
                       </Button>
-                    </Link>
+                   
                   </Grid>
                 </Grid>
               </Grid>
@@ -3351,7 +3357,7 @@ const Suspension = () => {
                     </h6>
                   </Grid>
                   <Grid item xs={12} sm={2}>
-                    <Link to="/cart">
+                   
                       <Button
                         variant="outlined"
                         color="error"
@@ -3364,7 +3370,7 @@ const Suspension = () => {
                       >
                         Add to Cart
                       </Button>
-                    </Link>
+                   
                   </Grid>
                 </Grid>
               </Grid>
@@ -3479,7 +3485,7 @@ const Suspension = () => {
                     </h6>
                   </Grid>
                   <Grid item xs={12} sm={2}>
-                    <Link to="/cart">
+                   
                       <Button
                         variant="outlined"
                         color="error"
@@ -3492,7 +3498,7 @@ const Suspension = () => {
                       >
                         Add to Cart
                       </Button>
-                    </Link>
+                   
                   </Grid>
                 </Grid>
               </Grid>
@@ -3595,7 +3601,7 @@ const Suspension = () => {
                     </h6>
                   </Grid>
                   <Grid item xs={12} sm={2}>
-                    <Link to="/cart">
+                   
                       <Button
                         variant="outlined"
                         color="error"
@@ -3608,7 +3614,7 @@ const Suspension = () => {
                       >
                         Add to Cart
                       </Button>
-                    </Link>
+                   
                   </Grid>
                 </Grid>
               </Grid>
@@ -3706,7 +3712,7 @@ const Suspension = () => {
                   </h6>
                 </Grid>
                 <Grid item xs={12} sm={2}>
-                  <Link to="/cart">
+                 
                     <Button
                       variant="outlined"
                       color="error"
@@ -3721,7 +3727,7 @@ const Suspension = () => {
                     >
                       Add to Cart
                     </Button>
-                  </Link>
+                 
                 </Grid>
               </Grid>
             </Grid>
@@ -3819,7 +3825,7 @@ const Suspension = () => {
                   </h6>
                 </Grid>
                 <Grid item xs={12} sm={2}>
-                  <Link to="/cart">
+                 
                     <Button
                       variant="outlined"
                       color="error"
@@ -3832,7 +3838,7 @@ const Suspension = () => {
                     >
                       Add to Cart
                     </Button>
-                  </Link>
+                 
                 </Grid>
               </Grid>
             </Grid>
