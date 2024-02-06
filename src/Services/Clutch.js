@@ -18,7 +18,7 @@ import "slick-carousel/slick/slick-theme.css";
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import classNames from 'classnames';
 import './styles.css';
 import {
@@ -341,7 +341,9 @@ const Clutch = () => {
     const user = JSON.parse(userString);
     const userId = user?._id;
     const [cartItems, setCartItems] = useState([]);
+    const navigate=useNavigate()
 
+   
     const addToCart = async (items) => {
         setCartItems([...cartItems, ...items]);
 
@@ -358,6 +360,7 @@ const Clutch = () => {
             });
 
             if (response.ok) {
+                navigate('/cart')
                 console.log('Items added to the cart on the server successfully.');
             } else {
                 console.error('Failed to add items to the cart on the server.');
@@ -430,9 +433,9 @@ const Clutch = () => {
         if (ref && ref.current) {
             ref.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
-        else{
-            window.alert("No perfect Match Found!!")
-          }
+        // else{
+        //     window.alert("No perfect Match Found!!")
+        //   }
     };
 
     useEffect(() => {
@@ -507,7 +510,7 @@ const Clutch = () => {
                 break;
             }
           }
-        }, 500);
+        }, 2000);
       
         // Set interval for blinking effect
         const blinkInterval = setInterval(() => {
@@ -574,7 +577,7 @@ const Clutch = () => {
                 }
                 hasScrolled = true;
               }
-        }, 5000); // Adjust the interval as needed
+        }, 2000); // Adjust the interval as needed
       
         // Cleanup the timeout and interval to avoid memory leaks
         return () => {
@@ -686,14 +689,14 @@ const Clutch = () => {
                                     </h6>
                                 </Grid>
                                 <Grid item xs={12} sm={2}>
-                                    <Link to='/cart'>
+                                    
                                         <Button variant="outlined" color="error"
                                             onClick={() => addToCart([data.CLUTCH_SET_REPLACEMENT])}
                                             style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                                         >
                                             Add to Cart
                                         </Button>
-                                    </Link>
+                                    
                                 </Grid>
                             </Grid>
                         </Grid>
@@ -767,14 +770,14 @@ const Clutch = () => {
                                     </h6>
                                 </Grid>
                                 <Grid item xs={12} sm={2}>
-                                    <Link to='/cart'>
+                                    
                                         <Button variant="outlined" color="error"
                                             onClick={() => addToCart([data.CLUTCH_BEARING_REPLACEMENT])}
                                             style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                                         >
                                             Add to Cart
                                         </Button>
-                                    </Link>
+                                    
                                 </Grid>
                             </Grid>
                         </Grid>
@@ -848,14 +851,14 @@ const Clutch = () => {
                                     </h6>
                                 </Grid>
                                 <Grid item xs={12} sm={2}>
-                                    <Link to='/cart'>
+                                    
                                         <Button variant="outlined" color="error"
                                             onClick={() => addToCart([data.FLYWHEEL_REPLACEMENT])}
                                             style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                                         >
                                             Add to Cart
                                         </Button>
-                                    </Link>
+                                    
                                 </Grid>
                             </Grid>
                         </Grid>
@@ -928,14 +931,14 @@ const Clutch = () => {
                                     </h6>
                                 </Grid>
                                 <Grid item xs={12} sm={2}>
-                                    <Link to='/cart'>
+                                    
                                         <Button variant="outlined" color="error"
                                             onClick={() => addToCart([data.FLYWHEEL_TURNING])}
                                             style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                                         >
                                             Add to Cart
                                         </Button>
-                                    </Link>
+                                    
                                 </Grid>
                             </Grid>
                         </Grid>
@@ -1011,14 +1014,14 @@ const Clutch = () => {
                                     </h6>
                                 </Grid>
                                 <Grid item xs={12} sm={2}>
-                                    <Link to='/cart'>
+                                    
                                         <Button variant="outlined" color="error"
                                             onClick={() => addToCart([data.CLUTCH_OVERHAUL])}
                                             style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                                         >
                                             Add to Cart
                                         </Button>
-                                    </Link>
+                                    
                                 </Grid>
                             </Grid>
                         </Grid>
@@ -1094,14 +1097,14 @@ const Clutch = () => {
                                     </h6>
                                 </Grid>
                                 <Grid item xs={12} sm={2}>
-                                    <Link to='/cart'>
+                                    
                                         <Button variant="outlined" color="error"
                                             onClick={() => addToCart([data.FRONT_BUMBER_REPLACEMENT])}
                                             style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                                         >
                                             Add to Cart
                                         </Button>
-                                    </Link>
+                                    
                                 </Grid>
                             </Grid>
                         </Grid>
@@ -1180,14 +1183,14 @@ const Clutch = () => {
                                     </h6>
                                 </Grid>
                                 <Grid item xs={12} sm={2}>
-                                    <Link to='/cart'>
+                                    
                                         <Button variant="outlined" color="error"
                                             onClick={() => addToCart([data.REAR_BUMPER_REPLACEMENT])}
                                             style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                                         >
                                             Add to Cart
                                         </Button>
-                                    </Link>
+                                    
                                 </Grid>
                             </Grid>
                         </Grid>
@@ -1265,14 +1268,14 @@ const Clutch = () => {
                                     </h6>
                                 </Grid>
                                 <Grid item xs={12} sm={2}>
-                                    <Link to='/cart'>
+                                    
                                         <Button variant="outlined" color="error"
                                             onClick={() => addToCart([data.BONNET_REPLACEMENT])}
                                             style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                                         >
                                             Add to Cart
                                         </Button>
-                                    </Link>
+                                    
                                 </Grid>
                             </Grid>
                         </Grid>
@@ -1350,14 +1353,14 @@ const Clutch = () => {
                                     </h6>
                                 </Grid>
                                 <Grid item xs={12} sm={2}>
-                                    <Link to='/cart'>
+                                    
                                         <Button variant="outlined" color="error"
                                             onClick={() => addToCart([data.BOOT_REPLACEMENT])}
                                             style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                                         >
                                             Add to Cart
                                         </Button>
-                                    </Link>
+                                    
                                 </Grid>
                             </Grid>
                         </Grid>
@@ -1436,14 +1439,14 @@ const Clutch = () => {
                                     </h6>
                                 </Grid>
                                 <Grid item xs={12} sm={2}>
-                                    <Link to='/cart'>
+                                    
                                         <Button variant="outlined" color="error"
                                             onClick={() => addToCart([data.FENDER_REPLACEMENT])}
                                             style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                                         >
                                             Add to Cart
                                         </Button>
-                                    </Link>
+                                    
                                 </Grid>
                             </Grid>
                         </Grid>
@@ -1522,14 +1525,14 @@ const Clutch = () => {
                                     </h6>
                                 </Grid>
                                 <Grid item xs={12} sm={2}>
-                                    <Link to='/cart'>
+                                    
                                         <Button variant="outlined" color="error"
                                             onClick={() => addToCart([data.RIGHT_FRONT_DOOR_REPLACEMENT])}
                                             style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                                         >
                                             Add to Cart
                                         </Button>
-                                    </Link>
+                                    
                                 </Grid>
                             </Grid>
                         </Grid>
@@ -1608,14 +1611,14 @@ const Clutch = () => {
                                     </h6>
                                 </Grid>
                                 <Grid item xs={12} sm={2}>
-                                    <Link to='/cart'>
+                                    
                                         <Button variant="outlined" color="error"
                                             onClick={() => addToCart([data.RIGHT_REAR_DOOR_REPLACEMENT])}
                                             style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                                         >
                                             Add to Cart
                                         </Button>
-                                    </Link>
+                                    
                                 </Grid>
                             </Grid>
                         </Grid>
@@ -1694,14 +1697,14 @@ const Clutch = () => {
                                     </h6>
                                 </Grid>
                                 <Grid item xs={12} sm={2}>
-                                    <Link to='/cart'>
+                                    
                                         <Button variant="outlined" color="error"
                                             onClick={() => addToCart([data.LEFT_FRONT_DOOR_REPLACEMENT])}
                                             style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                                         >
                                             Add to Cart
                                         </Button>
-                                    </Link>
+                                    
                                 </Grid>
                             </Grid>
                         </Grid>
@@ -1780,14 +1783,14 @@ const Clutch = () => {
                                     </h6>
                                 </Grid>
                                 <Grid item xs={12} sm={2}>
-                                    <Link to='/cart'>
+                                    
                                         <Button variant="outlined" color="error"
                                             onClick={() => addToCart([data.LEFT_REAR_DOOR_REPLACEMENT])}
                                             style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                                         >
                                             Add to Cart
                                         </Button>
-                                    </Link>
+                                    
                                 </Grid>
                             </Grid>
                         </Grid>
@@ -1865,14 +1868,14 @@ const Clutch = () => {
                                     </h6>
                                 </Grid>
                                 <Grid item xs={12} sm={2}>
-                                    <Link to='/cart'>
+                                    
                                         <Button variant="outlined" color="error"
                                             onClick={() => addToCart([data.CLUTCH_TRANSMISSION_TROUBLES])}
                                             style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                                         >
                                             Add to Cart
                                         </Button>
-                                    </Link>
+                                    
                                 </Grid>
                             </Grid>
                         </Grid>
@@ -1945,14 +1948,14 @@ const Clutch = () => {
                                     </h6>
                                 </Grid>
                                 <Grid item xs={12} sm={2}>
-                                    <Link to='/cart'>
+                                    
                                         <Button variant="outlined" color="error"
                                             onClick={() => addToCart([data.ABS_ISSUE])}
                                             style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                                         >
                                             Add to Cart
                                         </Button>
-                                    </Link>
+                                    
                                 </Grid>
                             </Grid>
                         </Grid>

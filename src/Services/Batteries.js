@@ -1,7 +1,7 @@
 import Spinner from 'react-bootstrap/Spinner';
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import classNames from 'classnames';
 import './styles.css';
 import Typography from "@mui/material/Typography";
@@ -337,7 +337,7 @@ const Batteries = () => {
   const user = JSON.parse(userString);
   const userId = user?._id;
   const [cartItems, setCartItems] = useState([]);
-
+  const navigate=useNavigate()
   const addToCart = async (items) => {
     setCartItems([...cartItems, ...items]);
 
@@ -354,7 +354,8 @@ const Batteries = () => {
       });
 
       if (response.ok) {
-        console.log('Items added to the cart on the server successfully.');
+       navigate('/cart')
+        
       } else {
         console.error('Failed to add items to the cart on the server.');
       }
@@ -422,9 +423,10 @@ const Batteries = () => {
    const scrollToBlinkingSpot = (ref) => {
     if (ref && ref.current) {
       ref.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }else{
-      window.alert("No perfect Match Found!!")
     }
+    // else{
+    //   window.alert("No perfect Match Found!!")
+    // }
   };
 
   useEffect(() => {
@@ -480,7 +482,7 @@ const Batteries = () => {
         }
         hasScrolled = true; // Update flag to indicate scrolling has occurred
       }
-    }, 5000); // Adjust the interval as needed
+    }, 2000); // Adjust the interval as needed
   
     // Set a timeout to stop blinking after 5000 milliseconds (adjust as needed)
     const blinkTimeout = setTimeout(() => {
@@ -529,7 +531,7 @@ const Batteries = () => {
             break;
         }
       }
-    }, 500);
+    }, 2000);
   
     // Cleanup the timeout and interval to avoid memory leaks
     return () => {
@@ -641,14 +643,14 @@ const Batteries = () => {
                   </h6>
                 </Grid>
                 <Grid item xs={12} sm={2}>
-                  <Link to="/cart">
+                  
                     <Button variant="outlined" color="error"
                       style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                       onClick={() => addToCart([data.AMARON_44_MONTHS_WARRANTY])}
                     >
                       Add to Cart
                     </Button>
-                  </Link>
+                  
                 </Grid>
               </Grid>
             </Grid>
@@ -732,14 +734,14 @@ const Batteries = () => {
                   </h6>
                 </Grid>
                 <Grid item xs={12} sm={2}>
-                  <Link to="/cart">
+                  
                     <Button variant="outlined" color="error"
                       style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                       onClick={() => addToCart([data.AMARON_55_MONTHS_WARRANTY])}
                     >
                       Add to Cart
                     </Button>
-                  </Link>
+                  
                 </Grid>
               </Grid>
             </Grid>
@@ -823,14 +825,14 @@ const Batteries = () => {
                   </h6>
                 </Grid>
                 <Grid item xs={12} sm={2}>
-                  <Link to="/cart">
+                  
                     <Button variant="outlined" color="error"
                       style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                       onClick={() => addToCart([data.AMARON_66_MONTHS_WARRANTY])}
                     >
                       Add to Cart
                     </Button>
-                  </Link>
+                  
                 </Grid>
               </Grid>
             </Grid>
@@ -914,14 +916,14 @@ const Batteries = () => {
                   </h6>
                 </Grid>
                 <Grid item xs={12} sm={2}>
-                  <Link to="/cart">
+                  
                     <Button variant="outlined" color="error"
                       style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                       onClick={() => addToCart([data.EXIDE_44_MONTHS_WARRANTY])}
                     >
                       Add to Cart
                     </Button>
-                  </Link>
+                  
                 </Grid>
               </Grid>
             </Grid>
@@ -1005,14 +1007,14 @@ const Batteries = () => {
                   </h6>
                 </Grid>
                 <Grid item xs={12} sm={2}>
-                  <Link to="/cart">
+                  
                     <Button variant="outlined" color="error"
                       style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                       onClick={() => addToCart([data.EXIDE_55_MONTHS_WARRANTY])}
                     >
                       Add to Cart
                     </Button>
-                  </Link>
+                  
                 </Grid>
               </Grid>
             </Grid>
@@ -1096,14 +1098,14 @@ const Batteries = () => {
                   </h6>
                 </Grid>
                 <Grid item xs={12} sm={2}>
-                  <Link to="/cart">
+                  
                     <Button variant="outlined" color="error"
                       style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                       onClick={() => addToCart([data.EXIDE_66_MONTHS_WARRANTY])}
                     >
                       Add to Cart
                     </Button>
-                  </Link>
+                  
                 </Grid>
               </Grid>
             </Grid>
@@ -1187,14 +1189,14 @@ const Batteries = () => {
                   </h6>
                 </Grid>
                 <Grid item xs={12} sm={2}>
-                  <Link to="/cart">
+                  
                     <Button variant="outlined" color="error"
                       style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                       onClick={() => addToCart([data.LIVGUARD_60_MONTHS_WARRANTY])}
                     >
                       Add to Cart
                     </Button>
-                  </Link>
+                  
                 </Grid>
               </Grid>
             </Grid>
@@ -1280,14 +1282,14 @@ const Batteries = () => {
                   </h6>
                 </Grid>
                 <Grid item xs={12} sm={2}>
-                  <Link to="/cart">
+                  
                     <Button variant="outlined" color="error"
                       style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                       onClick={() => addToCart([data.LIVGUARD_72_MONTHS_WARRANTY])}
                     >
                       Add to Cart
                     </Button>
-                  </Link>
+                  
                 </Grid>
               </Grid>
             </Grid>
@@ -1362,14 +1364,14 @@ const Batteries = () => {
                   </h6>
                 </Grid>
                 <Grid item xs={12} sm={2}>
-                  <Link to="/cart">
+                  
                     <Button variant="outlined" color="error"
                       style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                       onClick={() => addToCart([data.Alternator_Replacement])}
                     >
                       Add to Cart
                     </Button>
-                  </Link>
+                  
                 </Grid>
               </Grid>
             </Grid>
@@ -1446,14 +1448,14 @@ const Batteries = () => {
 
 
                 <Grid item xs={12} sm={2}>
-                  <Link to="/cart">
+                  
                     <Button variant="outlined" color="error"
                       style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                       onClick={() => addToCart([data.Alternator_Repair])}
                     >
                       Add to Cart
                     </Button>
-                  </Link>
+                  
                 </Grid>
               </Grid>
             </Grid>

@@ -18,7 +18,7 @@ import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons
 import Paper from '@mui/material/Paper';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, } from '@mui/material';
 import Footer from "./Footer";
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import classNames from 'classnames';
 import './styles.css';
 import {
@@ -332,6 +332,8 @@ const CarSpaCleaning = () => {
   const user = JSON.parse(userString);
   const userId = user?._id;
   const [cartItems, setCartItems] = useState([]);
+  const navigate=useNavigate()
+
 
   const addToCart = async (items) => {
     setCartItems([...cartItems, ...items]);
@@ -349,6 +351,7 @@ const CarSpaCleaning = () => {
       });
 
       if (response.ok) {
+        navigate('/cart')
         console.log('Items added to the cart on the server successfully.');
       } else {
         console.error('Failed to add items to the cart on the server.');
@@ -418,9 +421,9 @@ const CarSpaCleaning = () => {
     if (ref && ref.current) {
       ref.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
-    else{
-      window.alert("No perfect Match Found!!")
-    }
+    // else{
+    //   window.alert("No perfect Match Found!!")
+    // }
   };
 
   useEffect(() => {
@@ -470,7 +473,7 @@ const CarSpaCleaning = () => {
         }
         hasScrolled = true; // Update flag to indicate scrolling has occurred
       }
-    }, 5000); // Adjust the interval as needed
+    }, 2000); // Adjust the interval as needed
   
     // Set a timeout to stop blinking after 5000 milliseconds (adjust as needed)
     const blinkTimeout = setTimeout(() => {
@@ -513,7 +516,7 @@ const CarSpaCleaning = () => {
             break;
         }
       }
-    }, 500);
+    }, 2000);
   
     // Cleanup the timeout and interval to avoid memory leaks
     return () => {
@@ -616,14 +619,14 @@ const CarSpaCleaning = () => {
                   </h6>
                 </Grid>
                 <Grid item xs={12} sm={2}>
-                  <Link to="/cart">
+                  
                     <Button variant="outlined" color="error"
                       style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                       onClick={() => addToCart([data.FESTIVAL_360_DEEP_CLEANING])}
                     >
                       Add to Cart
                     </Button>
-                  </Link>
+                 
                 </Grid>
               </Grid>
             </Grid>
@@ -702,7 +705,7 @@ const CarSpaCleaning = () => {
                   </h6>
                 </Grid>
                 <Grid item xs={12} sm={2}>
-                  <Link to="/cart">
+                  
                     <Button
                       variant="outlined"
                       color="error"
@@ -711,7 +714,7 @@ const CarSpaCleaning = () => {
                     >
                       Add to Cart
                     </Button>
-                  </Link>
+                 
                 </Grid>
               </Grid>
             </Grid>
@@ -794,14 +797,14 @@ const CarSpaCleaning = () => {
                   </h6>
                 </Grid>
                 <Grid item xs={12} sm={2}>
-                  <Link to="/cart">
+                  
                     <Button variant="outlined" color="error"
                       style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                       onClick={() => addToCart([data.DEEP_ALL_ROUND_SPA])}
                     >
                       Add to Cart
                     </Button>
-                  </Link>
+                 
                 </Grid>
               </Grid>
             </Grid>
@@ -876,14 +879,14 @@ const CarSpaCleaning = () => {
                   </h6>
                 </Grid>
                 <Grid item xs={12} sm={2}>
-                  <Link to="/cart">
+                  
                     <Button variant="outlined" color="error"
                       style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                       onClick={() => addToCart([data.PREMIUM_TOP_WASH])}
                     >
                       Add to Cart
                     </Button>
-                  </Link>
+                 
                 </Grid>
               </Grid>
             </Grid>
@@ -956,14 +959,14 @@ const CarSpaCleaning = () => {
                     <b style={{ fontSize: '25px', color: 'black' }}>₹ {data.CAR_RUBBING_POLISHING.price}/-</b>
                   </h6>
                 </Grid>
-                <Grid item xs={12} sm={2}> <Link to="/cart">
+                <Grid item xs={12} sm={2}> 
                   <Button variant="outlined" color="error"
                     style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                     onClick={() => addToCart([data.CAR_RUBBING_POLISHING])}
                   >
                     Add to Cart
                   </Button>
-                </Link>
+               
                 </Grid>
               </Grid>
             </Grid>
@@ -1037,14 +1040,14 @@ const CarSpaCleaning = () => {
                   </h6>
                 </Grid>
                 <Grid item xs={12} sm={2}>
-                  <Link to="/cart">
+                  
                     <Button variant="outlined" color="error"
                       style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                       onClick={() => addToCart([data.RAT_PEST_REPELLENT_TREATMENT])}
                     >
                       Add to Cart
                     </Button>
-                  </Link>
+                 
                 </Grid>
               </Grid>
             </Grid>
@@ -1118,14 +1121,14 @@ const CarSpaCleaning = () => {
                   </h6>
                 </Grid>
                 <Grid item xs={12} sm={2}>
-                  <Link to="/cart">
+                  
                     <Button variant="outlined" color="error"
                       style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                       onClick={() => addToCart([data.CAR_INSPECTION_DIAGNOSTICS])}
                     >
                       Add to Cart
                     </Button>
-                  </Link>
+                 
                 </Grid>
               </Grid>
             </Grid>
@@ -1199,14 +1202,14 @@ const CarSpaCleaning = () => {
                   </h6>
                 </Grid>
                 <Grid item xs={12} sm={2}>
-                  <Link to="/cart">
+                  
                     <Button variant="outlined" color="error"
                       style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                       onClick={() => addToCart([data.SUNROOF_SERVICE])}
                     >
                       Add to Cart
                     </Button>
-                  </Link>
+                 
                 </Grid>
               </Grid>
             </Grid>

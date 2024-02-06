@@ -481,9 +481,9 @@ const PeriodicService = () => {
         if (ref && ref.current) {
             ref.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
-        else{
-            window.alert("No perfect Match Found!!")
-          }
+        // else{
+        //     window.alert("No perfect Match Found!!")
+        //   }
     };
     useEffect(() => {
         // Set blinking to true on the initial page load or reload
@@ -538,7 +538,7 @@ const PeriodicService = () => {
                 break;
             }
           }
-        }, 500);
+        },2000); 
         // Set interval for blinking effect
         const blinkInterval = setInterval(() => {
           // Scroll to the blinking card while the blinking effect is ongoing
@@ -587,7 +587,7 @@ const PeriodicService = () => {
                 }
                 hasScrolled = true;
               }
-        }, 5000); // Adjust the interval as needed
+        }, 2000); // Adjust the interval as needed
         // Cleanup the timeout and interval to avoid memory leaks
         return () => {
           clearTimeout(blinkTimeout);
@@ -1008,7 +1008,7 @@ const PeriodicService = () => {
                       }}
                     >
                             <Typography variant="h5" gutterBottom style={{ color: "green" }}>
-                                <b>GOCARSMITH EXCLISIVE</b>
+                                <b>GOCARSMITH EXCLUSIVE</b>
                             </Typography>
                             <Grid container spacing={2}>
                                 {/* First Container */}

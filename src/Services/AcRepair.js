@@ -1,6 +1,6 @@
 import Spinner from 'react-bootstrap/Spinner';
 import React, { useState, useEffect, useRef, useLayoutEffect  } from "react";
-import { useParams } from 'react-router-dom';
+import { Navigate, useNavigate, useParams } from 'react-router-dom';
 import classNames from 'classnames';
 import './styles.css';
 import axios from "axios";
@@ -308,7 +308,7 @@ const AcRepair = () => {
   const userId = user?._id;
   console.log(userId);
   const [cartItems, setCartItems] = useState([]);
-
+  const navigate=useNavigate()
   const addToCart = async (items) => {
     setCartItems([...cartItems, ...items]);
 
@@ -326,7 +326,8 @@ const AcRepair = () => {
       });
 
       if (response.ok) {
-        console.log("Items added to the cart on the server successfully.");
+        navigate('/cart')
+      //  window.location.reload(false)
       } else {
         console.error("Failed to add items to the cart on the server.");
       }
@@ -404,9 +405,10 @@ const radiatorFanMotorReplacementRef = useRef(null);
 const scrollToBlinkingSpot = (ref) => {
   if (ref && ref.current) {
     ref.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  }else{
-    window.alert("No perfect Match Found!!")
   }
+  // else{
+  //   window.alert("No perfect Match Found!!")
+  // }
 };
 
 useEffect(() => {
@@ -465,7 +467,7 @@ useEffect(() => {
       }
       hasScrolled = true; // Update flag to indicate scrolling has occurred
     }
-  }, 5000); // Adjust the interval as needed
+  }, 2000); // Adjust the interval as needed
 
   // Set a timeout to stop blinking after 5000 milliseconds (adjust as needed)
   const blinkTimeout = setTimeout(() => {
@@ -515,9 +517,12 @@ useEffect(() => {
             hasAlerted = true; // Update flag to indicate alert has been shown
           }
           break;
+          
       }
+
     }
-  }, 500);
+
+  }, 2000);
 
   // Cleanup the timeout and interval to avoid memory leaks
   return () => {
@@ -659,7 +664,7 @@ useEffect(() => {
                 </h6>
               </Grid>
               <Grid item xs={12} sm={2}>
-                <Link to="/cart">
+                
                   <Button
                     variant="outlined"
                     color="error"
@@ -668,7 +673,7 @@ useEffect(() => {
                   >
                     Add to Cart
                   </Button>
-                </Link>
+                
               </Grid>
             </Grid>
           </Grid>
@@ -789,7 +794,7 @@ useEffect(() => {
                 </h6>
               </Grid>
               <Grid item xs={12} sm={2}>
-                <Link to="/cart">
+                
                   <Button
                     variant="outlined"
                     color="error"
@@ -800,7 +805,7 @@ useEffect(() => {
                   >
                     Add to Cart
                   </Button>
-                </Link>
+                
               </Grid>
             </Grid>
           </Grid>
@@ -918,7 +923,7 @@ useEffect(() => {
                 </h6>
               </Grid>
               <Grid item xs={12} sm={2}>
-                <Link to="/cart">
+                
                   <Button
                     variant="outlined"
                     color="error"
@@ -927,7 +932,7 @@ useEffect(() => {
                   >
                     Add to Cart
                   </Button>
-                </Link>
+                
               </Grid>
             </Grid>
           </Grid>
@@ -1044,7 +1049,7 @@ useEffect(() => {
                 </h6>
               </Grid>
               <Grid item xs={12} sm={2}>
-                <Link to="/cart">
+                
                   <Button
                     variant="outlined"
                     color="error"
@@ -1053,7 +1058,7 @@ useEffect(() => {
                   >
                     Add to Cart
                   </Button>
-                </Link>
+                
               </Grid>
             </Grid>
           </Grid>
@@ -1171,7 +1176,7 @@ useEffect(() => {
                 </h6>
               </Grid>
               <Grid item xs={12} sm={2}>
-                <Link to="/cart">
+                
                   <Button
                     variant="outlined"
                     color="error"
@@ -1180,7 +1185,7 @@ useEffect(() => {
                   >
                     Add to Cart
                   </Button>
-                </Link>
+                
               </Grid>
             </Grid>
           </Grid>
@@ -1298,7 +1303,7 @@ useEffect(() => {
                 </h6>
               </Grid>
               <Grid item xs={12} sm={2}>
-                <Link to="/cart">
+                
                   <Button
                     variant="outlined"
                     color="error"
@@ -1307,7 +1312,7 @@ useEffect(() => {
                   >
                     Add to Cart
                   </Button>
-                </Link>
+                
               </Grid>
             </Grid>
           </Grid>
@@ -1424,7 +1429,7 @@ useEffect(() => {
               </Grid>
               <Grid item xs={12} sm={2}>
                 {" "}
-                <Link to="/cart">
+                
                   <Button
                     variant="outlined"
                     color="error"
@@ -1433,7 +1438,7 @@ useEffect(() => {
                   >
                     Add to Cart
                   </Button>
-                </Link>
+                
               </Grid>
             </Grid>
           </Grid>
@@ -1551,7 +1556,7 @@ useEffect(() => {
                 </h6>
               </Grid>
               <Grid item xs={12} sm={2}>
-                <Link to="/cart">
+                
                   <Button
                     variant="outlined"
                     color="error"
@@ -1560,7 +1565,7 @@ useEffect(() => {
                   >
                     Add to Cart
                   </Button>
-                </Link>
+                
               </Grid>
             </Grid>
           </Grid>
@@ -1683,7 +1688,7 @@ useEffect(() => {
                 </h6>
               </Grid>
               <Grid item xs={12} sm={2}>
-                <Link to="/cart">
+                
                   <Button
                     variant="outlined"
                     color="error"
@@ -1692,7 +1697,7 @@ useEffect(() => {
                   >
                     Add to Cart
                   </Button>
-                </Link>
+                
               </Grid>
             </Grid>
           </Grid>
@@ -1805,7 +1810,7 @@ useEffect(() => {
               </Grid>
               <Grid item xs={12} sm={2}>
                 {" "}
-                <Link to="/cart">
+                
                   <Button
                     variant="outlined"
                     color="error"
@@ -1814,7 +1819,7 @@ useEffect(() => {
                   >
                     Add to Cart
                   </Button>
-                </Link>
+                
               </Grid>
             </Grid>
           </Grid>
@@ -1928,7 +1933,7 @@ useEffect(() => {
                 </h6>
               </Grid>
               <Grid item xs={12} sm={2}>
-                <Link to="/cart">
+                
                   <Button
                     variant="outlined"
                     color="error"
@@ -1939,7 +1944,7 @@ useEffect(() => {
                   >
                     Add to Cart
                   </Button>
-                </Link>
+                
               </Grid>
             </Grid>
           </Grid>

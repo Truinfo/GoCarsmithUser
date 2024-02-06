@@ -31,6 +31,7 @@ const Cart = ( { cartItems, onDelete, onApplyCoupon }) => {
   const userString = localStorage.getItem("user");
   const user = JSON.parse(userString);
   const userId = user?._id;
+  
   useEffect(() => {
     const fetchCoupons = async () => {
       try {

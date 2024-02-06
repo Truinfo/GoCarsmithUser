@@ -18,7 +18,9 @@ import { useNavigate } from "react-router-dom";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 const HealthInsuranceForm = () => {
   const navigate = useNavigate();
-  const userId = localStorage.getItem("userId");
+  const userString = localStorage.getItem("user");
+  const user = JSON.parse(userString);
+  const userId = user?._id;
   const [formData, setFormData] = useState({
     userId: userId,
     holderName: "",

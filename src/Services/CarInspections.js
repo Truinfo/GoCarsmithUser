@@ -17,7 +17,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
 import Paper from '@mui/material/Paper';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import classNames from 'classnames';
 import './styles.css';
 import {
@@ -331,6 +331,7 @@ const CarInspections = () => {
 
     fetchData();
   }, [location, BrandId]);
+  const navigate=useNavigate()
   const userString = localStorage.getItem("user");
   const user = JSON.parse(userString);
   const userId = user?._id;
@@ -352,6 +353,7 @@ const CarInspections = () => {
       });
 
       if (response.ok) {
+        navigate('/cart')
         console.log('Items added to the cart on the server successfully.');
       } else {
         console.error('Failed to add items to the cart on the server.');
@@ -421,9 +423,9 @@ const CarInspections = () => {
     if (ref && ref.current) {
       ref.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
-    else{
-      window.alert("No perfect Match Found!!")
-    }
+    // else{
+    //   window.alert("No perfect Match Found!!")
+    // }
   };
 
   useEffect(() => {
@@ -488,7 +490,7 @@ const CarInspections = () => {
         }
         hasScrolled = true; // Update flag to indicate scrolling has occurred
       }
-    }, 5000); // Adjust the interval as needed
+    }, 2000); // Adjust the interval as needed
   
     // Set a timeout to stop blinking after 5000 milliseconds (adjust as needed)
     const blinkTimeout = setTimeout(() => {
@@ -546,7 +548,7 @@ const CarInspections = () => {
             break;
         }
       }
-    }, 500);
+    }, 2000);
   
     // Cleanup the timeout and interval to avoid memory leaks
     return () => {
@@ -601,7 +603,7 @@ const CarInspections = () => {
           }}
         >
             <Typography variant="h5" gutterBottom style={{ color: 'green' }}>
-              <b>GET 10% OFF PERIODIC SERCICE</b>
+              <b>GET 10% OFF PERIODIC SERVICE</b>
             </Typography>
             <Grid container spacing={2}>
               {/* First Container */}
@@ -659,14 +661,14 @@ const CarInspections = () => {
                     <b style={{ fontSize: '25px', color: 'black' }}>₹ {data.SECOND_HAND_CAR_INSPECTION.price}/-</b>
                   </h6>
                 </Grid>
-                <Grid item xs={12} sm={2}><Link to='/cart'>
+                <Grid item xs={12} sm={2}>
                   <Button variant="outlined" color="error"
                     style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                     onClick={() => addToCart([data.SECOND_HAND_CAR_INSPECTION])}
                   >
                     Add to Cart
                   </Button>
-                </Link>
+               
                 </Grid>
               </Grid>
             </Grid>
@@ -743,14 +745,14 @@ const CarInspections = () => {
                     <b style={{ fontSize: '25px', color: 'black' }}>₹ {data.ROAD_TRIP_INSPECTION.price}/-</b>
                   </h6>
                 </Grid>
-                <Grid item xs={12} sm={2}><Link to='/cart'>
+                <Grid item xs={12} sm={2}>
                   <Button variant="outlined" color="error"
                     style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                     onClick={() => addToCart([data.ROAD_TRIP_INSPECTION])}
                   >
                     Add to Cart
                   </Button>
-                </Link>
+               
                 </Grid>
               </Grid>
             </Grid>
@@ -825,14 +827,14 @@ const CarInspections = () => {
                     <b style={{ fontSize: '25px', color: 'black' }}>₹ {data.ENGINE_SCANNING.price}/-</b>
                   </h6>
                 </Grid>
-                <Grid item xs={12} sm={2}><Link to='/cart'>
+                <Grid item xs={12} sm={2}>
                   <Button variant="outlined" color="error"
                     style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                     onClick={() => addToCart([data.ENGINE_SCANNING])}
                   >
                     Add to Cart
                   </Button>
-                </Link>
+               
                 </Grid>
               </Grid>
             </Grid>
@@ -910,14 +912,14 @@ const CarInspections = () => {
                     <b style={{ fontSize: '25px', color: 'black' }}>₹ {data.Insurance_Claim_Inspection.price}/-</b>
                   </h6>
                 </Grid>
-                <Grid item xs={12} sm={2}><Link to='/cart'>
+                <Grid item xs={12} sm={2}>
                   <Button variant="outlined" color="error"
                     style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                     onClick={() => addToCart([data.Insurance_Claim_Inspection])}
                   >
                     Add to Cart
                   </Button>
-                </Link>
+               
                 </Grid>
               </Grid>
             </Grid>
@@ -992,14 +994,14 @@ const CarInspections = () => {
                     <b style={{ fontSize: '25px', color: 'black' }}>₹ {data.COMPLETE_SUSPENSION_INSPECTION.price}/-</b>
                   </h6>
                 </Grid>
-                <Grid item xs={12} sm={2}><Link to='/cart'>
+                <Grid item xs={12} sm={2}>
                   <Button variant="outlined" color="error"
                     style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                     onClick={() => addToCart([data.COMPLETE_SUSPENSION_INSPECTION])}
                   >
                     Add to Cart
                   </Button>
-                </Link>
+               
                 </Grid>
               </Grid>
             </Grid>
@@ -1075,14 +1077,14 @@ const CarInspections = () => {
                     <b style={{ fontSize: '25px', color: 'black' }}>₹ {data.CAR_FLUIDS_CHECK.price}/-</b>
                   </h6>
                 </Grid>
-                <Grid item xs={12} sm={2}><Link to='/cart'>
+                <Grid item xs={12} sm={2}>
                   <Button variant="outlined" color="error"
                     style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                     onClick={() => addToCart([data.CAR_FLUIDS_CHECK])}
                   >
                     Add to Cart
                   </Button>
-                </Link>
+               
                 </Grid>
               </Grid>
             </Grid>
@@ -1159,14 +1161,14 @@ const CarInspections = () => {
                     <b style={{ fontSize: '25px', color: 'black' }}>₹ {data.RADIATOR_FLUSH_CLEAN.price}/-</b>
                   </h6>
                 </Grid>
-                <Grid item xs={12} sm={2}><Link to='/cart'>
+                <Grid item xs={12} sm={2}>
                   <Button variant="outlined" color="error"
                     style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                     onClick={() => addToCart([data.RADIATOR_FLUSH_CLEAN])}
                   >
                     Add to Cart
                   </Button>
-                </Link>
+               
                 </Grid>
               </Grid>
             </Grid>
@@ -1239,14 +1241,14 @@ const CarInspections = () => {
                     <b style={{ fontSize: '25px', color: 'black' }}>₹ {data.RADIATOR_REPLACEMENT.price}/-</b>
                   </h6>
                 </Grid>
-                <Grid item xs={12} sm={2}><Link to='/cart'>
+                <Grid item xs={12} sm={2}>
                   <Button variant="outlined" color="error"
                     style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                     onClick={() => addToCart([data.RADIATOR_REPLACEMENT])}
                   >
                     Add to Cart
                   </Button>
-                </Link>
+               
                 </Grid>
               </Grid>
             </Grid>
@@ -1319,14 +1321,14 @@ const CarInspections = () => {
                     <b style={{ fontSize: '25px', color: 'black' }}>₹ {data.RADIATOR_FAN_MOTOR_REPLACEMENT.price}/-</b>
                   </h6>
                 </Grid>
-                <Grid item xs={12} sm={2}><Link to='/cart'>
+                <Grid item xs={12} sm={2}>
                   <Button variant="outlined" color="error"
                     style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                     onClick={() => addToCart([data.RADIATOR_FAN_MOTOR_REPLACEMENT])}
                   >
                     Add to Cart
                   </Button>
-                </Link>
+               
                 </Grid>
               </Grid>
             </Grid>
@@ -1400,14 +1402,14 @@ const CarInspections = () => {
                     <b style={{ fontSize: '25px', color: 'black' }}>₹ {data.CAR_WATERLOG_ASSISTANCE.price}/-</b>
                   </h6>
                 </Grid>
-                <Grid item xs={12} sm={2}><Link to='/cart'>
+                <Grid item xs={12} sm={2}>
                   <Button variant="outlined" color="error"
                     style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                     onClick={() => addToCart([data.CAR_WATERLOG_ASSISTANCE])}
                   >
                     Add to Cart
                   </Button>
-                </Link>
+               
                 </Grid>
               </Grid>
             </Grid>
@@ -1479,14 +1481,14 @@ const CarInspections = () => {
                     <b style={{ fontSize: '25px', color: 'black' }}>₹ {data.CAR_ENGINE_ISSUES.price}/-</b>
                   </h6>
                 </Grid>
-                <Grid item xs={12} sm={2}><Link to='/cart'>
+                <Grid item xs={12} sm={2}>
                   <Button variant="outlined" color="error"
                     style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                     onClick={() => addToCart([data.CAR_ENGINE_ISSUES])}
                   >
                     Add to Cart
                   </Button>
-                </Link>
+               
                 </Grid>
               </Grid>
             </Grid>
@@ -1558,14 +1560,14 @@ const CarInspections = () => {
                     <b style={{ fontSize: '25px', color: 'black' }}>₹ {data.RADIATOR_FAN_MOTOR_REPLACEMENT.price}/-</b>
                   </h6>
                 </Grid>
-                <Grid item xs={12} sm={2}><Link to='/cart'>
+                <Grid item xs={12} sm={2}>
                   <Button variant="outlined" color="error"
                     style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                     onClick={() => addToCart([data.RADIATOR_FAN_MOTOR_REPLACEMENT])}
                   >
                     Add to Cart
                   </Button>
-                </Link>
+               
                 </Grid>
               </Grid>
             </Grid>
@@ -1635,14 +1637,14 @@ const CarInspections = () => {
                     <b style={{ fontSize: '25px', color: 'black' }}>₹ {data.DAMAGED_CAR_BODY_INTERIORS.price}/-</b>
                   </h6>
                 </Grid>
-                <Grid item xs={12} sm={2}><Link to='/cart'>
+                <Grid item xs={12} sm={2}>
                   <Button variant="outlined" color="error"
                     style={{ fontSize: "16px", border: "3px solid red", fontWeight: "700" }}
                     onClick={() => addToCart([data.DAMAGED_CAR_BODY_INTERIORS])}
                   >
                     Add to Cart
                   </Button>
-                </Link>
+               
                 </Grid>
               </Grid>
             </Grid>

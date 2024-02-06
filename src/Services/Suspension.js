@@ -477,9 +477,9 @@ const Suspension = () => {
     if (ref && ref.current) {
       ref.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
-    else{
-      window.alert("No perfect Match Found!!")
-    }
+    // else{
+    //   window.alert("No perfect Match Found!!")
+    // }
   };
 
   useEffect(() => {
@@ -576,7 +576,7 @@ const Suspension = () => {
             break;
         }
       }
-    }, 5000);
+    }, 2000);
   
     // Set interval for blinking effect
     const blinkInterval = setInterval(() => {
@@ -664,7 +664,7 @@ const Suspension = () => {
             }
             hasScrolled = true;
           }
-    }, 500); // Adjust the interval as needed
+    }, 2000); // Adjust the interval as needed
   
     // Cleanup the timeout and interval to avoid memory leaks
     return () => {
