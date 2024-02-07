@@ -408,15 +408,7 @@ const userValuesPresent = userId ;
     setAnchorEl1(null);
   };
 
-  const options = [
-    { label: "Profile", link: "/profile" },
-    { label: "GoApp Money", link: "/GoMoney" },
-    { label: "OrderHistory", link: "/Orderhistory" },
-    { label: "Health Card", link: "/HealthCard" },
-    { label: "My Cars", link: "/MyCars" },
-    { label: "Manage Address", link: "/ManageAddress" },
-    { label: "Logout" },
-  ];
+
 
   const isUserLoggedIn = !!localStorage.getItem("token");
   const handleLogOut = async () => {
@@ -427,7 +419,7 @@ const userValuesPresent = userId ;
 
       // Make a request to the signout API endpoint with the authorization header
       const response = await axios.post(
-        "https://gocarsmithbackend.onrender.com/api/user/signout",
+        "http://localhost:2000/api/user/signout",
         {},
         {
           headers: {
@@ -576,27 +568,7 @@ const userValuesPresent = userId ;
     return div;
   };
   const [serviceCenterData, setServiceCenterData] = useState([]);
-  // const getServiceCenters = (location, popup) => {
-  //   const _id = localStorage.getItem("location");
-  //   vectorLayer.getSource().clear(); // Clear existing markers
-  //   axios
-  //     .get(`https://gocarsmithbackend.onrender.com/api/getServicesCenterByLocation/${_id}`)
-  //     .then((response) => {
-  //       console.log("Service center data:", response.data); // Log the data
-  //       const data = response.data
-  //       console.log(data);
-  //       setServiceCenterData(response.data);
-  //       response.data.forEach((location) => {
-  //         createMarker(location, popup);
-  //       });
-  //     })
-  //     .catch((error) => {
-  //       console.error("Error fetching service center data:", error);
-  //     });
-  // };  
-
-  // const [serviceCenterData, setServiceCenterData] = useState([]);
-  // Assuming you want to set the first _id in localStorage
+  
   useEffect(() => {
     if (serviceCenterData && serviceCenterData.length > 0) {
       const ServiceCenter = serviceCenterData[0]._id;
@@ -610,7 +582,7 @@ const userValuesPresent = userId ;
     const _id = localStorage.getItem("location");
     vectorLayer.getSource().clear(); // Clear existing markers
     axios
-      .get(`https://gocarsmithbackend.onrender.com/api/getServicesCenterByLocation/${_id}`)
+      .get(`http://localhost:2000/api/getServicesCenterByLocation/${_id}`)
       .then((response) => {
         console.log("Service center data:", response.data); // Log the data
         setServiceCenterData(response.data)
@@ -631,11 +603,17 @@ const userValuesPresent = userId ;
 
 
   const [locations, setLocations] = useState([]);
+  const token = localStorage.getItem("token");
+   
   useEffect(() => {
     const fetchLocations = async () => {
       try {
         const response = await axios.get(
-          "https://gocarsmithbackend.onrender.com/api/admin/getLocations"
+          "http://localhost:2000/api/user/getLocations",{
+
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },}
         );
         if (response.status === 200) {
           const data = response.data; // Check the structure of the response

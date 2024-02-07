@@ -203,7 +203,7 @@ const Suspension = () => {
     const fetchChildCities = async () => {
       try {
         const response = await fetch(
-          `https://gocarsmithbackend.onrender.com/api/getChildCities/${parentId}`
+          `http://localhost:2000/api/getChildCities/${parentId}`
         );
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
@@ -318,7 +318,7 @@ const Suspension = () => {
         const field = "SuspensionAndFitness";
 
         const response = await axios.get(
-          `https://gocarsmithbackend.onrender.com/api/getServicesByLocationModelFuelTypeAndField/${locationName}/${modelId}/${fuelType}/${field}`,
+          `http://localhost:2000/api/user/getServicesByLocationModelFuelTypeAndField/${locationName}/${modelId}/${fuelType}/${field}`,
           {
             headers: {
               Authorization: `Bearer ${getToken()}`,
@@ -347,7 +347,7 @@ const Suspension = () => {
       const LabelName = "Suspension";
       try {
         const response = await axios.get(
-          `https://gocarsmithbackend.onrender.com/api/getpricelist/${location}/${BrandId}/${LabelName}`
+          `http://localhost:2000/api/getpricelist/${location}/${BrandId}/${LabelName}`
         );
 
         if (response.status === 200) {
@@ -372,7 +372,7 @@ const Suspension = () => {
     setCartItems([...cartItems, ...items]);
     if(userId){
       try {
-        const response = await fetch('https://gocarsmithbackend.onrender.com/api/AddToCart', {
+        const response = await fetch('http://localhost:2000/api/AddToCart', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -401,7 +401,7 @@ const Suspension = () => {
     const fetchKeySpecs = async () => {
       try {
         const response = await fetch(
-          `https://gocarsmithbackend.onrender.com/api/user/getKeySpecsModel/${modelId}`
+          `http://localhost:2000/api/user/getKeySpecsModel/${modelId}`
         );
 
         if (!response.ok) {

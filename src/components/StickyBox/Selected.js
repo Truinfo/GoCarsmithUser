@@ -16,7 +16,7 @@ const SelectedCarDetails = ({ selectedBrand, selectedModel, selectedFuelType , o
     }}>
       <CardContent>
         <img
-          src={`https://gocarsmithbackend.onrender.com${selectedModel.modelImage}`}
+          src={`http://localhost:2000${selectedModel.modelImage}`}
           alt={selectedModel.model || "Model Image"}
           style={{
             width: "100%",

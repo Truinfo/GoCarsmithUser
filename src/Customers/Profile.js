@@ -84,7 +84,7 @@ const Profile = () => {
   const getUserByEmail = async () => {
     try {
       const response = await axios.get(
-        `https://gocarsmithbackend.onrender.com/api/user/getUserByEmail/${email}`,
+        `http://localhost:2000/api/user/getUserByEmail/${email}`,
         axiosConfig
       );
       const data = response.data.user;
@@ -114,7 +114,7 @@ const Profile = () => {
       console.log("Complete Update Data:", formData);
 
       const response = await axios.post(
-        "https://gocarsmithbackend.onrender.com/api/user/updateProfile",
+        "http://localhost:2000/api/user/updateProfile",
         formData,
         {
           headers: {
@@ -138,7 +138,7 @@ const Profile = () => {
       const requestData = { email: userDetails.email }; // Include email in the request payload
 
       const response = await axios.delete(
-        "https://gocarsmithbackend.onrender.com/api/user/deleteProfileImage",
+        "http://localhost:2000/api/user/deleteProfileImage",
         { ...axiosConfig, data: requestData } // Include email in the request data
       );
 
@@ -207,7 +207,7 @@ const Profile = () => {
           }
         >
           <Avatar
-            src={`https://gocarsmithbackend.onrender.com${userDetails.profilePicture}`}
+            src={`http://localhost:2000${userDetails.profilePicture}`}
             sx={{ width: "100%", height: "100%", objectFit: "cover" }}
             style={avatarStyle}
             defaultSrc={defaultAvatarSrc}

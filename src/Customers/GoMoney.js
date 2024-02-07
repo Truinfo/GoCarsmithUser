@@ -33,7 +33,7 @@ const GoMoney = () => {
         const getReferalData = async () => {
             
             try {
-                const response = await axios.get(`https://gocarsmithbackend.onrender.com/api/getReferalDetailsBy/${userId}`);
+                const response = await axios.get(`http://localhost:2000/api/getReferalDetailsBy/${userId}`);
                 if (response.status === 200) {
                     // setCoins(response.data.filter(item => new Date(item.expiryDate) > currentDate));
                     setCoins(response.data); 

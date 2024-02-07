@@ -55,7 +55,7 @@ function ForgottPassword() {
     } else {
       try {
         const response = await axios.post(
-          "https://gocarsmithbackend.onrender.com/api/user/forgotPassword",
+          "http://localhost:2000/api/user/forgotPassword",
           { email }
         );
   

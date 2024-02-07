@@ -265,7 +265,7 @@ const Denting = () => {
   useEffect(() => {
     const fetchChildCities = async () => {
       try {
-        const response = await fetch(`https://gocarsmithbackend.onrender.com/api/getChildCities/${parentId}`);
+        const response = await fetch(`http://localhost:2000/api/getChildCities/${parentId}`);
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
@@ -291,7 +291,7 @@ const Denting = () => {
         const field = 'DentingAndPainting';
 
         const response = await axios.get(
-          `https://gocarsmithbackend.onrender.com/api/getServicesByLocationModelFuelTypeAndField/${locationName}/${modelId}/${fuelType}/${field}`,
+          `http://localhost:2000/api/user/getServicesByLocationModelFuelTypeAndField/${locationName}/${modelId}/${fuelType}/${field}`,
           {
             headers: {
               Authorization: `Bearer ${getToken()}`,
@@ -319,7 +319,7 @@ const Denting = () => {
 
       const LabelName = "DENTING AND PAINTING";
       try {
-        const response = await axios.get(`https://gocarsmithbackend.onrender.com/api/getpricelist/${location}/${BrandId}/${LabelName}`);
+        const response = await axios.get(`http://localhost:2000/api/getpricelist/${location}/${BrandId}/${LabelName}`);
 
         if (response.status === 200) {
           setPriceLists(response.data.pricelists);
@@ -343,7 +343,7 @@ const Denting = () => {
     setCartItems([...cartItems, ...items]);
     if(userId){
       try {
-        const response = await fetch('https://gocarsmithbackend.onrender.com/api/AddToCart', {
+        const response = await fetch('http://localhost:2000/api/AddToCart', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -371,7 +371,7 @@ const Denting = () => {
   useEffect(() => {
     const fetchKeySpecs = async () => {
       try {
-        const response = await fetch(`https://gocarsmithbackend.onrender.com/api/user/getKeySpecsModel/${modelId}`);
+        const response = await fetch(`http://localhost:2000/api/user/getKeySpecsModel/${modelId}`);
 
         if (!response.ok) {
           const errorData = await response.json();

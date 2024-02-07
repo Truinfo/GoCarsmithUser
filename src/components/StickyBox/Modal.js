@@ -14,7 +14,7 @@ const Modal = ({ onClose }) => {
   const fuelType = localStorage.getItem("fuelType") || (userCars.length > 0 ? userCars[0].fuelType : '');
   const modelImage = localStorage.getItem("imagePath") || (userCars.length > 0 ? userCars[0].modelImage : '');
 
-  console.log(userCars);
+
   const hasStoredDetails =
     BrandName && modelId && modelName && modelImage && fuelType;
 
@@ -23,6 +23,7 @@ const Modal = ({ onClose }) => {
   const handleSelectCarsClick = () => {
     setIsBrandsVisible(true);
   };
+  
 
   const handleBrandChangeClick = () => {
     localStorage.removeItem("BrandName");
@@ -42,7 +43,7 @@ const Modal = ({ onClose }) => {
 
   const fetchUserCars = async () => {
     try {
-      const response = await fetch(`https://gocarsmithbackend.onrender.com/api/user/getCarsByEmail/${userEmail}`, {
+      const response = await fetch(`http://localhost:2000/api/user/getCarsByEmail/${userEmail}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',

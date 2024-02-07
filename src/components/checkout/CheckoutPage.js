@@ -785,7 +785,7 @@ export default function CheckoutPage() {
     const getCarrtDetails = async () => {
       try {
         const response = await axios.get(
-          `https://gocarsmithbackend.onrender.com/api/getUserCartBy/${userId}`
+          `http://localhost:2000/api/getUserCartBy/${userId}`
         );
 
         if (response.status === 200) {
@@ -802,7 +802,7 @@ export default function CheckoutPage() {
     const getReferalData = async () => {
             
       try {
-          const response = await axios.get(`https://gocarsmithbackend.onrender.com/api/getReferalDetailsBy/${userId}`);
+          const response = await axios.get(`http://localhost:2000/api/getReferalDetailsBy/${userId}`);
           if (response.status === 200) {
 
               setCoins(response.data.map(item =>parseInt(item.totalMoney)))
@@ -923,7 +923,7 @@ export default function CheckoutPage() {
     }
     try {
       const response = await axios.post(
-        `https://gocarsmithbackend.onrender.com/api/user/AddAppointment`,
+        `http://localhost:2000/api/user/AddAppointment`,
         payAfterService,
         {
           method: "POST",
@@ -936,14 +936,14 @@ export default function CheckoutPage() {
         localStorage.setItem("Coupon", 0);
        
         const response = await axios.delete(
-          `https://gocarsmithbackend.onrender.com/api/removeCart`, {
+          `http://localhost:2000/api/removeCart`, {
             data: deductMoneyData, // Pass the data in the 'data' property of the config object
           }
         );
 
         if (response.status === 200) {
           // const fetching = await axios.put(
-          //   `https://gocarsmithbackend.onrender.com/api/useReferralAmountBy`,deductMoneyData
+          //   `http://localhost:2000/api/useReferralAmountBy`,deductMoneyData
           // );
   
           // if (fetching.status === 200) {
@@ -983,7 +983,7 @@ export default function CheckoutPage() {
 
     try {
       const response = await axios.post(
-        `https://gocarsmithbackend.onrender.com/api/user/AddAppointment`,
+        `http://localhost:2000/api/user/AddAppointment`,
         payAfterService,
         {
           method: "POST",
@@ -997,7 +997,7 @@ export default function CheckoutPage() {
         localStorage.setItem("Coupon", 0);
         console.log(2);
         const response = await axios.delete(
-          `https://gocarsmithbackend.onrender.com/api/removeCart/${userId}`
+          `http://localhost:2000/api/removeCart/${userId}`
         );
 
         if (response.status === 200) {

@@ -63,7 +63,7 @@ const Referral = () => {
     useEffect(() => {
         const generateReferralCode = async () => {
             try {
-                const response = await axios.post('https://gocarsmithbackend.onrender.com/api/generateReferralCode');
+                const response = await axios.post('http://localhost:2000/api/generateReferralCode');
                 setReferralCode(response.data.referralCode);
             } catch (error) {
                 console.error(error);
@@ -118,7 +118,7 @@ const Referral = () => {
                 };
 
                 try {
-                    const response = await axios.post('https://gocarsmithbackend.onrender.com/api/earnCoinsByReferalFriend', dataUpload);
+                    const response = await axios.post('http://localhost:2000/api/earnCoinsByReferalFriend', dataUpload);
                     if (response.status === 200) {
                       
                         setIsReferralLinkSent(false)

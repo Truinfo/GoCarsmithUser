@@ -47,10 +47,15 @@ function Brands({onClickClose}) {
   ];
 
   useEffect(() => {
+    const token = localStorage.getItem("token");
+     
     const fetchAllBrands = async () => {
       try {
         const response = await fetch(
-          "https://gocarsmithbackend.onrender.com/api/admin/getBrands"
+          "http://localhost:2000/api/user/getBrands" ,{
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },}
         );
         if (response.ok) {
           const data = await response.json();
@@ -68,10 +73,14 @@ function Brands({onClickClose}) {
 
   useEffect(() => {
     if (selectedBrand) {
+      const token = localStorage.getItem("token");
       const fetchModels = async () => {
         try {
           const response = await fetch(
-            `https://gocarsmithbackend.onrender.com/api/getModel/${selectedBrand._id}`
+            `http://localhost:2000/api/user/getModel/${selectedBrand._id}`, {
+              headers: {
+                Authorization: `Bearer ${token}`,
+              },}
           );
           if (response.ok) {
             const data = await response.json();
@@ -97,11 +106,15 @@ function Brands({onClickClose}) {
   };
 
   useEffect(() => {
+    const token = localStorage.getItem("token");
     if (selectedBrand && selectedModel) {
       const fetchFuelTypes = async () => {
         try {
           const response = await fetch(
-            `https://gocarsmithbackend.onrender.com/api/getFuelTypesByBrandAndModel/${selectedBrand._id}/${selectedModel._id}`
+            `http://localhost:2000/api/user/getFuelTypesByBrandAndModel/${selectedBrand._id}/${selectedModel._id}`, {
+              headers: {
+                Authorization: `Bearer ${token}`,
+              },}
           );
           if (response.ok) {
             const data = await response.json();
@@ -291,7 +304,7 @@ function Brands({onClickClose}) {
                       }
                     >
                       <img
-                        src={`https://gocarsmithbackend.onrender.com${model.modelImage}`}
+                        src={`http://localhost:2000${model.modelImage}`}
                         alt={model.model || "Model Image"}
                         style={{
                           width: "70%",
@@ -369,7 +382,7 @@ function Brands({onClickClose}) {
                       }
                     >
                       <img
-                        src={`https://gocarsmithbackend.onrender.com${brand.brandImage}`}
+                        src={`http://localhost:2000${brand.brandImage}`}
                         alt={brand.name}
                         style={{
                           width: "80%",

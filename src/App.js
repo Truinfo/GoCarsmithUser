@@ -59,7 +59,7 @@ const App = () => {
 
     <BrowserRouter>
       <Header />
-      <Token />
+      <Token/>
       
       <Routes>
         <Route path="/faq" element={<Faqs />} />

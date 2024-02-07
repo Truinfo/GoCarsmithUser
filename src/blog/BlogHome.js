@@ -18,7 +18,7 @@ const BlogHome = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("https://gocarsmithbackend.onrender.com/api/user/blog/posts");
+        const response = await axios.get("http://localhost:2000/api/user/blog/posts");
         setBlogPosts(response.data);
       } catch (error) {
         console.error("Error fetching blog data:", error);
@@ -47,7 +47,7 @@ const BlogHome = () => {
           <CardMedia
             component="img"
             style={{ height: '252px', width: '100%' ,objectFit:"cover" }}
-            image={`https://gocarsmithbackend.onrender.com${card.cover[0].img}`}
+            image={`http://localhost:2000${card.cover[0].img}`}
             alt={card.posttitle}
           />
                   )}

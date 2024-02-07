@@ -222,7 +222,7 @@ const AcRepair = () => {
     const fetchChildCities = async () => {
       try {
         const response = await fetch(
-          `https://gocarsmithbackend.onrender.com/api/getChildCities/${parentId}`
+          `http://localhost:2000/api/getChildCities/${parentId}`
         );
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
@@ -258,7 +258,7 @@ const AcRepair = () => {
         const field = "AcServices";
         
         const response = await axios.get(
-          `https://gocarsmithbackend.onrender.com/api/getServicesByLocationModelFuelTypeAndField/${locationName}/${modelId}/${fuelType}/${field}`,
+          `http://localhost:2000/api/user/getServicesByLocationModelFuelTypeAndField/${locationName}/${modelId}/${fuelType}/${field}`,
           {
             headers: {
               Authorization: `Bearer ${getToken()}`,
@@ -287,7 +287,7 @@ const AcRepair = () => {
       const LabelName = "AC Services";
       try {
         const response = await axios.get(
-          `https://gocarsmithbackend.onrender.com/api/getpricelist/${location}/${BrandId}/${LabelName}`
+          `http://localhost:2000/api/getpricelist/${location}/${BrandId}/${LabelName}`
         );
 
         if (response.stconsole.logatus === 200) {
@@ -313,7 +313,7 @@ const AcRepair = () => {
     setCartItems([...cartItems, ...items]);
     if(userId){
       try {
-        const response = await fetch("https://gocarsmithbackend.onrender.com/api/AddToCart", {
+        const response = await fetch("http://localhost:2000/api/AddToCart", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -344,7 +344,7 @@ const AcRepair = () => {
     const fetchKeySpecs = async () => {
       try {
         const response = await fetch(
-          `https://gocarsmithbackend.onrender.com/api/user/getKeySpecsModel/${modelId}`
+          `http://localhost:2000/api/user/getKeySpecsModel/${modelId}`
         );
 
         if (!response.ok) {

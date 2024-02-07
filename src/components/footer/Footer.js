@@ -54,7 +54,8 @@ const Footer = () => {
         color: "white",
         borderTop: "2px solid #ccc",
         width: "auto",
-        marginTop:"20px"
+        marginTop:"20px",
+        
       }}
     >
       <AddressContainer style={{ textAlign: "left", marginBottom: "10px" }}>
@@ -180,5 +181,6 @@ const Footer = () => {
       </div>
     </RootPaper>
   );
+
 };
 export default Footer;

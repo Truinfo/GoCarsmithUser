@@ -19,12 +19,8 @@ const Token = () => {
     if (logoutTimer) {
       clearTimeout(logoutTimer);
     }
-    setLogoutTimer(setTimeout(handleSessionTimeout, 300000)); // Reset timer for 5 minutes
-  };
-
-  const handleSessionTimeout = () => {
-    localStorage.clear();
-    setShowModal(true);
+    // Uncomment the following line if you want to reset the timer on user activity
+    // setLogoutTimer(setTimeout(handleLogout, 300000)); // Reset timer for 5 minutes
   };
 
   const handleLogout = () => {

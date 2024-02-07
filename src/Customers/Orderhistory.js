@@ -48,7 +48,7 @@ export default function OrderHistory() {
     const getOrderHistory = async () => {
       try {
         const response = await axios.get(
-          `https://gocarsmithbackend.onrender.com/api/getAppointmentBookingById/${userId}`
+          `http://localhost:2000/api/getAppointmentBookingById/${userId}`
         );
         if (response.data) {
           setOrderHistory(response.data);
@@ -130,7 +130,7 @@ export default function OrderHistory() {
               <CardMedia
                 component="img"
                 height="194"
-                image={`https://gocarsmithbackend.onrender.com${eachDetail.imagePath}`}
+                image={`http://localhost:2000${eachDetail.imagePath}`}
                 alt="Car Image"
                 style={{ border: "15px solid white", borderRadius: "5px" }}
               />

@@ -20,7 +20,7 @@ const VerifyEmail = () => {
 
   const handleContinueButtonClick = async () => {
     try {
-      const response = await fetch("https://gocarsmithbackend.onrender.com/api/user/generateAndSendOTP", {
+      const response = await fetch("http://localhost:2000/api/user/generateAndSendOTP", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -49,7 +49,7 @@ const VerifyEmail = () => {
 
   const handleVerifyButtonClick = async () => {
     try {
-      const response = await fetch("https://gocarsmithbackend.onrender.com/api/user/verifyOTP", {
+      const response = await fetch("http://localhost:2000/api/user/verifyOTP", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
