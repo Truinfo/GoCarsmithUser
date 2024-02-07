@@ -52,8 +52,7 @@ const Success = () => {
             Thank you for your order.
           </Typography>
           <Typography variant="subtitle1" >
-            Your order number is #2001539. We have emailed your order
-            confirmation, and will send you an update from the Service Center on
+             We will send you an update from the Service Center on
             your Appointment.
           </Typography>
           <div style={{

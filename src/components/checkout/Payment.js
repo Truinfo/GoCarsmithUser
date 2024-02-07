@@ -22,24 +22,22 @@ const CheckoutComponent = (props) => {
   const userString = localStorage.getItem("user");
   const user = JSON.parse(userString);
   const userId = user?._id;
-const GoCarsmithCoins= localStorage.getItem("Coins")
-
-const deductMoneyData={
+  const GoCarsmithCoins= localStorage.getItem("Coins")
+  const deductMoneyData={
   userId:userId,
   amountToUse:GoCarsmithCoins
 }
-
   const handlePayment = (e) => {
     e.preventDefault();
     setLoading2(true);
-
-   axios.post("https://gocarsmithbackend.onrender.com/api/payment", { ...data })
+    axios
+      .post("http://localhost:2000/api/payment", { ...data })
 
       .then(async (res) => {
-
+       if(res){
         try {
           const response = await axios.post(
-            `https://gocarsmithbackend.onrender.com/api/user/AddAppointment`,
+            `http://localhost:2000/api/user/AddAppointment`,
             orderDetails,
             {
               method: "POST",
@@ -48,28 +46,20 @@ const deductMoneyData={
               },
             }
           );
-
           if (response.status === 200) {
             const data = response.data;
             window.location.href = res.data;
             if (data) {
               localStorage.setItem("Coupon", 0);
-              const fetching = await axios.put(
-                `https://gocarsmithbackend.onrender.com/api/useReferralAmountBy`, deductMoneyData
-              );
-              if (fetching.status === 200) {
-                localStorage.removeItem('Coins')
-
-              } else {
-                console.log("fail to clear cart data");
-              }
 
               const response = await axios.delete(
-                `https://gocarsmithbackend.onrender.com/api/removeCart/${userId}`
+                `http://localhost:2000/api/removeCart`,{
+                  data: deductMoneyData, // Pass the data in the 'data' property of the config object
+                }
               );
               if (response.status === 200) {
-                
-                
+                console.log("clear cart data", 1);
+                localStorage.setItem("Coins", 0);
               } else {
                 console.log("fail to clear cart data");
               }
@@ -83,6 +73,9 @@ const deductMoneyData={
         setTimeout(() => {
           setLoading2(false);
         }, 1500);
+       }else{
+        console.log("Appointment Failed")
+       }
       })
       .catch((error) => {
         setLoading2(false);

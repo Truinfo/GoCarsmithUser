@@ -857,33 +857,32 @@ export default function CheckoutPage() {
       if (validateForm()) {
         // Form is valid, proceed with form submission
         setActiveStep(activeStep + 1);
-      } else {
-        // Form is invalid, show error messages
-        console.log('Form validation failed');
-      }
-    }if (activeStep === steps.length - 1) {
-      // If it's the last step, handle place order or pay now based on the selected payment method
-      if (paymentMethod === "payCash") {
-        // Handle place order logic for Pay Cash
-        placeOrder();
-        // setTimeout(() => {
-        //   navigate('/Success')
-        // }, 3000);
-      } else if (paymentMethod === "payOnline") {
-        localStorage.setItem("Coins",GoCarsmithCoins)
-        // Handle pay now logic for Pay Online
-        setOpenPayment(true);
-      }
+        if (activeStep === steps.length - 1) {
+          // If it's the last step, handle place order or pay now based on the selected payment method
+          if (paymentMethod === "payCash") {
+            // Handle place order logic for Pay Cash
+            placeOrder();
+            // setTimeout(() => {
+            //   navigate('/Success')
+            // }, 3000);
+          } else if (paymentMethod === "payOnline") {
+            localStorage.setItem("Coins",GoCarsmithCoins)
+            // Handle pay now logic for Pay Online
+            setOpenPayment(true);
+          }
+        } 
+      } 
     } 
     else {
+      
+      console.log('Form validation failed');
       // If it's not the last step, proceed to the next step
-      setActiveStep(activeStep +1);
+      setActiveStep(activeStep);
 
     }
   };
   const orderDetails = {
     formData,
-
     servicesList,
     userId,
     carModel,
@@ -918,7 +917,10 @@ export default function CheckoutPage() {
       Brand,
       imagePath,
     };
-
+    const deductMoneyData={
+      userId:userId,
+      amountToUse:GoCarsmithCoins
+    }
     try {
       const response = await axios.post(
         `https://gocarsmithbackend.onrender.com/api/user/AddAppointment`,
@@ -934,27 +936,26 @@ export default function CheckoutPage() {
         localStorage.setItem("Coupon", 0);
        
         const response = await axios.delete(
-          `https://gocarsmithbackend.onrender.com/api/removeCart/${userId}`
+          `https://gocarsmithbackend.onrender.com/api/removeCart`, {
+            data: deductMoneyData, // Pass the data in the 'data' property of the config object
+          }
         );
 
         if (response.status === 200) {
-          console.log("clear cart data", 1);
+          // const fetching = await axios.put(
+          //   `https://gocarsmithbackend.onrender.com/api/useReferralAmountBy`,deductMoneyData
+          // );
+  
+          // if (fetching.status === 200) {
+          //   console.log("clear cart data", 1);
+          // } else {
+          //   console.log("fail to clear cart data");
+          // }
         } else {
           console.log("fail to clear cart data");
         }
-        const deductMoneyData={
-          userId:userId,
-          amountToUse:GoCarsmithCoins
-        }
-        const fetching = await axios.put(
-          `https://gocarsmithbackend.onrender.com/api/useReferralAmountBy`,deductMoneyData
-        );
-
-        if (fetching.status === 200) {
-          console.log("clear cart data", 1);
-        } else {
-          console.log("fail to clear cart data");
-        }
+       
+        
 
       } else {
         console.error("Failed to fetch locations");

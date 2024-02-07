@@ -52,7 +52,7 @@ const userValuesPresent = userId ;
     if (userValuesPresent) {
       // All required user-related values are present, navigate to the page
       navigate(card.link);
-      window.location.reload();
+      // window.location.reload();
     } else {
       // Display alert when user-related values are missing
       window.alert("Please Login...");
@@ -63,6 +63,7 @@ const userValuesPresent = userId ;
   const [searchResults, setSearchResults] = useState([]);
 
   // Dummy data for search suggestions (replace it with your actual data)
+
   const allWords = ["Regular AC Service", "High Performance AC Service",
     "Cooling Coil Replacement", "Condenser Replacement",
     "Compressor Replacement", "Heating coil Replacement",
@@ -389,7 +390,7 @@ const userValuesPresent = userId ;
     }
   };
 
-  ///////////////////
+
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);

@@ -7,9 +7,7 @@ const Token = () => {
   const navigate = useNavigate();
 
   const handleBeforeUnload = () => {
-    // Check if the page is being closed
     if (!navigator.sendBeacon) {
-      // Page is being closed, clear local storage
       if (logoutTimer) {
         clearTimeout(logoutTimer);
       }
@@ -21,31 +19,12 @@ const Token = () => {
     if (logoutTimer) {
       clearTimeout(logoutTimer);
     }
-    let inactiveTime = 0;
+    setLogoutTimer(setTimeout(handleSessionTimeout, 300000)); // Reset timer for 5 minutes
+  };
 
-    const setUserActive = () => {
-      inactiveTime = 0;
-    };
-
-    const activityEvents = ['mousemove', 'keydown', 'mousedown', 'touchstart'];
-
-    activityEvents.forEach((event) => {
-      window.addEventListener(event, setUserActive);
-    });
-
-    const checkInactive = () => {
-      inactiveTime += 100;
-
-      if (inactiveTime >= 300000) {
-        // Token has expired, clear all data in local storage
-        localStorage.clear();
-        setShowModal(true);
-      } else {
-        setTimeout(checkInactive, 100);
-      }
-    };
-
-    setTimeout(checkInactive, 100);
+  const handleSessionTimeout = () => {
+    localStorage.clear();
+    setShowModal(true);
   };
 
   const handleLogout = () => {
