@@ -20,7 +20,7 @@ const HealthCard = () => {
   const getHealthCard = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:2000/api/getHealthCardDetails/${userId}`
+        `https://gocarsmithbackend.onrender.com/api/getHealthCardDetails/${userId}`
       );
 
       if (response.data !== null) {
@@ -95,7 +95,7 @@ const HealthCard = () => {
                     <Grid item xs={12} container>
                       <Grid item>
                         <Avatar
-                          src={`http://localhost:2000${cartDetails.CoverPhoto}`}
+                          src={`https://gocarsmithbackend.onrender.com${cartDetails.CoverPhoto}`}
                           alt=  {cartDetails.holderName}
                           style={{
                             width: "150px",

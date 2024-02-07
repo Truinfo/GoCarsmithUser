@@ -36,7 +36,7 @@ const Cart = ( { cartItems, onDelete, onApplyCoupon }) => {
     const fetchCoupons = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:2000/api/user/getCoupons",
+          "https://gocarsmithbackend.onrender.com/api/user/getCoupons",
           {}
         );
         if (response.status === 200) {
@@ -57,7 +57,7 @@ const Cart = ( { cartItems, onDelete, onApplyCoupon }) => {
       
       try {
         const response = await axios.get(
-          `http://localhost:2000/api/getUserCartBy/${userId}`
+          `https://gocarsmithbackend.onrender.com/api/getUserCartBy/${userId}`
         );
         setCartData(response.data);
        
@@ -103,7 +103,7 @@ const Cart = ( { cartItems, onDelete, onApplyCoupon }) => {
         const selectedCoupon = filteredCoupons[0];
   
         const response = await axios.post(
-          "http://localhost:2000/api/user/applayCoupon",
+          "https://gocarsmithbackend.onrender.com/api/user/applayCoupon",
           {
             couponCode: selectedCoupon.code,
             totalAmount: wholeAmount,
@@ -117,7 +117,7 @@ const Cart = ( { cartItems, onDelete, onApplyCoupon }) => {
         setError(null);
       } else if (selectedCoupon) {
         const response = await axios.post(
-          "http://localhost:2000/api/user/applayCoupon",
+          "https://gocarsmithbackend.onrender.com/api/user/applayCoupon",
           {
             couponCode: selectedCoupon.code,
             totalAmount: wholeAmount,
@@ -152,13 +152,13 @@ const Cart = ( { cartItems, onDelete, onApplyCoupon }) => {
       const userId = user?._id;
       const itemId = _id;
       const response = await axios.delete(
-        `http://localhost:2000/api/removeCartItemBy/${userId}/${itemId}`
+        `https://gocarsmithbackend.onrender.com/api/removeCartItemBy/${userId}/${itemId}`
       );
       if (response.status === 200) {
        
         try {
           const response = await axios.get(
-            `http://localhost:2000/api/getUserCartBy/${userId}`
+            `https://gocarsmithbackend.onrender.com/api/getUserCartBy/${userId}`
           );
           setCartData(response.data);
           setLengthOfArray(response.data[0].listOfServices.length)

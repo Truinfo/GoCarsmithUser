@@ -47,7 +47,7 @@ const Membership = () => {
     setCartItems([...cartItems]);
    
     try {
-      const response = await fetch('http://localhost:2000/api/AddToCart', {
+      const response = await fetch('https://gocarsmithbackend.onrender.com/api/AddToCart', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -85,7 +85,7 @@ const Membership = () => {
 const [status,setStatus]=useState(false)
 useEffect(()=>{
  const getCartExistedItems=async()=>{
-  const response=await axios.get(`http://localhost:2000/api/getUserCartBy/${userId}`)
+  const response=await axios.get(`https://gocarsmithbackend.onrender.com/api/getUserCartBy/${userId}`)
  if(response.status===200){
   response.data.map((items)=>(
     items.listOfServices.map((isItems)=>{

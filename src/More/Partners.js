@@ -189,7 +189,7 @@ const Partners = () => {
 
     try {
         const response = await axios.post(
-            "http://localhost:2000/api/serviceCenter/requestAsPatner",
+            "https://gocarsmithbackend.onrender.com/api/serviceCenter/requestAsPatner",
             formData
         );
         console.log("Request sent successfully:", response.data);

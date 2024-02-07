@@ -50,7 +50,7 @@ function Passwordchanging() {
     setLoading(true);
     try {
       const response = await axios.post(
-        "http://localhost:2000/api/user/verifyCodeAndResetPassword",
+        "https://gocarsmithbackend.onrender.com/api/user/verifyCodeAndResetPassword",
         {
           email: localStorage.getItem("verifiedEmail"),
           code: otp,

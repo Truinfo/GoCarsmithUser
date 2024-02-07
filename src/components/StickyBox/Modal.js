@@ -43,7 +43,7 @@ const Modal = ({ onClose }) => {
 
   const fetchUserCars = async () => {
     try {
-      const response = await fetch(`http://localhost:2000/api/user/getCarsByEmail/${userEmail}`, {
+      const response = await fetch(`https://gocarsmithbackend.onrender.com/api/user/getCarsByEmail/${userEmail}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',

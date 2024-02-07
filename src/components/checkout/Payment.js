@@ -31,13 +31,13 @@ const CheckoutComponent = (props) => {
     e.preventDefault();
     setLoading2(true);
     axios
-      .post("http://localhost:2000/api/payment", { ...data })
+      .post("https://gocarsmithbackend.onrender.com/api/payment", { ...data })
 
       .then(async (res) => {
        if(res){
         try {
           const response = await axios.post(
-            `http://localhost:2000/api/user/AddAppointment`,
+            `https://gocarsmithbackend.onrender.com/api/user/AddAppointment`,
             orderDetails,
             {
               method: "POST",
@@ -53,7 +53,7 @@ const CheckoutComponent = (props) => {
               localStorage.setItem("Coupon", 0);
 
               const response = await axios.delete(
-                `http://localhost:2000/api/removeCart`,{
+                `https://gocarsmithbackend.onrender.com/api/removeCart`,{
                   data: deductMoneyData, // Pass the data in the 'data' property of the config object
                 }
               );

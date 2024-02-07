@@ -66,7 +66,7 @@ const BlogDescription = () => {
                 }
 
                 const response = await axios.get(
-                    `http://localhost:2000/api/user/blog/posts/${id}`,
+                    `https://gocarsmithbackend.onrender.com/api/user/blog/posts/${id}`,
                     {
                         headers: {
                             Authorization: `Bearer ${getToken()}`,
@@ -85,7 +85,7 @@ const BlogDescription = () => {
                     setLoadingPersonalizedComments(true);
 
                     const response = await axios.get(
-                        `http://localhost:2000/api/user/getPersonalizedComment/${userEmail}/${id}`,
+                        `https://gocarsmithbackend.onrender.com/api/user/getPersonalizedComment/${userEmail}/${id}`,
                         {
                             headers: {
                                 Authorization: `Bearer ${getToken()}`,
@@ -115,7 +115,7 @@ const BlogDescription = () => {
         try {
             if (userEmail) {
                 const response = await axios.post(
-                    `http://localhost:2000/api/user/addOrUpdateComment/${id}`,
+                    `https://gocarsmithbackend.onrender.com/api/user/addOrUpdateComment/${id}`,
                     {
                         comment: newComment,
                         email: userEmail,
@@ -133,7 +133,7 @@ const BlogDescription = () => {
 
                 if (response) {
                     const response = await axios.get(
-                        `http://localhost:2000/api/user/getPersonalizedComment/${userEmail}/${id}`,
+                        `https://gocarsmithbackend.onrender.com/api/user/getPersonalizedComment/${userEmail}/${id}`,
                         {
                             headers: {
                                 Authorization: `Bearer ${getToken()}`,
@@ -154,7 +154,7 @@ const BlogDescription = () => {
     const handleDeleteComment = async (commentId) => {
         try {
             const response = await axios.delete(
-                `http://localhost:2000/api/user/deleteCommentPersonalized/${id}`,
+                `https://gocarsmithbackend.onrender.com/api/user/deleteCommentPersonalized/${id}`,
                 {
                     headers: {
                         Authorization: `Bearer ${getToken()}`,
@@ -166,7 +166,7 @@ const BlogDescription = () => {
             );
 
             if (response.status === 200) {const response = await axios.post(
-                `http://localhost:2000/api/user/addOrUpdateComment/${id}`,
+                `https://gocarsmithbackend.onrender.com/api/user/addOrUpdateComment/${id}`,
                 {
                     comment: newComment,
                     email: userEmail,
@@ -184,7 +184,7 @@ const BlogDescription = () => {
 
             if (response) {
                 const response = await axios.get(
-                    `http://localhost:2000/api/user/getPersonalizedComment/${userEmail}/${id}`,
+                    `https://gocarsmithbackend.onrender.com/api/user/getPersonalizedComment/${userEmail}/${id}`,
                     {
                         headers: {
                             Authorization: `Bearer ${getToken()}`,
@@ -208,7 +208,7 @@ const BlogDescription = () => {
     const handleSavePersonalizedComment = async () => {
         try {
             const response = await axios.post(
-                `http://localhost:2000/api/user/addOrUpdateComment/${id}`,
+                `https://gocarsmithbackend.onrender.com/api/user/addOrUpdateComment/${id}`,
                 {
                     comment: personalizedCommentText,
                     email: userEmail,
@@ -228,7 +228,7 @@ const BlogDescription = () => {
 
             if (response) {
                 const response = await axios.get(
-                    `http://localhost:2000/api/user/getPersonalizedComment/${userEmail}/${id}`,
+                    `https://gocarsmithbackend.onrender.com/api/user/getPersonalizedComment/${userEmail}/${id}`,
                     {
                         headers: {
                             Authorization: `Bearer ${getToken()}`,
@@ -247,7 +247,7 @@ const BlogDescription = () => {
         console.log(userEmail)
         try {
             const response = await axios.post(
-                `http://localhost:2000/api/user/updateLikedStatus/${id}`,
+                `https://gocarsmithbackend.onrender.com/api/user/updateLikedStatus/${id}`,
                 {
                     email: userEmail,
                     action: action,
@@ -266,7 +266,7 @@ const BlogDescription = () => {
 
             if (response) {
                 const response = await axios.get(
-                    `http://localhost:2000/api/user/getParticularLikes/${userEmail}/${id}`,
+                    `https://gocarsmithbackend.onrender.com/api/user/getParticularLikes/${userEmail}/${id}`,
                     {
                         headers: {
                             Authorization: `Bearer ${getToken()}`,
@@ -285,7 +285,7 @@ const BlogDescription = () => {
             try {
                 if (userEmail && id) {
                     const response = await axios.get(
-                        `http://localhost:2000/api/user/getParticularLikes/${userEmail}/${id}`,
+                        `https://gocarsmithbackend.onrender.com/api/user/getParticularLikes/${userEmail}/${id}`,
                         {
                             headers: {
                                 Authorization: `Bearer ${getToken()}`,
@@ -311,7 +311,7 @@ const BlogDescription = () => {
             {blogDetails && blogDetails.cover && blogDetails.cover.length > 0 && (
               <Grid item xs={12}>
                 <img
-                  src={`http://localhost:2000${blogDetails.cover[0].img}`}
+                  src={`https://gocarsmithbackend.onrender.com${blogDetails.cover[0].img}`}
                   alt={`Cover Image 0`}
                   style={{ width: '100%' }}
                 />
@@ -327,7 +327,7 @@ const BlogDescription = () => {
             {blogDetails && blogDetails.cover && blogDetails.cover.length > 1 && (
               <Grid item xs={12}>
                 <img
-                  src={`http://localhost:2000${blogDetails.cover[1].img}`}
+                  src={`https://gocarsmithbackend.onrender.com${blogDetails.cover[1].img}`}
                   alt={`Cover Image 1`}
                   style={{ width: '100%' }}
                 />
@@ -341,7 +341,7 @@ const BlogDescription = () => {
             {blogDetails && blogDetails.cover && blogDetails.cover.length > 2 && (
               <Grid item xs={12}>
                 <img
-                  src={`http://localhost:2000${blogDetails.cover[2].img}`}
+                  src={`https://gocarsmithbackend.onrender.com${blogDetails.cover[2].img}`}
                   alt={`Cover Image 2`}
                   style={{ width: '100%' }}
                 />

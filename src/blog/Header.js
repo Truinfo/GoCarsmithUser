@@ -127,7 +127,7 @@ export default function SearchAppBar() {
 
       // Make a request to the signout API endpoint with the authorization header
       const response = await axios.post(
-        "http://localhost:2000/api/user/signout",
+        "https://gocarsmithbackend.onrender.com/api/user/signout",
         {},
         {
           headers: {

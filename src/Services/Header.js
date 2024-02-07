@@ -419,7 +419,7 @@ const userValuesPresent = userId ;
 
       // Make a request to the signout API endpoint with the authorization header
       const response = await axios.post(
-        "http://localhost:2000/api/user/signout",
+        "https://gocarsmithbackend.onrender.com/api/user/signout",
         {},
         {
           headers: {
@@ -582,7 +582,7 @@ const userValuesPresent = userId ;
     const _id = localStorage.getItem("location");
     vectorLayer.getSource().clear(); // Clear existing markers
     axios
-      .get(`http://localhost:2000/api/getServicesCenterByLocation/${_id}`)
+      .get(`https://gocarsmithbackend.onrender.com/api/getServicesCenterByLocation/${_id}`)
       .then((response) => {
         console.log("Service center data:", response.data); // Log the data
         setServiceCenterData(response.data)
@@ -609,7 +609,7 @@ const userValuesPresent = userId ;
     const fetchLocations = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:2000/api/user/getLocations",{
+          "https://gocarsmithbackend.onrender.com/api/user/getLocations",{
 
             headers: {
               Authorization: `Bearer ${token}`,

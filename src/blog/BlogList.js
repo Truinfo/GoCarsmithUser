@@ -24,9 +24,9 @@ const BlogList = () => {
       try {
         let url;
         if (subCategoryName) {
-          url = `http://localhost:2000/api/user/BySubcategory/${encodeURIComponent(subCategoryName)}`;
+          url = `https://gocarsmithbackend.onrender.com/api/user/BySubcategory/${encodeURIComponent(subCategoryName)}`;
         } else if (categoryName) {
-          url = `http://localhost:2000/api/user/ByCategory/${encodeURIComponent(categoryName)}`;
+          url = `https://gocarsmithbackend.onrender.com/api/user/ByCategory/${encodeURIComponent(categoryName)}`;
         } else {
           // Handle error or default case
           return;
@@ -69,7 +69,7 @@ const BlogList = () => {
                   component="img"
                   height="192px"
                   width="100%"
-                  image={`http://localhost:2000${card.cover[0].img}`}
+                  image={`https://gocarsmithbackend.onrender.com${card.cover[0].img}`}
                   alt={card.posttitle}
                   style={{ objectFit: 'cover' }}
                 />

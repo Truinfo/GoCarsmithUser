@@ -50,7 +50,7 @@ const Signup = () => {
       return;
     }
     try {
-      const response = await fetch('http://localhost:2000/api/user/signup', {
+      const response = await fetch('https://gocarsmithbackend.onrender.com/api/user/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

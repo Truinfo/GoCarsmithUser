@@ -18,7 +18,7 @@ const Logout = () => {
 
       // Make a request to the signout API endpoint with the authorization header
       const response = await axios.post(
-        "http://localhost:2000/api/admin/signout",
+        "https://gocarsmithbackend.onrender.com/api/admin/signout",
         {},
         {
           headers: {

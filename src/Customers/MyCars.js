@@ -43,7 +43,7 @@ const MyCars = () => {
   const fetchAllBrands = async () => {
     
     try {
-      const response = await fetch("http://localhost:2000/api/user/getBrands", {
+      const response = await fetch("https://gocarsmithbackend.onrender.com/api/user/getBrands", {
         headers: {
           Authorization: `Bearer ${token}`,
         },});
@@ -52,7 +52,7 @@ const MyCars = () => {
         // Add brandImage property to each brand
         const brandsWithImages = data.map((brand) => ({
           ...brand,
-          brandImage: `http://localhost:2000${brand.brandImage}`,
+          brandImage: `https://gocarsmithbackend.onrender.com${brand.brandImage}`,
         }));
         setBrands(brandsWithImages);
       } else {
@@ -66,7 +66,7 @@ const MyCars = () => {
   const fetchModels = async (brandId) => {
     try {
       const response = await fetch(
-        `http://localhost:2000/api/user/getModel/${brandId}`, {
+        `https://gocarsmithbackend.onrender.com/api/user/getModel/${brandId}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },}
@@ -76,7 +76,7 @@ const MyCars = () => {
         // Add modelImage property to each model
         const modelsWithImages = data.map((model) => ({
           ...model,
-          modelImage: `http://localhost:2000${model.modelImage}`,
+          modelImage: `https://gocarsmithbackend.onrender.com${model.modelImage}`,
         }));
         setModels(modelsWithImages);
       } else {
@@ -90,7 +90,7 @@ const MyCars = () => {
   const fetchUserCars = async () => {
     try {
       const response = await fetch(
-        `http://localhost:2000/api/user/getCarsByEmail/${userEmail}`,
+        `https://gocarsmithbackend.onrender.com/api/user/getCarsByEmail/${userEmail}`,
         {
           method: "GET",
           headers: {
@@ -178,7 +178,7 @@ const MyCars = () => {
       console.log("Cars Data:", carsData);
 
       const response = await fetch(
-        "http://localhost:2000/api/user/addCarsToUser",
+        "https://gocarsmithbackend.onrender.com/api/user/addCarsToUser",
         {
           method: "POST",
           headers: {
@@ -224,7 +224,7 @@ const MyCars = () => {
   const handleDelete = async (carId) => {
     try {
       const response = await fetch(
-        `http://localhost:2000/api/user/deleteCar/${userEmail}/${carId}`,
+        `https://gocarsmithbackend.onrender.com/api/user/deleteCar/${userEmail}/${carId}`,
         {
           method: "DELETE",
           headers: {
@@ -252,7 +252,7 @@ const MyCars = () => {
   const handleEditKilometers = async (carId, newKilometers) => {
     try {
       const response = await fetch(
-        `http://localhost:2000/api/user/editKilometers/${userEmail}/${carId}`,
+        `https://gocarsmithbackend.onrender.com/api/user/editKilometers/${userEmail}/${carId}`,
         {
           method: "PUT",
           headers: {

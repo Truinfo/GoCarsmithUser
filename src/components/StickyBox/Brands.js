@@ -52,7 +52,7 @@ function Brands({onClickClose}) {
     const fetchAllBrands = async () => {
       try {
         const response = await fetch(
-          "http://localhost:2000/api/user/getBrands" ,{
+          "https://gocarsmithbackend.onrender.com/api/user/getBrands" ,{
             headers: {
               Authorization: `Bearer ${token}`,
             },}
@@ -77,7 +77,7 @@ function Brands({onClickClose}) {
       const fetchModels = async () => {
         try {
           const response = await fetch(
-            `http://localhost:2000/api/user/getModel/${selectedBrand._id}`, {
+            `https://gocarsmithbackend.onrender.com/api/user/getModel/${selectedBrand._id}`, {
               headers: {
                 Authorization: `Bearer ${token}`,
               },}
@@ -111,7 +111,7 @@ function Brands({onClickClose}) {
       const fetchFuelTypes = async () => {
         try {
           const response = await fetch(
-            `http://localhost:2000/api/user/getFuelTypesByBrandAndModel/${selectedBrand._id}/${selectedModel._id}`, {
+            `https://gocarsmithbackend.onrender.com/api/user/getFuelTypesByBrandAndModel/${selectedBrand._id}/${selectedModel._id}`, {
               headers: {
                 Authorization: `Bearer ${token}`,
               },}
@@ -304,7 +304,7 @@ function Brands({onClickClose}) {
                       }
                     >
                       <img
-                        src={`http://localhost:2000${model.modelImage}`}
+                        src={`https://gocarsmithbackend.onrender.com${model.modelImage}`}
                         alt={model.model || "Model Image"}
                         style={{
                           width: "70%",
@@ -382,7 +382,7 @@ function Brands({onClickClose}) {
                       }
                     >
                       <img
-                        src={`http://localhost:2000${brand.brandImage}`}
+                        src={`https://gocarsmithbackend.onrender.com${brand.brandImage}`}
                         alt={brand.name}
                         style={{
                           width: "80%",

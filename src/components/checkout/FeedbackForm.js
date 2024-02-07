@@ -20,7 +20,7 @@ const FeedbackForm = () => {
 
     useEffect(() => {
         // Fetch service centers when the component mounts
-        axios.get(`http://localhost:2000/api/serviceCenter/getServiceCenters`)
+        axios.get(`https://gocarsmithbackend.onrender.com/api/serviceCenter/getServiceCenters`)
             .then(response => {
                 setServiceCenters(response.data.serviceCenterDetails);
             })
@@ -36,7 +36,7 @@ const FeedbackForm = () => {
         e.preventDefault();
 
         try {
-            const response = await fetch('http://localhost:2000/api/ServiceCenterReviews', {
+            const response = await fetch('https://gocarsmithbackend.onrender.com/api/ServiceCenterReviews', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

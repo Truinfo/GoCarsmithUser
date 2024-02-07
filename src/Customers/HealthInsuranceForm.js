@@ -49,7 +49,7 @@ const HealthInsuranceForm = () => {
     // Handle form submission logic here
     try {
       const response = await axios.post(
-        `http://localhost:2000/api/createHealthCard`,
+        `https://gocarsmithbackend.onrender.com/api/createHealthCard`,
         formData,
         {
           headers: {
