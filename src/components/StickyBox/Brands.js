@@ -187,8 +187,8 @@ function Brands({onClickClose}) {
       <Card
         style={{
           minWidth: 250,
-          height: 500,
-          maxWidth: 400,
+          height: 600,
+          maxWidth: 500,
           borderRadius: "1px",
           boxShadow: "0px 0px 15px rgba(0, 0, 0, 0.1)",
           position: "sticky",
@@ -385,8 +385,8 @@ function Brands({onClickClose}) {
                         src={`https://gocarsmithbackend.onrender.com${brand.brandImage}`}
                         alt={brand.name}
                         style={{
-                          width: "80%",
-                          height: "55px",
+                          width: "73%",
+                          height: "68px",
                           display: "block",
                           margin: "0 auto",
                         }}

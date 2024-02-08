@@ -151,6 +151,7 @@ const CardWithImage1 = ({ imageSrc, title , onClick}) => {
   );
 };
 
+
 const Home = () => {
   const [isBoxVisible, setBoxVisible] = useState(false);
   const handleIconClick = () => {
@@ -454,7 +455,19 @@ const Home = () => {
     console.log("pop click")
     setIsPopupOpen(true);
   };
-
+  useEffect(() => {
+    const test = () => {
+      // Check if userCars is not present in localStorage
+      if (!localStorage.getItem('userCars')) {
+        // Set BoxVisible to true if userCars is not present
+        setBoxVisible(true);
+        console.log("stickyboxopen");
+      } else {
+        // Toggle BoxVisible based on the previous state
+        setBoxVisible((prevVisible) => !prevVisible);
+      }}
+      test()
+  },[])
   const closePopup = () => {
     setIsPopupOpen(false);
   };

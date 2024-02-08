@@ -388,12 +388,14 @@ const MyCars = () => {
       <Box display="flex" justifyContent="center" flexWrap="wrap" p={2}>
         {userCars.map((car, index) => (
           <Card key={index} style={{ margin: "8px", width: "auto" }}>
+            
             <CardMedia
               component="img"
               height="200"
-              image={`${car.modelImage}`}
+              image={`https://gocarsmithbackend.onrender.com${car.modelImage}`}
               alt={car.modelName}
             />
+
             <CardContent>
               <Typography variant="h6" component="div">
                 {car.brandName} - {car.modelName}
