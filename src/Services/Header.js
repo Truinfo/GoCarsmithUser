@@ -609,15 +609,11 @@ const userValuesPresent = userId ;
     const fetchLocations = async () => {
       try {
         const response = await axios.get(
-          "https://gocarsmithbackend.onrender.com/api/user/getLocations",{
-
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },}
+          "https://gocarsmithbackend.onrender.com/api/user/getLocations"
         );
         if (response.status === 200) {
           const data = response.data; // Check the structure of the response
-          console.log(data.locationList);
+         
           setLocations(data.locationList); // Access the locations array
         } else {
           console.error("Failed to fetch locations");

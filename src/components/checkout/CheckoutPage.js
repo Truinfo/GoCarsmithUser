@@ -169,6 +169,7 @@ export default function CheckoutPage() {
   const endEveningHour = 18;
 
   const generateTimeSlots = (startHour, endHour, labelPrefix) => {
+    
     const currentHour = currentDate.hour();
 
     const currentMinute = currentDate.minute();
@@ -183,10 +184,13 @@ export default function CheckoutPage() {
       }
       slots.push({ label, id });
     }
+
     return slots;
+
   };
   const handleDateChange = (newDate) => {
     setCurrentDate(dayjs(newDate));
+    setSelectedSlot(null)
   };
   const morningSlots = generateTimeSlots(
     startMorningHour,
@@ -853,34 +857,35 @@ export default function CheckoutPage() {
 
 
   const handleNext = () => {
-    if(validateForm()) {
-      if (validateForm()) {
-        // Form is valid, proceed with form submission
-        setActiveStep(activeStep + 1);
-        if (activeStep === steps.length - 1) {
-          // If it's the last step, handle place order or pay now based on the selected payment method
-          if (paymentMethod === "payCash") {
-            // Handle place order logic for Pay Cash
-            placeOrder();
-            // setTimeout(() => {
-            //   navigate('/Success')
-            // }, 3000);
-          } else if (paymentMethod === "payOnline") {
-            localStorage.setItem("Coins",GoCarsmithCoins)
-            // Handle pay now logic for Pay Online
-            setOpenPayment(true);
-          }
-        } 
-      } 
-    } 
-    else {
+    if (validateForm()) {
+      setActiveStep(activeStep + 1);
+      if (activeStep === steps.length - 3) {
+        if (!selectedSlot){
       
-      console.log('Form validation failed');
-      // If it's not the last step, proceed to the next step
+        setActiveStep(activeStep);
+        }
+      } else {
+        setActiveStep(activeStep + 1);
+      }
+        if (activeStep === steps.length - 1) {
+        // If it's the last step, handle place order or pay now based on the selected payment method
+        if (paymentMethod === "payCash") {
+          // Handle place order logic for Pay Cash
+          placeOrder();
+          // setTimeout(() => {
+          //   navigate('/Success')
+          // }, 3000);
+        } else if (paymentMethod === "payOnline") {
+          localStorage.setItem("Coins", GoCarsmithCoins);
+          // Handle pay now logic for Pay Online
+          setOpenPayment(true);
+        }
+      }
+    } else {
       setActiveStep(activeStep);
-
     }
   };
+  
   const orderDetails = {
     formData,
     servicesList,
@@ -942,15 +947,7 @@ export default function CheckoutPage() {
         );
 
         if (response.status === 200) {
-          // const fetching = await axios.put(
-          //   `https://gocarsmithbackend.onrender.com/api/useReferralAmountBy`,deductMoneyData
-          // );
-  
-          // if (fetching.status === 200) {
-          //   console.log("clear cart data", 1);
-          // } else {
-          //   console.log("fail to clear cart data");
-          // }
+          console.log("remove cart")
         } else {
           console.log("fail to clear cart data");
         }

@@ -48,7 +48,7 @@ const CheckoutComponent = (props) => {
           );
           if (response.status === 200) {
             const data = response.data;
-            window.location.href = res.data;
+            
             if (data) {
               localStorage.setItem("Coupon", 0);
 
@@ -64,6 +64,7 @@ const CheckoutComponent = (props) => {
                 console.log("fail to clear cart data");
               }
             }
+            window.location.href = res.data;
           } else {
             console.error("Failed to fetch locations");
           }

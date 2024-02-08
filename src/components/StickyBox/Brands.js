@@ -47,15 +47,10 @@ function Brands({onClickClose}) {
   ];
 
   useEffect(() => {
-    const token = localStorage.getItem("token");
-     
     const fetchAllBrands = async () => {
       try {
         const response = await fetch(
-          "https://gocarsmithbackend.onrender.com/api/user/getBrands" ,{
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },}
+          "http://localhost:2000/api/user/getBrands"
         );
         if (response.ok) {
           const data = await response.json();
@@ -73,14 +68,10 @@ function Brands({onClickClose}) {
 
   useEffect(() => {
     if (selectedBrand) {
-      const token = localStorage.getItem("token");
       const fetchModels = async () => {
         try {
           const response = await fetch(
-            `https://gocarsmithbackend.onrender.com/api/user/getModel/${selectedBrand._id}`, {
-              headers: {
-                Authorization: `Bearer ${token}`,
-              },}
+            `http://localhost:2000/api/user/getModel/${selectedBrand._id}`
           );
           if (response.ok) {
             const data = await response.json();
@@ -106,15 +97,11 @@ function Brands({onClickClose}) {
   };
 
   useEffect(() => {
-    const token = localStorage.getItem("token");
     if (selectedBrand && selectedModel) {
       const fetchFuelTypes = async () => {
         try {
           const response = await fetch(
-            `https://gocarsmithbackend.onrender.com/api/user/getFuelTypesByBrandAndModel/${selectedBrand._id}/${selectedModel._id}`, {
-              headers: {
-                Authorization: `Bearer ${token}`,
-              },}
+            `http://localhost:2000/api/user/getFuelTypesByBrandAndModel/${selectedBrand._id}/${selectedModel._id}`
           );
           if (response.ok) {
             const data = await response.json();
@@ -187,8 +174,8 @@ function Brands({onClickClose}) {
       <Card
         style={{
           minWidth: 250,
-          height: 600,
-          maxWidth: 500,
+          height: 500,
+          maxWidth: 400,
           borderRadius: "1px",
           boxShadow: "0px 0px 15px rgba(0, 0, 0, 0.1)",
           position: "sticky",
@@ -385,8 +372,8 @@ function Brands({onClickClose}) {
                         src={`https://gocarsmithbackend.onrender.com${brand.brandImage}`}
                         alt={brand.name}
                         style={{
-                          width: "73%",
-                          height: "68px",
+                          width: "80%",
+                          height: "55px",
                           display: "block",
                           margin: "0 auto",
                         }}
