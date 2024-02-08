@@ -192,9 +192,20 @@ const Partners = () => {
             "https://gocarsmithbackend.onrender.com/api/serviceCenter/requestAsPatner",
             formData
         );
-        console.log("Request sent successfully:", response.data);
+        if(response){
+
+          window.alert("Request sent successfully!");
+          setFormData({
+            name: "",
+            mobileNumber: "",
+            locality: "",
+            workshopName: "",
+            email: "",
+            workshopDetails: "", // Add workshopDetails field to the state
+        });
+        }
         // Display success message
-        window.alert("Request sent successfully!");
+        
     } catch (error) {
         console.error("Error sending request:", error);
     }
@@ -219,8 +230,8 @@ const Partners = () => {
           }}
         >
           <EmailIcon style={{ marginLeft: "20px" }} />
-          <a href="mailto:Partners@gocarsmith.in" style={{ marginLeft: "8px", textDecoration: "none", color: "inherit" }}>
-  <h4>Partners@gocarsmith.in</h4>
+          <a href="mailto:partners@gocarsmith.in" style={{ marginLeft: "8px", textDecoration: "none", color: "inherit" }}>
+  <h4>partners@gocarsmith.in</h4>
 </a>
 
           <PhoneIcon style={{ marginLeft: "20px" }} />
@@ -522,7 +533,7 @@ const Partners = () => {
             </Grid>
           </Grid>
           <hr
-            style={{ border: "2px solid red", width: "100%", marginTop: "10px" }}
+            style={{ border: "2px solid red", width: "15%", marginTop: "10px" }}
           />
         </div>
 
@@ -570,7 +581,7 @@ const Partners = () => {
             </Grid>
           </Grid>
           <hr
-            style={{ border: "2px solid red", width: "100%", marginTop: "10px" }}
+            style={{ border: "2px solid red", width: "15%", marginTop: "10px" }}
           />
         </div>
         <div style={{ padding: "20px", textAlign: "center" }}>
@@ -621,7 +632,7 @@ const Partners = () => {
             </Grid>
           </Grid>
           <hr
-            style={{ border: "2px solid red", width: "100%", marginTop: "10px" }}
+            style={{ border: "2px solid red", width: "15%", marginTop: "10px" }}
           />
         </div>
         <div style={{ padding: "20px", textAlign: "center" }}>
@@ -683,7 +694,7 @@ const Partners = () => {
             </Grid>
           </Grid>
           <hr
-            style={{ border: "2px solid red", width: "100%", marginTop: "10px" }}
+            style={{ border: "2px solid red", width: "15%", marginTop: "10px" }}
           />
         </div>
         <div style={{ padding: "20px" }}>

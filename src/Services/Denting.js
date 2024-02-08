@@ -2043,7 +2043,7 @@ const Denting = () => {
         <Slider {...settings}>
           {slides.map((slide, index) => (
             <div key={index} style={{ width: "300px", height: "200px" }}>
-              <Card style={{ height: "350px", margin: "5px" }}>
+              <Card style={{ height: "380px", margin: "5px" }}>
                 <CardContent style={{ margin: "0px" }}>
                   <Typography variant="h6" style={{ fontWeight: "bold" }}>
                     {slide.name}

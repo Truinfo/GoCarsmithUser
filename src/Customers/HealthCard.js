@@ -44,21 +44,23 @@ const HealthCard = () => {
     <div>
       {dataStatus ? (
         <div style={{margin:"10px"}}>
-          <Typography variant="h3" sx={{magin:"20px", display:"flex", justifyContent:'center', fontWeight:"600"}}>Health Card</Typography>
+          <Typography variant="h3" sx={{magin:"20px", display:"flex", justifyContent:'center',paddingBottom:"25px", fontWeight:"600"}}>Health Card</Typography>
           <div
             style={{
               display: "flex",
               justifyContent:"center",
               alignItems: "center",
+             
             }}
           >
             <Paper
               elevation={3}
               style={{
-                padding: "20px",
-                width: "auto",
+                padding: "10px",
+                width: "50%",
                 backgroundColor: "#D3D3D3",
                 boxShadow: "none",
+               
               }}
             >
               <Typography

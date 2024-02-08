@@ -240,7 +240,7 @@ const GoMoney = () => {
                                 <AccordionDetails>
                                     {/* Accordion Content */}
                                     <Typography>
-                                        Please note that you can only utilise 50% of your GoApp Money at a time to pay for a car service at GoMechanic.
+                                        Please note that you can only utilise 50% of your GoApp Money at a time to pay for a car service at GoCarsmith.
                                     </Typography>
                                 </AccordionDetails>
                             </Accordion>

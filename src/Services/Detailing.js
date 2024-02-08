@@ -82,7 +82,7 @@ const accordionData = [
   },
   {
     title: 'I can’t visit the workshop to drop my car. Can GoCarsmith help?',
-    content: 'Absolutely not, any paint protection coating is temporary and gentle to the painted surface. A Teflon coating can last upto 6 to 8 months if cared well. Ceramic coating on the other hand bonds to the paint surface and lasts much longer than any wax or paint sealant. A highly recommended service for your {BrandName}  {modelName}.',
+    content: `Absolutely not, any paint protection coating is temporary and gentle to the painted surface. A Teflon coating can last upto 6 to 8 months if cared well. Ceramic coating on the other hand bonds to the paint surface and lasts much longer than any wax or paint sealant. A highly recommended service for your ${BrandName}  ${modelName}.`,
   },
   {
     title: `What products do you use for interior cleaning on my ${BrandName}  ${modelName} ? `,

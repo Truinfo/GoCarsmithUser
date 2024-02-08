@@ -301,8 +301,8 @@ const Reviews = () => {
                                 <Typography variant="h4" sx={{ marginBottom: 2, marginTop: 4, color: '#333', fontWeight:600 }}>
                                     1,02,400 Car Owners Made The Smarter Choice
                                 </Typography>
-                                <Typography variant="h5" sx={{ marginBottom: 2, marginTop: -2, color: '#555' , fontWeight:600 }}>
-                            This is their Love For Us!
+                                <Typography variant="h5" sx={{ marginBottom: 2, marginTop: -2, fontWeight:600 }}>
+                                This is their Love For Us!
                                 </Typography>
                                 <Typography variant="h6" sx={{ marginBottom: 2, color: '#333', fontWeight:600 }}>
                                 <h2><b> 4.7</b>/5 </h2>

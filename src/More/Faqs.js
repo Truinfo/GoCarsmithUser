@@ -100,7 +100,7 @@ const FaqAccordion = () => {
         {
             question: 'Where can I book a car service with GoCarsmith?',
             answer:
-                'You can book a GoCarsmith car service directly from our website or by downloading the exclusive Android App. Want a more human experience? call or WhatsApp on 8398 970 970. GoCarsmith car services are also available on Paytm Mall.',
+                'You can book a GoCarsmith car service directly from our website or by downloading the exclusive Android App. Want a more human experience? call or WhatsApp on 08913576079. GoCarsmith car services are also available on Paytm Mall.',
         },
         {
             question: 'How to book a car service with GoCarsmith?',

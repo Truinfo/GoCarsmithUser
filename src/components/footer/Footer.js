@@ -176,7 +176,7 @@ const Footer = () => {
           style={{ width: "150px", marginTop: "10px" }}
         />
         <p style={{ marginTop: "90px" }}>
-          © 2019-2023 TruQuest Infotech
+          © 2023-2024 TruQuest Infotech
         </p>
       </div>
     </RootPaper>

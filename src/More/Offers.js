@@ -305,10 +305,10 @@ const Offers = () => {
                     style={{
                       marginBottom: "40px",
                       border: "1px solid #ccc",
-                      backgroundColor: "#e8e6df",
-                      padding: "10px",
+                      backgroundColor:"#e8e6df",
+                      padding:"0px",
                       width: "30px",
-                      textAlign: "center",
+                      textAlign:"center",
                     }}
                   >
                     1
@@ -319,7 +319,7 @@ const Offers = () => {
                       marginBottom: "50px",
                       border: "1px solid #ccc",
                       backgroundColor: "#e8e6df",
-                      padding: "10px",
+                      padding: "0px",
                       width: "30px",
                       textAlign: "center",
                     }}
@@ -332,7 +332,7 @@ const Offers = () => {
                       marginBottom: "50px",
                       border: "1px solid #ccc",
                       backgroundColor: "#e8e6df",
-                      padding: "10px",
+                      padding: "0px",
                       width: "30px",
                       textAlign: "center",
                     }}
@@ -345,7 +345,7 @@ const Offers = () => {
                       marginBottom: "50px",
                       border: "1px solid #ccc",
                       backgroundColor: "#e8e6df",
-                      padding: "10px",
+                      padding: "0px",
                       width: "30px",
                       textAlign: "center",
                     }}

@@ -774,8 +774,8 @@ const Home = () => {
               </Grid>
             </Grid>
             <Container>
-              <h1>How GoCarsmith Works?</h1>
-              <Grid container spacing={3}>
+              <h1 style={{marginBottom:"25px"}}>How GoCarsmith Works?</h1>
+              <Grid container spacing={5}>
                 {/* Left side with numbers 1, 2, 3, 4 */}
                 <Grid
                   item
@@ -785,19 +785,19 @@ const Home = () => {
                     display: "flex",
                     flexDirection: "column",
                     alignItems: "center",
-                    padding: "10px",
-                    marginBottom: "60px",
+                    padding: "30px",
+                    marginTop: "10px",
                   }}
                 >
                   <Typography
                     variant="h4"
                     style={{
-                      marginBottom: "50px",
+                      marginBottom: "40px",
                       border: "1px solid #ccc",
-                      backgroundColor: "#e8e6df",
-                      padding: "10px",
-                      width: "40px",
-                      textAlign: "center",
+                      backgroundColor:"#e8e6df",
+                      padding:"0px",
+                      width: "30px",
+                      textAlign:"center",
                     }}
                   >
                     1
@@ -808,8 +808,8 @@ const Home = () => {
                       marginBottom: "50px",
                       border: "1px solid #ccc",
                       backgroundColor: "#e8e6df",
-                      padding: "10px",
-                      width: "40px",
+                      padding: "0px",
+                      width: "30px",
                       textAlign: "center",
                     }}
                   >
@@ -821,8 +821,8 @@ const Home = () => {
                       marginBottom: "50px",
                       border: "1px solid #ccc",
                       backgroundColor: "#e8e6df",
-                      padding: "10px",
-                      width: "40px",
+                      padding: "0px",
+                      width: "30px",
                       textAlign: "center",
                     }}
                   >
@@ -834,8 +834,8 @@ const Home = () => {
                       marginBottom: "50px",
                       border: "1px solid #ccc",
                       backgroundColor: "#e8e6df",
-                      padding: "10px",
-                      width: "40px",
+                      padding: "0px",
+                      width: "30px",
                       textAlign: "center",
                     }}
                   >
@@ -844,46 +844,38 @@ const Home = () => {
                 </Grid>
                 {/* Center content */}
                 <Grid item xs={12} sm={6}>
-                  {/* Add your content here */}
-                  <Typography variant="body1">
-                    {1 === 1 && (
-                      <>
-                        <Typography
-                          variant="body1"
-                          style={{ textAlign: "left",  }}
-                        >
-                          <h3>Select The Perfect Car Service</h3>
-                        </Typography>
-                        <p>From GoCarsmith board portfolio of Services</p>
-                        <Typography
-                          variant="body1"
-                          style={{ textAlign: "left", marginTop: "30px" }}
-                        >
-                          <h3>Schedule Free Doorstep Pick-up</h3>
-                        </Typography>
-                        <p>
-                          We offer free pick up and drop for all service booked
-                        </p>
-                        <Typography
-                          variant="body1"
-                          style={{ textAlign: "left", marginTop: "40px" }}
-                        >
-                          <h3>Track Your Car Service Real-Time</h3>
-                        </Typography>
-                        <p>We will take care of everything from here!</p>
-                        <Typography
-                          variant="body1"
-                          style={{ textAlign: "left", marginTop: "45px" }}
-                        >
-                          <h3>Earn While We Service</h3>
-                        </Typography>
-                        <p>
-                          Spread the word! You get Rs.750. Your friends get
-                          Rs.750!
-                        </p>
-                      </>
-                    )}
-                  </Typography>
+                  <div>
+                    <Typography
+                      variant="h6"
+                      style={{ textAlign: "left", marginTop: "10px" }}
+                    >
+                      <b>Select The Perfect Car Service</b>
+                    </Typography>
+                    <p style={{paddingLeft:"15px"}}>From GoCarsmith board portfolio of Services</p>
+                    <Typography
+                      variant="h6"
+                      style={{ textAlign: "left", marginTop: "30px" }}
+                    >
+                      <b>Schedule Free Doorstep Pick-up</b>
+                    </Typography>
+                    <p style={{paddingLeft:"15px"}}>We offer free pick up and drop for all service booked</p>
+                    <Typography
+                      variant="h6"
+                      style={{ textAlign: "left", marginTop: "40px" }}
+                    >
+                      <b>Track Your Car Service Real-Time</b>
+                    </Typography>
+                    <p style={{paddingLeft:"15px"}}>We Will take care of everything from here!</p>
+                    <Typography
+                      variant="h6"
+                      style={{ textAlign: "left", marginTop: "45px" }}
+                    >
+                      <b>Earn While We Service</b>
+                    </Typography>
+                    <p style={{paddingLeft:"15px"}}>
+                      Spread the word! You get Rs.750. Your friends get Rs.750!
+                    </p>
+                  </div>
                 </Grid>
                 {/* Right side with an image */}
                 <Grid item xs={12} sm={3}>

@@ -1966,7 +1966,7 @@ useEffect(() => {
         <Slider {...settings} >
             {slides.map((slide, index) => (
               <div key={index} style={{ width: "300px", height: "200px" }}>
-                <Card style={{ height: "350px", margin: "5px" }}>
+                <Card style={{ height: "380px", margin: "5px" }}>
                   <CardContent style={{ margin: "0px" }}>
                     <Typography variant="h6" style={{ fontWeight: "bold" }}>
                       {slide.name}
@@ -2147,10 +2147,12 @@ useEffect(() => {
         </div>
       </Paper>
       <div style={{marginTop:"15px"}}>
-        <h2>
+       
+        {priceLists.length > 0 ? (
+          <>
+           <h2>
           Price Lists for {locationName} and {BrandName}
         </h2>
-        {priceLists.length > 0 ? (
           <TableContainer component={Paper}>
             <Table>
               <TableHead>
@@ -2173,8 +2175,9 @@ useEffect(() => {
               </TableBody>
             </Table>
           </TableContainer>
+          </>
         ) : (
-          <p>No priceLists found for the specified location and brand.</p>
+          <p></p>
         )}
       </div>
       

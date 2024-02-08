@@ -312,7 +312,7 @@ const BlogDescription = () => {
               <Grid item xs={12}>
                 <img
                   src={`https://gocarsmithbackend.onrender.com${blogDetails.cover[0].img}`}
-                  alt={`Cover Image 0`}
+                  alt={`Cover  0`}
                   style={{ width: '100%' }}
                 />
               </Grid>
@@ -320,7 +320,7 @@ const BlogDescription = () => {
           </Grid>
           {blogDetails && (
             <CarInfo title="Description">
-              <Typography>{blogDetails.description}</Typography>
+              <Typography style={{textAlign:"justify"}}>{blogDetails.description}</Typography>
             </CarInfo>
           )}
           <Grid container spacing={2}>
@@ -328,21 +328,21 @@ const BlogDescription = () => {
               <Grid item xs={12}>
                 <img
                   src={`https://gocarsmithbackend.onrender.com${blogDetails.cover[1].img}`}
-                  alt={`Cover Image 1`}
+                  alt={`Cover  1`}
                   style={{ width: '100%' }}
                 />
               </Grid>
             )}
           </Grid>
           <CarInfo title="Content">
-            <Typography>{blogDetails && blogDetails.content}</Typography>
+            <Typography style={{textAlign:"justify"}}>{blogDetails && blogDetails.content}</Typography>
           </CarInfo>
           <Grid container spacing={2}>
             {blogDetails && blogDetails.cover && blogDetails.cover.length > 2 && (
               <Grid item xs={12}>
                 <img
                   src={`https://gocarsmithbackend.onrender.com${blogDetails.cover[2].img}`}
-                  alt={`Cover Image 2`}
+                  alt={`Cover  2`}
                   style={{ width: '100%' }}
                 />
               </Grid>
@@ -405,7 +405,7 @@ const BlogDescription = () => {
                     variant="contained"
                     color="primary"
                     onClick={handleSavePersonalizedComment}
-                    style={{ marginLeft: '80px' }}
+                    style={{ marginLeft: '80px', }}
                   >
                     Save Comment
                   </Button>
@@ -470,12 +470,13 @@ const BlogDescription = () => {
                 rows={5}
                 value={newComment}
                 onChange={(e) => setNewComment(e.target.value)}
+
               />
               <Button
                 variant="contained"
                 color="primary"
                 onClick={handlePostComment}
-                style={{ marginLeft: '80px' }}
+                style={{ marginLeft: '40px',marginTop:"30px" }}
                 disabled={
                   newComment === null ||
                   newComment === undefined ||
