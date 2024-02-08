@@ -26,6 +26,7 @@ import {
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 import Paper from "@mui/material/Paper";
+
 import {
   Table,
   TableBody,
@@ -273,7 +274,6 @@ const Suspension = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-
     centerPadding: "10px",
     nextArrow: <CustomNextArrow />,
     prevArrow: <CustomPrevArrow />,
@@ -309,6 +309,8 @@ const Suspension = () => {
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 1,
+    nextArrow: <CustomNextArrow />,
+    prevArrow: <CustomPrevArrow />,
   };
 
   useEffect(() => {
@@ -743,7 +745,7 @@ const Suspension = () => {
                     alt="Car Image"
                     height="250"
                     image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/EPS%20Module%20Repair/Thumbnail.jpg"
-                    style={{ borderRadius: "8px 0 0 8px", marginTop: "8px" }}
+                    style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                   />
                 </Grid>
                 {/* Second Container */}
@@ -865,7 +867,7 @@ const Suspension = () => {
                     alt="Car Image"
                     height="200"
                     image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Steering%20Rack%20Repair/thumbnail.jpg"
-                    style={{ borderRadius: "8px 0 0 8px", marginTop: "8px" }}
+                    style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                   />
                 </Grid>
                 {/* Second Container */}
@@ -994,7 +996,7 @@ const Suspension = () => {
                     alt="Car Image"
                     height="300"
                     image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/New%20Thumbnail/front_shokerthumbnail%20(1).jpg"
-                    style={{ borderRadius: "8px 0 0 8px", marginTop: "10px" }}
+                     style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                   />
                 </Grid>
                 {/* Second Container */}
@@ -1133,7 +1135,7 @@ const Suspension = () => {
                     alt="Car Image"
                     height="320"
                     image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/New%20Thumbnail/RearshockThumbnail%20(1).jpg"
-                    style={{ borderRadius: "8px 0 0 8px", marginTop: "10px" }}
+                     style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                   />
                 </Grid>
                 {/* Second Container */}
@@ -1272,7 +1274,7 @@ const Suspension = () => {
                     alt="Car Image"
                     height="300"
                     image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Suspension%20Lower%20Arm%20Replacement/Thumbnail.jpg"
-                    style={{ borderRadius: "8px 0 0 8px", marginTop: "10px" }}
+                     style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                   />
                 </Grid>
                 {/* Second Container */}
@@ -1400,7 +1402,7 @@ const Suspension = () => {
                     alt="Car Image"
                     height="300"
                     image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Link%20Road%20Replacement/Thumbanil.jpg"
-                    style={{ borderRadius: "8px 0 0 8px", marginTop: "10px" }}
+                     style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                   />
                 </Grid>
                 {/* Second Container */}
@@ -1528,7 +1530,7 @@ const Suspension = () => {
                     alt="Car Image"
                     height="300"
                     image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Tie%20Rod%20End%20Replacement/Thumbanil.jpg"
-                    style={{ borderRadius: "8px 0 0 8px", marginTop: "10px" }}
+                     style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                   />
                 </Grid>
                 {/* Second Container */}
@@ -1655,7 +1657,7 @@ const Suspension = () => {
                     alt="Car Image"
                     height="250"
                     image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJSsg6umgWFODYMGK2T7p7WgMwD72PZWKuQ5x8TmCyggODWh__VCVDR5XYEKtF_bwKkps&usqp=CAU"
-                    style={{ borderRadius: "8px 0 0 8px", marginTop: "10px" }}
+                     style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                   />
                 </Grid>
                 {/* Second Container */}
@@ -1782,7 +1784,7 @@ const Suspension = () => {
                     alt="Car Image"
                     height="300"
                     image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Front%20Shocker%20Mount%20Replacement/Thumbanil.jpg"
-                    style={{ borderRadius: "8px 0 0 8px", marginTop: "10px" }}
+                     style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                   />
                 </Grid>
                 {/* Second Container */}
@@ -1923,7 +1925,7 @@ const Suspension = () => {
                     alt="Car Image"
                     height="300"
                     image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Front%20Axle%20Repair/Thumbnail.jpg"
-                    style={{ borderRadius: "8px 0 0 8px", marginTop: "10px" }}
+                     style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                   />
                 </Grid>
                 {/* Second Container */}
@@ -2052,7 +2054,7 @@ const Suspension = () => {
                     alt="Car Image"
                     height="270"
                     image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Silencer%20Repair/thumbnail.jpg"
-                    style={{ borderRadius: "8px 0 0 8px", marginTop: "8px" }}
+                    style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                   />
                 </Grid>
                 {/* Second Container */}
@@ -2178,7 +2180,7 @@ const Suspension = () => {
                     alt="Car Image"
                     height="250"
                     image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Radiator%20Replacement%20Replacement_/thumbnail.jpg"
-                    style={{ borderRadius: "8px 0 0 8px", marginTop: "10px" }}
+                     style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                   />
                 </Grid>
                 {/* Second Container */}
@@ -2307,7 +2309,7 @@ const Suspension = () => {
                     alt="Car Image"
                     height="250"
                     image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Gear%20Box%20Mounting%20Replacement/Thumbnail.jpg"
-                    style={{ borderRadius: "8px 0 0 8px", marginTop: "10px" }}
+                     style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                   />
                 </Grid>
                 {/* Second Container */}
@@ -2431,7 +2433,7 @@ const Suspension = () => {
                     alt="Car Image"
                     height="250"
                     image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Engine%20Mounting%20Replacement/Thumbnail.jpg"
-                    style={{ borderRadius: "8px 0 0 8px", marginTop: "10px" }}
+                     style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                   />
                 </Grid>
                 {/* Second Container */}
@@ -2552,7 +2554,7 @@ const Suspension = () => {
                     alt="Car Image"
                     height="250"
                     image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Radiator%20Fan%20Motor%20Replacement/Thumbnail.jpg"
-                    style={{ borderRadius: "8px 0 0 8px", marginTop: "10px" }}
+                     style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                   />
                 </Grid>
                 {/* Second Container */}
@@ -2679,7 +2681,7 @@ const Suspension = () => {
                     alt="Car Image"
                     height="250"
                     image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Fuel%20Replacement%20Pump/thumbnail.jpg"
-                    style={{ borderRadius: "8px 0 0 8px", marginTop: "10px" }}
+                     style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                   />
                 </Grid>
                 {/* Second Container */}
@@ -2806,7 +2808,7 @@ const Suspension = () => {
                     alt="Car Image"
                     height="250"
                     image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Water%20Pump%20Replacement/Thumbnail.jpg"
-                    style={{ borderRadius: "8px 0 0 8px", marginTop: "10px" }}
+                     style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                   />
                 </Grid>
                 {/* Second Container */}
@@ -2927,7 +2929,7 @@ const Suspension = () => {
                     alt="Car Image"
                     height="250"
                     image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/ECM%20Repair/Thumbnail.jpg"
-                    style={{ borderRadius: "8px 0 0 8px", marginTop: "10px" }}
+                     style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                   />
                 </Grid>
                 {/* Second Container */}
@@ -3051,7 +3053,7 @@ const Suspension = () => {
                     alt="Car Image"
                     height="200"
                     image="https://gomechprod.blob.core.windows.net/gm-retail-app/retailservices/Foam_Wash_Thumbnail.jpg"
-                    style={{ borderRadius: "8px 0 0 8px", marginTop: "10px" }}
+                     style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                   />
                 </Grid>
                 {/* Second Container */}
@@ -3164,7 +3166,7 @@ const Suspension = () => {
                     alt="Car Image"
                     height="280"
                     image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA4VAFkRLHZlpo7CAzn2yMFuBezILF-G-Lhg&usqp=CAU"
-                    style={{ borderRadius: "8px 0 0 8px", marginTop: "10px" }}
+                     style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                   />
                 </Grid>
                 {/* Second Container */}
@@ -3282,7 +3284,7 @@ const Suspension = () => {
                     alt="Car Image"
                     height="200"
                     image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/New%20Thumbnail/Mud%20Flaps.jpg"
-                    style={{ borderRadius: "8px 0 0 8px", marginTop: "10px" }}
+                     style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                   />
                 </Grid>
                 {/* Second Container */}
@@ -3398,7 +3400,7 @@ const Suspension = () => {
                     alt="Car Image"
                     height="200"
                     image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Inner%20Door%20handle%20Latch/Thumbnail%20Interior%20Door%20Latch%20Replacement.jpeg"
-                    style={{ borderRadius: "8px 0 0 8px", marginTop: "10px" }}
+                     style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                   />
                 </Grid>
                 {/* Second Container */}
@@ -3526,7 +3528,7 @@ const Suspension = () => {
                     alt="Car Image"
                     height="290"
                     image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Power%20Window%20Repair/thumbnail.jpg"
-                    style={{ borderRadius: "8px 0 0 8px", marginTop: "10px" }}
+                     style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                   />
                 </Grid>
                 {/* Second Container */}
@@ -3643,7 +3645,7 @@ const Suspension = () => {
                   alt="Car Image"
                   height="200"
                   image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/CUSTOM%20SERVICES/Noises%20With%20Car%20Suspension%20_%20Steering.jpg"
-                  style={{ borderRadius: "8px 0 0 8px", marginTop: "8px" }}
+                  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               <Grid item sm={8}>
@@ -3753,7 +3755,7 @@ const Suspension = () => {
                   alt="Car Image"
                   height="200"
                   image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/CUSTOM%20SERVICES/Faulty%20Electricals.jpg"
-                  style={{ borderRadius: "8px 0 0 8px", marginTop: "8px" }}
+                  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               <Grid item sm={8}>
@@ -4154,11 +4156,11 @@ const Suspension = () => {
         </Paper>
         <h1 style={{padding:"20px 0px 10px 0px"}}> Popular Regions </h1>
         <div style={{ padding: "20px", background: "#f5f4f2", marginBottom: "20px" }}>
-          <Slider {...carouselSettings}>
+          <Slider  {...carouselSettings} >
             {childLocations.map((loc, index) => (
               <div
                 key={loc._id}
-                style={{ textAlign: "center", padding: "20px" }}
+                style={{ textAlign: "center", padding: "20px"  }}
               >
                 {loc.name}
               </div>

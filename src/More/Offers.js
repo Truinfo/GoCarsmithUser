@@ -142,12 +142,14 @@ const Offers = () => {
 
   
   const settings1 = {
-    dots: true,
+    dots: false,
     infinite: false,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 2,
-    centerPadding: '10px',
+   nextArrow: <CustomNextArrow />,
+     prevArrow: <CustomPrevArrow/>,
+    
   };
   const imageUrls1 = [
     {
@@ -259,10 +261,10 @@ const Offers = () => {
         </Typography>
         <br />
       </div>
-      <div style={{margin:"10px"}}>
-  <Slider {...settings1}>
+      <div style={{margin:"70px"}}>
+  <Slider {...settings1} >
     {imageUrls1.map((imageUrl, index) => (
-      <div key={index}>
+      <div key={index} >
           <img
             src={imageUrl.image}
             alt={` ${index + 1}`}

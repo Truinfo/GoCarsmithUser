@@ -646,7 +646,7 @@ const Clutch = () => {
                                     alt="Car Image"
                                     height="300"
                                     image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Clutch%20Service/Thumbnail.jpg"
-                                    style={{ borderRadius: '8px 0 0 8px', marginTop: '8px' }}
+                                     style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                                 />
                             </Grid>
                             <Grid item sm={8}>
@@ -726,7 +726,8 @@ const Clutch = () => {
                                     component="img"
                                     alt="Car Image"
                                     height="300"
-                                    image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Clutch%20Bearing%20OES%20Replacement/Thumbnail.jpg" style={{ borderRadius: '8px 0 0 8px', marginTop: '10px' }}
+                                    image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Clutch%20Bearing%20OES%20Replacement/Thumbnail.jpg" 
+                                     style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                                 />
                             </Grid>
                             {/* Second Container */}
@@ -807,7 +808,7 @@ const Clutch = () => {
                                     component="img"
                                     alt="Car Image"
                                     height="300"
-                                    image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/New%20Thumbnail/flywheelThumbnail%20(1).jpg" style={{ borderRadius: '8px 0 0 8px', marginTop: '10px' }}
+                                    image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/New%20Thumbnail/flywheelThumbnail%20(1).jpg"  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                                 />
                             </Grid>
                             {/* Second Container */}
@@ -888,7 +889,7 @@ const Clutch = () => {
                                     component="img"
                                     alt="Car Image"
                                     height="300"
-                                    image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Flywheel%20turning/Thumbanil.jpg" style={{ borderRadius: '8px 0 0 8px', marginTop: '10px' }}
+                                    image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Flywheel%20turning/Thumbanil.jpg"  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                                 />
                             </Grid>
                             {/* Second Container */}
@@ -972,7 +973,7 @@ const Clutch = () => {
                                     alt="Car Image"
                                     height="200"
                                     image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Overhaul%20Services/Clutch%20Overhaul/clutch%20overhaul.jpg"
-                                    style={{ borderRadius: '8px 0 0 8px', marginTop: '8px' }}
+                                     style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                                 />
                             </Grid>
                             {/* Second Container */}
@@ -1051,7 +1052,7 @@ const Clutch = () => {
                                     component="img"
                                     alt="Car Image"
                                     height="250"
-                                    image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Front%20Bumper/Front%20Bumper.png" style={{ borderRadius: '8px 0 0 8px', marginTop: '10px' }}
+                                    image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Front%20Bumper/Front%20Bumper.png"  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                                 />
                             </Grid>
                             {/* Second Container */}
@@ -1136,7 +1137,7 @@ const Clutch = () => {
                                     alt="Car Image"
                                     height="250"
                                     image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Rear%20Bumper/Rear%20Bumper%20Replacement%20Sq.png"
-                                    style={{ borderRadius: '8px 0 0 8px', marginTop: '10px' }}
+                                     style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                                 />
                             </Grid>
                             {/* Second Container */}
@@ -1221,7 +1222,7 @@ const Clutch = () => {
                                     alt="Car Image"
                                     height="250"
                                     image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/7%20services%20Images/Bonnet%20Replacement/Thumbnail.png"
-                                    style={{ borderRadius: '8px 0 0 8px', marginTop: '10px' }}
+                                     style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                                 />
                             </Grid>
                             {/* Second Container */}
@@ -1307,7 +1308,7 @@ const Clutch = () => {
                                     alt="Car Image"
                                     height="250"
                                     image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/7%20services%20Images/Boot%20replacement/Thumbnail.png"
-                                    style={{ borderRadius: '8px 0 0 8px', marginTop: '10px' }}
+                                     style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                                 />
                             </Grid>
                             {/* Second Container */}
@@ -1392,7 +1393,7 @@ const Clutch = () => {
                                     alt="Car Image"
                                     height="250"
                                     image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/7%20services%20Images/Fender%20Replacement/Thumbnail.png"
-                                    style={{ borderRadius: '8px 0 0 8px', marginTop: '10px' }}
+                                     style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                                 />
                             </Grid>
                             {/* Second Container */}
@@ -1478,7 +1479,7 @@ const Clutch = () => {
                                     alt="Car Image"
                                     height="250"
                                     image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/7%20services%20Images/Right%20Front%20Door%20Replacement/Thumbnail.png"
-                                    style={{ borderRadius: '8px 0 0 8px', marginTop: '10px' }}
+                                     style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                                 />
                             </Grid>
                             {/* Second Container */}
@@ -1564,7 +1565,7 @@ const Clutch = () => {
                                     alt="Car Image"
                                     height="250"
                                     image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/7%20services%20Images/Right%20Rear%20Door%20Replacement/Thumbnail.png"
-                                    style={{ borderRadius: '8px 0 0 8px', marginTop: '10px' }}
+                                     style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                                 />
                             </Grid>
                             {/* Second Container */}
@@ -1650,7 +1651,7 @@ const Clutch = () => {
                                     alt="Car Image"
                                     height="250"
                                     image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/7%20services%20Images/Left%20Front%20Door%20Replacement/Thumbnail.png"
-                                    style={{ borderRadius: '8px 0 0 8px', marginTop: '10px' }}
+                                     style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                                 />
                             </Grid>
                             {/* Second Container */}
@@ -1736,7 +1737,7 @@ const Clutch = () => {
                                     alt="Car Image"
                                     height="250"
                                     image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/7%20services%20Images/Left%20Rear%20Door%20Replacement/Thumbnail.png"
-                                    style={{ borderRadius: '8px 0 0 8px', marginTop: '10px' }}
+                                     style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                                 />
                             </Grid>
                             {/* Second Container */}
@@ -1825,7 +1826,7 @@ const Clutch = () => {
                                     component="img"
                                     alt="Car Image"
                                     height="220"
-                                    image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/CUSTOM%20SERVICES/Clutch%20_%20Transmission%20Troubles.jpg" style={{ borderRadius: '8px 0 0 8px', marginTop: '10px' }}
+                                    image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/CUSTOM%20SERVICES/Clutch%20_%20Transmission%20Troubles.jpg"  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                                 />
                             </Grid>
                             {/* Second Container */}
@@ -1906,7 +1907,7 @@ const Clutch = () => {
                                     component="img"
                                     alt="Car Image"
                                     height="200"
-                                    image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/CUSTOM%20SERVICES/ABS%20Issue.jpg" style={{ borderRadius: '8px 0 0 8px', marginTop: '10px' }}
+                                    image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/CUSTOM%20SERVICES/ABS%20Issue.jpg"  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                                 />
                             </Grid>
                             {/* Second Container */}

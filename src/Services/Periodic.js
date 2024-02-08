@@ -654,9 +654,10 @@ const PeriodicService = () => {
                                     <CardMedia
                                         component="img"
                                         alt="Car Image"
+                                        style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                                         height="300"
                                         image="https://thumbs.dreamstime.com/b/worker-uniform-disassembles-vehicle-engine-car-service-station-automobile-checking-inspection-professional-diagnostics-173424972.jpg"
-                                        style={{ borderRadius: '8px 0 0 8px', marginTop: '8px' }}
+                                         
                                     />
                                 </Grid>
                                 {/* Second Container */}
@@ -748,7 +749,7 @@ const PeriodicService = () => {
                                         alt="Car Image"
                                         height="300"
                                         image="https://gomechprod.blob.core.windows.net/gm-retail-app/service-new-images/Standard%20Service%20Package%20sq.jpg"
-                                        style={{ borderRadius: "8px 0 0 8px", marginTop: "10px" }}
+                                         style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                                     />
                                 </Grid>
                                 {/* Second Container */}
@@ -884,7 +885,7 @@ const PeriodicService = () => {
                                         alt="Car Image"
                                         height="350"
                                         image="https://gomechprod.blob.core.windows.net/gm-retail-app/service-new-images/Comprehensive%20Service%20Package%202%20sq.jpg"
-                                        style={{ borderRadius: "8px 0 0 8px", marginTop: "10px" }}
+                                         style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                                     />
                                 </Grid>
                                 {/* Second Container */}
@@ -1027,7 +1028,7 @@ const PeriodicService = () => {
                                         alt="Car Image"
                                         height="300"
                                         image="https://t4.ftcdn.net/jpg/04/23/67/35/240_F_423673516_wtn1XosRyqpk33Qp2032QVGJKJgEzPWm.jpg"
-                                        style={{ borderRadius: "8px 0 0 8px", marginTop: "10px" }}
+                                         style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                                     />
                                 </Grid>
                                 {/* Second Container */}
@@ -1147,7 +1148,7 @@ const PeriodicService = () => {
                                         alt="Car Image"
                                         height="350"
                                         image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/BrakePads/Brake%20Shoe%20Thumbnail.jpg"
-                                        style={{ borderRadius: "8px 0 0 8px", marginTop: "10px" }}
+                                         style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                                     />
                                 </Grid>
                                 {/* Second Container */}
@@ -1260,7 +1261,7 @@ const PeriodicService = () => {
                                         alt="Car Image"
                                         height="300"
                                         image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Front%20Disc%20Brake/Thumbnail.jpg"
-                                    />
+                                        style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}    />
                                 </Grid>
                                 {/* Second Container */}
                                 <Grid item sm={8}>
@@ -1373,6 +1374,7 @@ const PeriodicService = () => {
                                         alt="Car Image"
                                         height="300"
                                         image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Caliper%20Pin%20Replacement/Thumbnail.jpg"
+                                        style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                                     />
                                 </Grid>
                                 {/* Second Container */}
@@ -1485,6 +1487,7 @@ const PeriodicService = () => {
                                         component="img"
                                         alt="Car Image"
                                         height="200"
+                                        style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                                         image="https://media.istockphoto.com/id/522633920/photo/car-service-procedure.jpg?s=612x612&w=0&k=20&c=CrnBjpIeeOQ66VbyHikmN1wsfnwDSsQ_YHJDOZeiPck="
                                     />
                                 </Grid>
@@ -1594,6 +1597,7 @@ const PeriodicService = () => {
                                         component="img"
                                         alt="Car Image"
                                         height="270"
+                                        style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                                         image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlGrkV4NO96mbZWtTlBpTaM1sl0YLva76QnlOIaoWAIL56ZixoOooFyxSpIxIhqs7d830&usqp=CAU"
                                     />
                                 </Grid>
@@ -1710,6 +1714,7 @@ const PeriodicService = () => {
                                         component="img"
                                         alt="Car Image"
                                         height="200"
+                                        style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                                         image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Brake%20Drums/Thumbnail2.jpg"
                                     />
                                 </Grid>
@@ -1822,6 +1827,7 @@ const PeriodicService = () => {
                                     <CardMedia
                                         component="img"
                                         alt="Car Image"
+                                        style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                                         height="270"
                                         image="https://gomechprod.blob.core.windows.net/gm-retail-app/retailservices/wheel%20cylinder%20replacement/thumbnail.jpg"
                                     />

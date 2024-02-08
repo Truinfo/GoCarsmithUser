@@ -583,7 +583,7 @@ const WindSheilds = () => {
                     alt="Car Image"
                     height="280"
                     image="https://www.aisglass.com/wp-content/uploads/2021/12/Windshield-scaled.jpg."
-                    style={{ borderRadius: "8px 0 0 8px", marginTop: "8px" }}
+                    style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                   />
                 </Grid>
                 {/* Second Container */}
@@ -702,7 +702,7 @@ const WindSheilds = () => {
                     alt="Car Image"
                     height="280"
                     image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Rear%20Windshield%20replacement/Rear%20Windshield%20Replacement%20Sq.jpg"
-                    style={{ borderRadius: "8px 0 0 8px", marginTop: "10px" }}
+                    style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                   />
                 </Grid>
                 {/* Second Container */}
@@ -821,7 +821,7 @@ const WindSheilds = () => {
                     alt="Car Image"
                     height="280"
                     image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Door%20Glass%20Replacement/Door%20Glass%20Replacement%20Sq.jpg"
-                    style={{ borderRadius: "8px 0 0 8px", marginTop: "10px" }}
+                    style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                   />
                 </Grid>
                 {/* Second Container */}
@@ -938,7 +938,7 @@ const WindSheilds = () => {
                     alt="Car Image"
                     height="280"
                     image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Lights/721307022804.jpg"
-                    style={{ borderRadius: "8px 0 0 8px", marginTop: "10px" }}
+                    style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                   />
                 </Grid>
                 {/* Second Container */}
@@ -1051,7 +1051,7 @@ const WindSheilds = () => {
                     alt="Car Image"
                     height="280"
                     image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Lights/8E5945257.jpg"
-                    style={{ borderRadius: "8px 0 0 8px", marginTop: "10px" }}
+                    style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                   />
                 </Grid>
                 {/* Second Container */}
@@ -1168,6 +1168,7 @@ const WindSheilds = () => {
                     alt="Car Image"
                     height="300"
                     image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Fog%20Light/maruti_fog_lamp.jpg"
+                    style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                   />
                 </Grid>
                 {/* Second Container */}
@@ -1285,6 +1286,7 @@ const WindSheilds = () => {
                     alt="Car Image"
                     height="300"
                     image="	https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Side%20Mirror%20Replacement/thumbnail.jpg"
+                    style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                   />
                 </Grid>
                 {/* Second Container */}

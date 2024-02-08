@@ -632,7 +632,7 @@ const Denting = () => {
                   alt="Car Image"
                   height="250"
                   image="https://gomechprod.blob.core.windows.net/gm-retail-app/service-new-images/Front%20bumper%20paint%20sq.jpg"
-                  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px' }}
+                  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               {/* Second Container */}
@@ -724,7 +724,7 @@ const Denting = () => {
                   component="img"
                   alt="Car Image"
                   height="250"
-                  image="https://gomechprod.blob.core.windows.net/gm-retail-app/service-new-images/Bonnet%20paint%20sq.jpg" style={{ borderRadius: '8px 0 0 8px', marginTop: '10px' }}
+                  image="https://gomechprod.blob.core.windows.net/gm-retail-app/service-new-images/Bonnet%20paint%20sq.jpg"  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               {/* Second Container */}
@@ -816,7 +816,7 @@ const Denting = () => {
                   component="img"
                   alt="Car Image"
                   height="260"
-                  image="https://gomechprod.blob.core.windows.net/gm-retail-app/service-new-images/LHS%20quarter%20panel%20paint%20sq.jpg" style={{ borderRadius: '8px 0 0 8px', marginTop: '10px' }}
+                  image="https://gomechprod.blob.core.windows.net/gm-retail-app/service-new-images/LHS%20quarter%20panel%20paint%20sq.jpg"  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               {/* Second Container */}
@@ -908,7 +908,7 @@ const Denting = () => {
                   component="img"
                   alt="Car Image"
                   height="260"
-                  image="https://gomechprod.blob.core.windows.net/gm-retail-app/service-new-images/Boot%20paint%20sq.jpg" style={{ borderRadius: '8px 0 0 8px', marginTop: '10px' }}
+                  image="https://gomechprod.blob.core.windows.net/gm-retail-app/service-new-images/Boot%20paint%20sq.jpg"  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               {/* Second Container */}
@@ -1000,7 +1000,7 @@ const Denting = () => {
                   component="img"
                   alt="Car Image"
                   height="300"
-                  image="https://gomechprod.blob.core.windows.net/gm-retail-app/service-new-images/RHS%20running%20board%20paint%20sq.jpg" style={{ borderRadius: '8px 0 0 8px', marginTop: '10px' }}
+                  image="https://gomechprod.blob.core.windows.net/gm-retail-app/service-new-images/RHS%20running%20board%20paint%20sq.jpg"  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               {/* Second Container */}
@@ -1091,7 +1091,7 @@ const Denting = () => {
                   component="img"
                   alt="Car Image"
                   height="300"
-                  image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/services_icon/wheel-Alloy-Painting-min.png" style={{ borderRadius: '8px 0 0 8px', marginTop: '10px' }}
+                  image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/services_icon/wheel-Alloy-Painting-min.png"  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               {/* Second Container */}
@@ -1182,7 +1182,7 @@ const Denting = () => {
                   component="img"
                   alt="Car Image"
                   height="300"
-                  image="https://gomechprod.blob.core.windows.net/gm-retail-app/service-new-images/LHS%20running%20board%20paint%20sq.jpg" style={{ borderRadius: '8px 0 0 8px', marginTop: '10px' }}
+                  image="https://gomechprod.blob.core.windows.net/gm-retail-app/service-new-images/LHS%20running%20board%20paint%20sq.jpg"  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               {/* Second Container */}
@@ -1273,7 +1273,7 @@ const Denting = () => {
                   component="img"
                   alt="Car Image"
                   height="300"
-                  image="https://gomechprod.blob.core.windows.net/gm-retail-app/service-new-images/LHS%20front%20door%20paint%20sq.jpg" style={{ borderRadius: '8px 0 0 8px', marginTop: '10px' }}
+                  image="https://gomechprod.blob.core.windows.net/gm-retail-app/service-new-images/LHS%20front%20door%20paint%20sq.jpg"  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               {/* Second Container */}
@@ -1364,7 +1364,7 @@ const Denting = () => {
                   component="img"
                   alt="Car Image"
                   height="300"
-                  image="https://gomechprod.blob.core.windows.net/gm-retail-app/service-new-images/LHS%20rear%20door%20paint%20sq.jpg" style={{ borderRadius: '8px 0 0 8px', marginTop: '10px' }}
+                  image="https://gomechprod.blob.core.windows.net/gm-retail-app/service-new-images/LHS%20rear%20door%20paint%20sq.jpg"  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               {/* Second Container */}
@@ -1452,7 +1452,7 @@ const Denting = () => {
                   component="img"
                   alt="Car Image"
                   height="300"
-                  image="https://gomechprod.blob.core.windows.net/gm-retail-app/service-new-images/LHS%20rear%20door%20paint%20sq.jpg" style={{ borderRadius: '8px 0 0 8px', marginTop: '10px' }}
+                  image="https://gomechprod.blob.core.windows.net/gm-retail-app/service-new-images/LHS%20rear%20door%20paint%20sq.jpg"  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               {/* Second Container */}
@@ -1535,7 +1535,7 @@ const Denting = () => {
                   component="img"
                   alt="Car Image"
                   height="300"
-                  image="https://gomechprod.blob.core.windows.net/gm-retail-app/service-new-images/LHS%20running%20board%20paint%20sq.jpg" style={{ borderRadius: '8px 0 0 8px', marginTop: '10px' }}
+                  image="https://gomechprod.blob.core.windows.net/gm-retail-app/service-new-images/LHS%20running%20board%20paint%20sq.jpg"  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               {/* Second Container */}
@@ -1621,7 +1621,7 @@ const Denting = () => {
                   component="img"
                   alt="Car Image"
                   height="300"
-                  image="https://gomechprod.blob.core.windows.net/gm-retail-app/service-new-images/RHS front door paint sq.jpg" style={{ borderRadius: '8px 0 0 8px', marginTop: '10px' }}
+                  image="https://gomechprod.blob.core.windows.net/gm-retail-app/service-new-images/RHS front door paint sq.jpg"  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               {/* Second Container */}
@@ -1704,7 +1704,7 @@ const Denting = () => {
                   component="img"
                   alt="Car Image"
                   height="300"
-                  image="https://gomechprod.blob.core.windows.net/gm-retail-app/service-new-images/RHS front door paint sq.jpg" style={{ borderRadius: '8px 0 0 8px', marginTop: '10px' }}
+                  image="https://gomechprod.blob.core.windows.net/gm-retail-app/service-new-images/RHS front door paint sq.jpg"  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               {/* Second Container */}
@@ -1792,7 +1792,7 @@ const Denting = () => {
                   component="img"
                   alt="Car Image"
                   height="300"
-                  image="https://gomechprod.blob.core.windows.net/gm-retail-app/service-new-images/RHS%20rear%20door%20paint%20sq.jpg" style={{ borderRadius: '8px 0 0 8px', marginTop: '10px' }}
+                  image="https://gomechprod.blob.core.windows.net/gm-retail-app/service-new-images/RHS%20rear%20door%20paint%20sq.jpg"  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               {/* Second Container */}
@@ -1880,7 +1880,7 @@ const Denting = () => {
                   component="img"
                   alt="Car Image"
                   height="300"
-                  image="https://gomechprod.blob.core.windows.net/gm-retail-app/service-new-images/RHS%20quarter%20panel%20paint%20sq.jpg" style={{ borderRadius: '8px 0 0 8px', marginTop: '10px' }}
+                  image="https://gomechprod.blob.core.windows.net/gm-retail-app/service-new-images/RHS%20quarter%20panel%20paint%20sq.jpg"  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               {/* Second Container */}
@@ -1967,7 +1967,7 @@ const Denting = () => {
                   component="img"
                   alt="Car Image"
                   height="300"
-                  image="https://gomechprod.blob.core.windows.net/gm-retail-app/service-new-images/RHS%20running%20board%20paint%20sq.jpg" style={{ borderRadius: '8px 0 0 8px', marginTop: '10px' }}
+                  image="https://gomechprod.blob.core.windows.net/gm-retail-app/service-new-images/RHS%20running%20board%20paint%20sq.jpg"  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               {/* Second Container */}

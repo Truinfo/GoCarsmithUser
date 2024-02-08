@@ -585,7 +585,7 @@ const Tyres = () => {
                   alt="Car Image"
                   height="300"
                   image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/tyres_new/Apollo/Apollo%20Amazer%204G%20Life.jpg"
-                  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px' }}
+                   style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               {/* Second Container */}
@@ -670,7 +670,7 @@ const Tyres = () => {
                   alt="Car Image"
                   height="300"
                   image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/tyres_new/Apollo/Apollo%20Amazer%204G%20Life.jpg"
-                  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px' }}
+                   style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               {/* Second Container */}
@@ -754,7 +754,7 @@ const Tyres = () => {
                   alt="Car Image"
                   height="300"
                   image="https://m.media-amazon.com/images/I/516XMsYkqXL.jpg"
-                  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px' }}
+                   style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               {/* Second Container */}
@@ -839,7 +839,7 @@ const Tyres = () => {
                   alt="Car Image"
                   height="320"
                   image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn8jwpUOX3wGFL1EwrudM9VJXnnDKlGGk2A3QBH9ZqklZmr6BwhTtZLVkqMaNIN9qqPx8&usqp=CAU"
-                  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px' }}
+                   style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               {/* Second Container */}
@@ -924,7 +924,7 @@ const Tyres = () => {
                   alt="Car Image"
                   height="300"
                   image="https://5.imimg.com/data5/FQ/GA/XV/SELLER-9240473/mrf-lt-155-d12-savari-lug-tyre-250x250.jpg"
-                  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px' }}
+                   style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               {/* Second Container */}
@@ -1009,7 +1009,7 @@ const Tyres = () => {
                   alt="Car Image"
                   height="300"
                   image="https://5.imimg.com/data5/HO/OF/ZK/SELLER-20487139/mrf-commercial-tubeless-tyre-500x500.jpg"
-                  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px' }}
+                   style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               {/* Second Container */}
@@ -1096,7 +1096,7 @@ const Tyres = () => {
                   alt="Car Image"
                   height="300"
                   image="https://cdn.moglix.com/p/EY8KkvZV1DLTE-medium.jpg"
-                  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px' }}
+                   style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               {/* Second Container */}
@@ -1181,7 +1181,7 @@ const Tyres = () => {
                   alt="Car Image"
                   height="300"
                   image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-fliFwN5-gUoGU0AbibG9_eB8JxtFM-VxkWbqLCCXynPJZnGnlvTjd-muX5c2aMnm4rI&usqp=CAU"
-                  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px' }}
+                   style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               {/* Second Container */}
@@ -1266,7 +1266,7 @@ const Tyres = () => {
                   alt="Car Image"
                   height="300"
                   image="https://trimg.cardekho.com/model/200x200/Ecopia-EP150-Bridgestone.jpg"
-                  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px' }}
+                   style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               {/* Second Container */}
@@ -1349,7 +1349,7 @@ const Tyres = () => {
                   alt="Car Image"
                   height="330"
                   image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEaAcljUJYAxHdIz-nnIN96PBhsBRfWr93g9SvBfHJAoVjS50HkXQwA9Pt4Jdg9qbSn1U&usqp=CAU"
-                  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px' }}
+                   style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               {/* Second Container */}
@@ -1434,7 +1434,7 @@ const Tyres = () => {
                   alt="Car Image"
                   height="350"
                   image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS085u8SzdX6w1J0KqiQ03IKsChEgI1ZAhK4B3EDwjDftCz_GKgENwSItskj3KzcH1pC9U&usqp=CAU"
-                  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px' }}
+                   style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               {/* Second Container */}
@@ -1519,7 +1519,7 @@ const Tyres = () => {
                   alt="Car Image"
                   height="300"
                   image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS085u8SzdX6w1J0KqiQ03IKsChEgI1ZAhK4B3EDwjDftCz_GKgENwSItskj3KzcH1pC9U&usqp=CAU"
-                  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px' }}
+                   style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               {/* Second Container */}
@@ -1604,7 +1604,7 @@ const Tyres = () => {
                   alt="Car Image"
                   height="300"
                   image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS085u8SzdX6w1J0KqiQ03IKsChEgI1ZAhK4B3EDwjDftCz_GKgENwSItskj3KzcH1pC9U&usqp=CAU"
-                  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px' }}
+                   style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               {/* Second Container */}
@@ -1689,7 +1689,7 @@ const Tyres = () => {
                   component="img"
                   alt="Car Image"
                   height="300"
-                  image="https://gomechprod.blob.core.windows.net/gm-retail-app/service-new-images/Wheel%20alignment%201%20sq.jpg" style={{ borderRadius: '8px 0 0 8px', marginTop: '10px' }}
+                  image="https://gomechprod.blob.core.windows.net/gm-retail-app/service-new-images/Wheel%20alignment%201%20sq.jpg"  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               {/* Second Container */}
@@ -1777,7 +1777,7 @@ const Tyres = () => {
                   component="img"
                   alt="Car Image"
                   height="300"
-                  image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/New%20Thumbnail/Mud%20Flaps.jpg" style={{ borderRadius: '8px 0 0 8px', marginTop: '10px' }}
+                  image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/New%20Thumbnail/Mud%20Flaps.jpg"  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               {/* Second Container */}

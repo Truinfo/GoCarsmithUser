@@ -595,7 +595,7 @@ const Batteries = () => {
                   alt="Car Image"
                   height="300"
                   image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Battery/Amaron/amaron%20pro%20new-min.png"
-                  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px' }}
+                   style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               {/* Second Container */}
@@ -686,7 +686,7 @@ const Batteries = () => {
                   alt="Car Image"
                   height="300"
                   image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Battery/Amaron/amaron%20pro%20new-min.png"
-                  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px' }}
+                   style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               {/* Second Container */}
@@ -777,7 +777,7 @@ const Batteries = () => {
                   alt="Car Image"
                   height="300"
                   image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Battery/Amaron/amaron%20pro%20new-min.png"
-                  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px' }}
+                   style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               {/* Second Container */}
@@ -868,7 +868,7 @@ const Batteries = () => {
                   alt="Car Image"
                   height="300"
                   image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Battery/Exide/exide%20mileage%20new-min.png"
-                  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px' }}
+                   style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               {/* Second Container */}
@@ -959,7 +959,7 @@ const Batteries = () => {
                   alt="Car Image"
                   height="300"
                   image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Battery/Exide/exide%20mileage%20new-min.png"
-                  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px' }}
+                   style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               {/* Second Container */}
@@ -1050,7 +1050,7 @@ const Batteries = () => {
                   alt="Car Image"
                   height="300"
                   image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Battery/Exide/exide%20mileage%20new-min.png"
-                  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px' }}
+                   style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               {/* Second Container */}
@@ -1141,7 +1141,7 @@ const Batteries = () => {
                   alt="Car Image"
                   height="300"
                   image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Battery/Livguard/Livguard.png"
-                  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px' }}
+                   style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               {/* Second Container */}
@@ -1234,7 +1234,7 @@ const Batteries = () => {
                   alt="Car Image"
                   height="300"
                   image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Battery/Livguard/Livguard.png"
-                  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px' }}
+                   style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               {/* Second Container */}
@@ -1321,7 +1321,7 @@ const Batteries = () => {
                   alt="Car Image"
                   height="300"
                   image="	https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Alternator%20Replacement/Thumbnail.jpg"
-                  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px' }}
+                   style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               {/* Second Container */}
@@ -1403,7 +1403,7 @@ const Batteries = () => {
                   alt="Car Image"
                   height="300"
                   image="	https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Alternator%20Repair/thumbnail.jpg"
-                  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px' }}
+                   style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               {/* Second Container */}

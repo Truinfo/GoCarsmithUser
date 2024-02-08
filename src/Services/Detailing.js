@@ -546,7 +546,7 @@ return (<>
             alt="Car Image"
             height="250"
             image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/New%20Thumbnail/3M%20car%20Rubbing%20_%20Polishing.jpg"
-            style={{ borderRadius: '8px 0 0 8px', marginTop: '8px' }}
+             style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
           />
         </Grid>
         {/* Second Container */}
@@ -633,7 +633,7 @@ return (<>
             component="img"
             alt="Car Image"
             height="250"
-            image="https://gomechprod.blob.core.windows.net/gm-retail-app/Banner/3M_ceramic_Thumbnail.jpg" style={{ borderRadius: '8px 0 0 8px', marginTop: '10px' }}
+            image="https://gomechprod.blob.core.windows.net/gm-retail-app/Banner/3M_ceramic_Thumbnail.jpg"  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
           />
         </Grid>
         {/* Second Container */}
@@ -719,7 +719,7 @@ return (<>
             alt="Car Image"
             height="250"
             image="https://gomechprod.blob.core.windows.net/gm-retail-app/Banner/Meguiar_Ceramic_Thumbnail.jpg"
-            style={{ borderRadius: '8px 0 0 8px', marginTop: '10px' }}
+             style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
           />
         </Grid>
         {/* Second Container */}
@@ -801,7 +801,7 @@ return (<>
             component="img"
             alt="Car Image"
             height="280"
-            image="https://gomechprod.blob.core.windows.net/gm-retail-app/Banner/3M_Teflon_Thumbnail.jpg" style={{ borderRadius: '8px 0 0 8px', marginTop: '10px' }}
+            image="https://gomechprod.blob.core.windows.net/gm-retail-app/Banner/3M_Teflon_Thumbnail.jpg"  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
           />
         </Grid>
         {/* Second Container */}
@@ -882,7 +882,7 @@ return (<>
             alt="Car Image"
             height="250"
             image="https://gomechprod.blob.core.windows.net/gm-retail-app/Banner/Meguiar_Teflon_Thumbnail.jpg"
-            style={{ borderRadius: '8px 0 0 8px', marginTop: '10px' }}
+             style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
           />
         </Grid>
         {/* Second Container */}
@@ -963,7 +963,7 @@ return (<>
             component="img"
             alt="Car Image"
             height="250"
-            image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/PPF/PPF%20Sq.jpg" style={{ borderRadius: '8px 0 0 8px', marginTop: '10px' }}
+            image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/PPF/PPF%20Sq.jpg"  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
           />
         </Grid>
         {/* Second Container */}
@@ -1044,7 +1044,8 @@ return (<>
             component="img"
             alt="Car Image"
             height="260"
-            image="https://gomechprod.blob.core.windows.net/gm-retail-app/Banner/3M_ARUC_Thumbnail.jpg" />
+            image="https://gomechprod.blob.core.windows.net/gm-retail-app/Banner/3M_ARUC_Thumbnail.jpg"
+            style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }} />
         </Grid>
         {/* Second Container */}
         <Grid item sm={8}>
@@ -1126,7 +1127,8 @@ return (<>
             component="img"
             alt="Car Image"
             height="250"
-            image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/services_icon/Silencer-Coating-Thumbnail-min.png" />
+            image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/services_icon/Silencer-Coating-Thumbnail-min.png"
+            style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }} />
         </Grid>
         {/* Second Container */}
         <Grid item sm={8}>

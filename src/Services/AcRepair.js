@@ -587,7 +587,7 @@ useEffect(() => {
                 alt="Car Image"
                 height="300"
                 image="https://gomechprod.blob.core.windows.net/gm-retail-app/service-new-images/newB.jpg"
-                style={{ borderRadius: "8px 0 0 8px", marginTop: "8px" }}
+                style={{ borderRadius: "8px 0 0 8px", marginTop: "8px",marginBottom:"30px" }}
               />
             </Grid>
             {/* Second Container */}

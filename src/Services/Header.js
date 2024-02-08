@@ -8,7 +8,9 @@ import {
   IconButton,
   Menu,
   MenuItem,
+  Dialog,
   Grid,
+  DialogTitle,
 } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import { Link, useNavigate } from "react-router-dom";
@@ -21,24 +23,20 @@ import { Form } from "react-bootstrap";
 import Select from "react-select";
 import Point from "ol/geom/Point";
 import { Style, Icon } from "ol/style";
-import { styled, alpha } from "@mui/material/styles";
+
 import VectorSource from "ol/source/Vector";
 import VectorLayer from "ol/layer/Vector";
 import Overlay from "ol/Overlay";
 import { fromLonLat } from "ol/proj";
 import axios from "axios";
-const StyledTypography = styled(Typography)(({ theme }) => ({
-  cursor: "pointer",
-  "&:hover": {
-    backgroundColor: "orange", // Add red background color on hover
-    color: "white",
-  },
-}));
+import Profile from "../Customers/Profile";
+import { IoMdClose } from "react-icons/io";
+
 
 const Header = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [anchorEl1, setAnchorEl1] = React.useState(null);
-  const [isLoggedIn, setIsLoggedIn] = React.useState("");
+ 
   const navigate = useNavigate();
 
 
@@ -404,9 +402,22 @@ const userValuesPresent = userId ;
     setAnchorEl1(event.currentTarget);
   };
 
+  const [dialogOpen, setDialogOpen] = useState(false);
+
   const handleClose1 = () => {
     setAnchorEl1(null);
   };
+
+  const handleClose2 = () => {
+    setDialogOpen(false);
+    handleClose1(); // Close the menu as well
+  };
+
+  const handleProfileClick = () => {
+    setDialogOpen(true);
+    handleClose1(); // Close the menu after opening the dialog
+  };  
+
 
 
 
@@ -720,7 +731,8 @@ const userValuesPresent = userId ;
                   color: "white",
                   backgroundColor: "black",
                   width: "200px",
-                  marginRight: "5px"
+                  marginRight: "5px",
+                  cursor:"pointer"
                 }}
               >
                 {locations && locations.length > 0 ? (
@@ -745,6 +757,7 @@ const userValuesPresent = userId ;
                   color: "white",
                   backgroundColor: "black",
                   width: "200px",
+                  cursor:"pointer"
                 }}
               >
                 {serviceCenterData && serviceCenterData.length > 0 ? (
@@ -891,12 +904,9 @@ const userValuesPresent = userId ;
               open={Boolean(anchorEl1)}
               onClose={handleClose1}
             >
-              <Link
-                to="/profile"
-                style={{ textDecoration: "none", color: "inherit" }}
-              >
-                <MenuItem onClick={() => handleClose1()}>Profile</MenuItem>
-              </Link>
+             
+                <MenuItem onClick={() => handleProfileClick()}>Profile</MenuItem>
+             
               <Link
                 to="/GoMoney"
                 style={{ textDecoration: "none", color: "inherit" }}
@@ -933,6 +943,14 @@ const userValuesPresent = userId ;
               </Link>
               <MenuItem onClick={handleLogOut}>Logout</MenuItem>
             </Menu>
+            <Dialog open={dialogOpen} onClose={() => setDialogOpen(false)}   maxWidth="md" // Set the maxWidth to 'lg' (large)
+          fullWidth >
+            <DialogTitle style={{ display:"flex" ,justifyContent:"flex-end",}}>
+            
+    <IoMdClose onClick={()=>setDialogOpen(false)}  style={{cursor:"pointer",opacity:"0.6" ,fontSize:"25px"}}/>
+            </DialogTitle>
+        <Profile/>
+      </Dialog>
           </>
         ) : (
           // Render "Log In" button when user is not logged in

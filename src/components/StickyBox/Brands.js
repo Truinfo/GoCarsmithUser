@@ -50,7 +50,7 @@ function Brands({onClickClose}) {
     const fetchAllBrands = async () => {
       try {
         const response = await fetch(
-          "http://localhost:2000/api/user/getBrands"
+          "https://gocarsmithbackend.onrender.com/api/user/getBrands"
         );
         if (response.ok) {
           const data = await response.json();
@@ -71,7 +71,7 @@ function Brands({onClickClose}) {
       const fetchModels = async () => {
         try {
           const response = await fetch(
-            `http://localhost:2000/api/user/getModel/${selectedBrand._id}`
+            `https://gocarsmithbackend.onrender.com/api/user/getModel/${selectedBrand._id}`
           );
           if (response.ok) {
             const data = await response.json();
@@ -101,7 +101,7 @@ function Brands({onClickClose}) {
       const fetchFuelTypes = async () => {
         try {
           const response = await fetch(
-            `http://localhost:2000/api/user/getFuelTypesByBrandAndModel/${selectedBrand._id}/${selectedModel._id}`
+            `https://gocarsmithbackend.onrender.com/api/user/getFuelTypesByBrandAndModel/${selectedBrand._id}/${selectedModel._id}`
           );
           if (response.ok) {
             const data = await response.json();
@@ -131,7 +131,7 @@ function Brands({onClickClose}) {
 
   const handleBackClick = () => {
     if (view === "fueltypes") {
-      setView("models");
+      setView("brands");
     } else if (view === "models") {
       setView("brands");
     }

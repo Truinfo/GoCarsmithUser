@@ -546,7 +546,7 @@ const Sos = () => {
                                     alt="Car Image"
                                     height="260"
                                     image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Battery-Jump-Start.png"
-                                    style={{ borderRadius: '8px 0 0 8px', marginTop: '8px' }}
+                                    style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                                 />
                             </Grid>
                             {/* Second Container */}
@@ -625,7 +625,8 @@ const Sos = () => {
                                     component="img"
                                     alt="Car Image"
                                     height="270"
-                                    image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Car-Engine-Scanning.png" style={{ borderRadius: '8px 0 0 8px', marginTop: '10px' }}
+                                    image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Car-Engine-Scanning.png" 
+                                     style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                                 />
                             </Grid>
                             {/* Second Container */}
@@ -707,7 +708,7 @@ const Sos = () => {
                                     alt="Car Image"
                                     height="280"
                                     image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Car-Fluid-Leakage.png"
-                                    style={{ borderRadius: '8px 0 0 8px', marginTop: '10px' }}
+                                     style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                                 />
                             </Grid>
                             {/* Second Container */}
@@ -787,7 +788,8 @@ const Sos = () => {
                                     component="img"
                                     alt="Car Image"
                                     height="250"
-                                    image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Wheel-Lift-Towing.png" style={{ borderRadius: '8px 0 0 8px', marginTop: '10px' }}
+                                    image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Wheel-Lift-Towing.png"  
+                                    style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                                 />
                             </Grid>
                             {/* Second Container */}
@@ -866,7 +868,7 @@ const Sos = () => {
                                     component="img"
                                     alt="Car Image"
                                     height="250"
-                                    image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Car-Self-Starter-Issue.png" style={{ borderRadius: '8px 0 0 8px', marginTop: '10px' }}
+                                    image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Car-Self-Starter-Issue.png"  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                                 />
                             </Grid>
                             {/* Second Container */}
@@ -944,7 +946,8 @@ const Sos = () => {
                                     component="img"
                                     alt="Car Image"
                                     height="250"
-                                    image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Flat-Bed-Towing.png" />
+                                    image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Flat-Bed-Towing.png" 
+                                    style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}/>
                             </Grid>
                             {/* Second Container */}
                             <Grid item sm={8}>
@@ -1021,7 +1024,8 @@ const Sos = () => {
                                     component="img"
                                     alt="Car Image"
                                     height="250"
-                                    image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/sos/Clutch-Breakdown.png" />
+                                    image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/sos/Clutch-Breakdown.png"
+                                    style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }} />
                             </Grid>
                             {/* Second Container */}
                             <Grid item sm={8}>
@@ -1098,7 +1102,8 @@ const Sos = () => {
                                     component="img"
                                     alt="Car Image"
                                     height="250"
-                                    image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/sos/Car-Flooding.png" />
+                                    image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/sos/Car-Flooding.png"
+                                    style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }} />
                             </Grid>
                             {/* Second Container */}
                             <Grid item sm={8}>
@@ -1176,7 +1181,8 @@ const Sos = () => {
                                     component="img"
                                     alt="Car Image"
                                     height="250"
-                                    image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/sos/Insurance-Accident.png" />
+                                    image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/sos/Insurance-Accident.png"
+                                    style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }} />
                             </Grid>
                             {/* Second Container */}
                             <Grid item sm={8}>
@@ -1254,7 +1260,8 @@ const Sos = () => {
                                     component="img"
                                     alt="Car Image"
                                     height="250"
-                                    image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/sos/Brake-Failure.png" />
+                                    image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/sos/Brake-Failure.png"
+                                    style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }} />
                             </Grid>
                             {/* Second Container */}
                             <Grid item sm={8}>
@@ -1329,7 +1336,8 @@ const Sos = () => {
                                     component="img"
                                     alt="Car Image"
                                     height="250"
-                                    image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/sos/Critical-Dashboard-Light.png" />
+                                    image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/sos/Critical-Dashboard-Light.png"
+                                    style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }} />
                             </Grid>
                             {/* Second Container */}
                             <Grid item sm={8}>
@@ -1402,7 +1410,8 @@ const Sos = () => {
                                     component="img"
                                     alt="Car Image"
                                     height="250"
-                                    image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/sos/Wrong-Fuel-Emergency.png" />
+                                    image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/sos/Wrong-Fuel-Emergency.png"
+                                    style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }} />
                             </Grid>
                             {/* Second Container */}
                             <Grid item sm={8}>

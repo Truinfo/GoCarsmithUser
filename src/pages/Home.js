@@ -445,7 +445,19 @@ const Home = () => {
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
-
+  useEffect(() => {
+    const test = () => {
+      // Check if userCars is not present in localStorage
+      if (!localStorage.getItem('userCars')) {
+        // Set BoxVisible to true if userCars is not present
+        setBoxVisible(true);
+        console.log("stickyboxopen");
+      } else {
+        // Toggle BoxVisible based on the previous state
+        setBoxVisible((prevVisible) => !prevVisible);
+      }}
+      test()
+    },[])
   const handleClose = () => {
     setAnchorEl(null);
   };

@@ -167,9 +167,6 @@ const Profile = () => {
     getUserByEmail();
   }, []); // Fetch user details on component mount
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
 
   return (
     <div
@@ -177,17 +174,18 @@ const Profile = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        height: "120vh",
+        height: "100vh",
+        
       }}
     >
+      
       <Paper
-        elevation={3}
+        elevation={0}
         style={{
           padding: "20px",
           maxWidth: "700px",
-          margin: "0 auto",
+          margin: "-20px",
           textAlign: "center",
-          border: "1px solid #000",
         }}
       >
         <h1>User Profile</h1>

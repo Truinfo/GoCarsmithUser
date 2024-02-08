@@ -618,7 +618,7 @@ const CarInspections = () => {
                   alt="Car Image"
                   height="300"
                   image="https://media.istockphoto.com/id/1258125364/photo/replacement-of-spark-plugs-in-a-modern-engine.jpg?s=612x612&w=0&k=20&c=3PxkCoppC8g7f1nWWn-GBiZjQocjz7sLuVj2Wpx8iJ8="
-                  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px' }}
+                  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               {/* Second Container */}
@@ -704,7 +704,8 @@ const CarInspections = () => {
                   component="img"
                   alt="Car Image"
                   height="280"
-                  image="https://media.istockphoto.com/id/1367189665/photo/an-asian-insurance-adjuster-inspecting-damage-to-vehicle.jpg?s=612x612&w=0&k=20&c=IynArO49gQhgblC7P40oKasON7g4WAhOGlGPE_svXR8=" style={{ borderRadius: '8px 0 0 8px', marginTop: '10px' }}
+                  image="https://media.istockphoto.com/id/1367189665/photo/an-asian-insurance-adjuster-inspecting-damage-to-vehicle.jpg?s=612x612&w=0&k=20&c=IynArO49gQhgblC7P40oKasON7g4WAhOGlGPE_svXR8="
+                  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               {/* Second Container */}
@@ -785,7 +786,7 @@ const CarInspections = () => {
                   alt="Car Image"
                   height="280"
                   image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/New%20Car%20service%20Photos/Engine%20Scanning/Thumbnail.jpg"
-                  style={{ borderRadius: '8px 0 0 8px', marginTop: '10px' }}
+                  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               {/* Second Container */}
@@ -867,7 +868,7 @@ const CarInspections = () => {
                   alt="Car Image"
                   height="280"
                   image="https://gomechprod.blob.core.windows.net/gm-retail-app/service-new-images/Car%20Insurance_Square.jpg"
-                  style={{ borderRadius: '8px 0 0 8px', marginTop: '10px' }}
+                  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               {/* Second Container */}
@@ -951,7 +952,8 @@ const CarInspections = () => {
                   component="img"
                   alt="Car Image"
                   height="280"
-                  image="https://blog.way.com/wp-content/uploads/2022/11/car-suspension.jpg" style={{ borderRadius: '8px 0 0 8px', marginTop: '10px' }}
+                  image="https://blog.way.com/wp-content/uploads/2022/11/car-suspension.jpg"
+                  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               {/* Second Container */}
@@ -1033,7 +1035,8 @@ const CarInspections = () => {
                   component="img"
                   alt="Car Image"
                   height="250"
-                  image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/New%20Car%20service%20Photos/Car%20fluid%20Check/Thumbnail.jpg" style={{ borderRadius: '8px 0 0 8px', marginTop: '10px' }}
+                  image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/New%20Car%20service%20Photos/Car%20fluid%20Check/Thumbnail.jpg" 
+                  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               {/* Second Container */}
@@ -1118,7 +1121,8 @@ const CarInspections = () => {
                   component="img"
                   alt="Car Image"
                   height="260"
-                  image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Radiator%20cleaning/Thumbnail.jpg" />
+                  image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Radiator%20cleaning/Thumbnail.jpg"
+                  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }} />
               </Grid>
               {/* Second Container */}
               <Grid item sm={8}>
@@ -1199,7 +1203,8 @@ const CarInspections = () => {
                   component="img"
                   alt="Car Image"
                   height="260"
-                  image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Radiator%20Replacement%20Replacement_/thumbnail.jpg" />
+                  image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Radiator%20Replacement%20Replacement_/thumbnail.jpg" 
+                  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}/>
               </Grid>
               {/* Second Container */}
               <Grid item sm={8}>
@@ -1279,7 +1284,8 @@ const CarInspections = () => {
                   component="img"
                   alt="Car Image"
                   height="260"
-                  image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Radiator%20Fan%20Motor%20Replacement/Thumbnail.jpg" />
+                  image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Radiator%20Fan%20Motor%20Replacement/Thumbnail.jpg" 
+                  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}/>
               </Grid>
               {/* Second Container */}
               <Grid item sm={8}>
@@ -1361,7 +1367,8 @@ const CarInspections = () => {
                   component="img"
                   alt="Car Image"
                   height="250"
-                  image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/CUSTOM%20SERVICES/Car%20Water%20logging%20Assistance.jpg" />
+                  image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/CUSTOM%20SERVICES/Car%20Water%20logging%20Assistance.jpg"
+                  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }} />
               </Grid>
               {/* Second Container */}
               <Grid item sm={8}>
@@ -1440,7 +1447,8 @@ const CarInspections = () => {
                   component="img"
                   alt="Car Image"
                   height="250"
-                  image="https://rovntechs.com/wp-content/uploads/2021/11/Common-Engine-Problems-1024x684.jpg" />
+                  image="https://rovntechs.com/wp-content/uploads/2021/11/Common-Engine-Problems-1024x684.jpg"
+                  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }} />
               </Grid>
               {/* Second Container */}
               <Grid item sm={8}>
@@ -1503,7 +1511,7 @@ const CarInspections = () => {
 
 
       {/* twelth card */}
-      <h1 style={{ marginLeft: '80px' }}>Custom Issues</h1>
+     
       {data.RADIATOR_FAN_MOTOR_REPLACEMENT && data.RADIATOR_FAN_MOTOR_REPLACEMENT.price !== null ? (
         <Card ref={problemWithCarBrakesWheelsRef} className={addBlinkClass('Problem with Car Brakes & Wheels')} style={{padding:"20px" , boxShadow:"none" ,marginTop:"10px"}}>
         <Card
@@ -1521,7 +1529,8 @@ const CarInspections = () => {
                   component="img"
                   alt="Car Image"
                   height="250"
-                  image="https://www.shutterstock.com/image-photo/car-mechanic-serviceman-disassembly-checking-600nw-2342615173.jpg" />
+                  image="https://www.shutterstock.com/image-photo/car-mechanic-serviceman-disassembly-checking-600nw-2342615173.jpg" 
+                  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}/>
               </Grid>
               {/* Second Container */}
               <Grid item sm={8}>
@@ -1581,7 +1590,7 @@ const CarInspections = () => {
       ) : null}
 
       {/* thirtheen card */}
-      <h1 style={{ marginLeft: '80px' }}>Custom Issues</h1>
+     
       {data.DAMAGED_CAR_BODY_INTERIORS && data.DAMAGED_CAR_BODY_INTERIORS.price !== null ? (
         <Card ref={damagedCarBodyInteriorsRef} className={addBlinkClass('DAMAGED CAR BODY INTERIORS')} style={{padding:"20px" , boxShadow:"none" ,marginTop:"10px"}}>
         <Card
@@ -1599,7 +1608,8 @@ const CarInspections = () => {
                   component="img"
                   alt="Car Image"
                   height="250"
-                  image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/CUSTOM%20SERVICES/Damaged%20Car%20Body%20or%20Interiors.jpg" />
+                  image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/CUSTOM%20SERVICES/Damaged%20Car%20Body%20or%20Interiors.jpg" 
+                  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}/>
               </Grid>
               {/* Second Container */}
               <Grid item sm={8}>

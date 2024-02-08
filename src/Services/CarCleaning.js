@@ -574,7 +574,7 @@ const CarSpaCleaning = () => {
                   alt="Car Image"
                   height="250"
                   image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/7%20services%20Images/festive/thumbnail.jpg"
-                  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px' }}
+                  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               {/* Second Container */}
@@ -663,7 +663,9 @@ const CarSpaCleaning = () => {
                   component="img"
                   alt="Car Image"
                   height="250"
-                  image="https://gomechprod.blob.core.windows.net/gm-retail-app/service-new-images/Dry%20Cleaning%20sq.jpg" style={{ borderRadius: '8px 0 0 8px', marginTop: '10px' }}
+                  image="https://gomechprod.blob.core.windows.net/gm-retail-app/service-new-images/Dry%20Cleaning%20sq.jpg" 
+                  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
+                  
                 />
               </Grid>
               {/* Second Container */}
@@ -750,7 +752,7 @@ const CarSpaCleaning = () => {
                   alt="Car Image"
                   height="280"
                   image="https://gomechprod.blob.core.windows.net/gm-retail-app/service-new-images/comprehensive%20cleaning%20sq.jpg"
-                  style={{ borderRadius: '8px 0 0 8px', marginTop: '10px' }}
+                  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               {/* Second Container */}
@@ -836,7 +838,8 @@ const CarSpaCleaning = () => {
                   component="img"
                   alt="Car Image"
                   height="280"
-                  image="https://gomechprod.blob.core.windows.net/gm-retail-app/retailservices/Foam_Wash_Thumbnail.jpg" style={{ borderRadius: '8px 0 0 8px', marginTop: '10px' }}
+                  image="https://gomechprod.blob.core.windows.net/gm-retail-app/retailservices/Foam_Wash_Thumbnail.jpg" 
+                  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
                 />
               </Grid>
               {/* Second Container */}
@@ -918,7 +921,8 @@ const CarSpaCleaning = () => {
                   component="img"
                   alt="Car Image"
                   height="260"
-                  image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Car%20Rubbing%20and%20Polishing/thumbnail.jpg" />
+                  image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Car%20Rubbing%20and%20Polishing/thumbnail.jpg" 
+                  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}/>
               </Grid>
               {/* Second Container */}
               <Grid item sm={8}>
@@ -997,7 +1001,8 @@ const CarSpaCleaning = () => {
                   component="img"
                   alt="Car Image"
                   height="250"
-                  image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Rat%20Repellent%20Treatment/thumbnail.jpg" />
+                  image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Rat%20Repellent%20Treatment/thumbnail.jpg"
+                  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }} />
               </Grid>
               {/* Second Container */}
               <Grid item sm={8}>
@@ -1079,7 +1084,8 @@ const CarSpaCleaning = () => {
                   component="img"
                   alt="Car Image"
                   height="250"
-                  image="https://res.cloudinary.com/yourmechanic/image/upload/dpr_auto,f_auto,q_auto/v1/article_images/RS_Pre_Purchase_Inspection" />
+                  image="https://res.cloudinary.com/yourmechanic/image/upload/dpr_auto,f_auto,q_auto/v1/article_images/RS_Pre_Purchase_Inspection" 
+                  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}/>
               </Grid>
               {/* Second Container */}
 
@@ -1160,7 +1166,9 @@ const CarSpaCleaning = () => {
                   component="img"
                   alt="Car Image"
                   height="250"
-                  image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/services_icon/Sunroof-Service.jpg" />
+                  style={{ borderRadius: '8px 0 0 8px', marginTop: '8px',marginBottom: '30px' }}
+                  image="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/services_icon/Sunroof-Service.jpg" 
+                  />
               </Grid>
               {/* Second Container */}
               <Grid item sm={8}>
