@@ -2101,7 +2101,7 @@ useEffect(() => {
               <li>
                 <span sx={{ fontWeight: "normal", marginTop: "10px" }}>
                   <b>Standard Car Service:</b> The most popular service package.
-                  Benefits of the basic scheme with additional services
+                  Benefits of the basic scheme with additional services.
                 </span>
               </li>
               <li>

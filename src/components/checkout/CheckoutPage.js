@@ -420,6 +420,7 @@ export default function CheckoutPage() {
                       label="Select Date"
                       minDate={dayjs()}
                       value={currentDate}
+                      format="DD/MM/YYYY"
                       onChange={(newDate) => handleDateChange(newDate)}
                     />
                   </DemoContainer>

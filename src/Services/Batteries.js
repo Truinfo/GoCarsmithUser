@@ -1547,16 +1547,20 @@ const Batteries = () => {
                 <span sx={{ fontWeight: 'normal', marginTop: '10px' }}><b>Basic Car Service:</b> All the bare essential services to keep your car up and running.</span>
               </li>
               <li>
-                <span sx={{ fontWeight: 'normal', marginTop: '10px' }}><b>Standard Car Service:</b> The most popular service package. Benefits of the basic scheme with additional services</span>
+                <span sx={{ fontWeight: 'normal', marginTop: '10px' }}><b>Standard Car Service:</b> The most popular service package. Benefits of the basic scheme with additional services.</span>
               </li>
               <li>
-                <span sx={{ fontWeight: 'normal', marginTop: '50px' }}><b>Comprehensive Car Service:</b> GoCarsmith's signature package with bumper-to-bumper car servicing</span>
+                <span sx={{ fontWeight: 'normal', marginTop: '50px' }}><b>Comprehensive Car Service:</b> GoCarsmith's signature package with bumper-to-bumper car servicing.</span>
               </li>
             </ul>
           </div>
           <Typography variant="h6" sx={{ textAlign: 'left', marginTop: '50px' }}><b>Industry-rated top-notch equipment</b></Typography>
           <Typography variant="body1" sx={{ textAlign: 'left', marginTop: '5px' }}>
-            At every GoCarsmith workshop in {locationName}, we employ only the cutting edge in industry-standard car service equipment. From automatic AC gas recharging apparatus, laser automated wheel balancing/alignment machine, OBD2 diagnostic scanner, ECU programming devices, and specialized tools specific to your car.
+            At every GoCarsmith workshop in {locationName},
+             we employ only the cutting edge in industry-standard car service equipment. 
+             From automatic AC gas recharging apparatus, 
+             laser automated wheel balancing/alignment machine, OBD2 diagnostic scanner, 
+             ECU programming devices, and specialized tools specific to your car.
           </Typography>
 
           <Typography variant="h6" sx={{ textAlign: 'left', marginTop: '20px' }}><b>Warranty on car services</b></Typography>

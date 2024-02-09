@@ -152,6 +152,7 @@ const BlogDescription = () => {
     };
 
     const handleDeleteComment = async (commentId) => {
+      
         try {
             const response = await axios.delete(
                 `https://gocarsmithbackend.onrender.com/api/user/deleteCommentPersonalized/${id}`,
@@ -165,36 +166,9 @@ const BlogDescription = () => {
                 }
             );
 
-            if (response.status === 200) {const response = await axios.post(
-                `https://gocarsmithbackend.onrender.com/api/user/addOrUpdateComment/${id}`,
-                {
-                    comment: newComment,
-                    email: userEmail,
-                },
-                {
-                    headers: {
-                        Authorization: `Bearer ${getToken()}`,
-                    },
-                }
-            );
+            
+      window.location.reload(false)
 
-            const updatedComments = response.data.comments;
-            setComments(updatedComments);
-            setNewComment('');
-
-            if (response) {
-                const response = await axios.get(
-                    `https://gocarsmithbackend.onrender.com/api/user/getPersonalizedComment/${userEmail}/${id}`,
-                    {
-                        headers: {
-                            Authorization: `Bearer ${getToken()}`,
-                        },
-                    }
-                );
-
-                setPersonalizedComments([response.data.comment]);
-            }
-      }
     } catch (error) {
       console.error('Error deleting comment:', error);
     }
@@ -405,7 +379,7 @@ const BlogDescription = () => {
                     variant="contained"
                     color="primary"
                     onClick={handleSavePersonalizedComment}
-                    style={{ marginLeft: '80px', }}
+                    style={{ marginLeft: '80px',marginTop:"30px" }}
                   >
                     Save Comment
                   </Button>
@@ -417,7 +391,7 @@ const BlogDescription = () => {
                     variant="contained"
                     color="primary"
                     onClick={handleEditPersonalizedComment}
-                    style={{ marginLeft: '80px' }}
+                    style={{ marginLeft: '80px',marginTop:"30px" }}
                   >
                     Edit Comment
                   </Button>
@@ -425,7 +399,7 @@ const BlogDescription = () => {
                     variant="contained"
                     color="primary"
                     onClick={handleDeleteComment}
-                    style={{ marginLeft: '80px' }}
+                    style={{ marginLeft: '80px',marginTop:"30px" }}
                   >
                     Delete Comment
                   </Button>

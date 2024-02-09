@@ -54,7 +54,7 @@ const userId = user?._id;
 const userString = localStorage.getItem("userCars");
 const userCars = JSON.parse(userString);
 const usermodelId = userCars?.[0]?.modelId;
-const usermodelName= userCars?.[0]?.modelName;
+const usermodelName = userCars?.[0]?.modelName;
 const userfuelType = userCars?.[0]?.fuelType;
 const userBrandId = userCars?.[0]?.BrandId;
 const userBrandName = userCars?.[0]?.brandName;
@@ -63,8 +63,8 @@ const currentfuelType = localStorage.getItem("fuelType");
 const currentBrandId = localStorage.getItem("BrandId");
 const currentBrandName = localStorage.getItem("BrandName");
 const currentmodelName = localStorage.getItem('modelName')
-const modelId = currentModelId  || usermodelId;
-const fuelType = currentfuelType  || userfuelType;
+const modelId = currentModelId || usermodelId;
+const fuelType = currentfuelType || userfuelType;
 const BrandId = currentBrandId || userBrandId;
 const BrandName = currentBrandName || userBrandName;
 const modelName = currentmodelName || usermodelName;
@@ -143,7 +143,7 @@ const CardWithImage = ({ imageSrc, title, link }) => {
     </Grid>
   );
 };
-const CardWithImage1 = ({ imageSrc, title , onClick}) => {
+const CardWithImage1 = ({ imageSrc, title, onClick }) => {
   return (
     <Grid item xs={12} sm={6} md={3} onClick={onClick}>
       <CardMedia component="img" alt={title} height="250" image={imageSrc} />
@@ -159,11 +159,11 @@ const Home = () => {
   };
   const cardData = [
     {
-      title: "2 Lakhs+",
+      title: "5000+",
       description: "Car Services",
     },
     {
-      title: "1 Lakhs+",
+      title: "1000+",
       description: "Happy Customers",
     },
     {
@@ -171,7 +171,7 @@ const Home = () => {
       description: "Average Ratings",
     },
     {
-      title: "200+",
+      title: "20+",
       description: "Touch Points in India",
     },
   ];
@@ -249,7 +249,11 @@ const Home = () => {
     ][index];
     const section = document.getElementById(sectionName);
     if (section) {
-      section.scrollIntoView({
+      const windowHeight = window.innerHeight;
+      const sectionHeight = section.offsetHeight;
+      const offset = (windowHeight - sectionHeight) / 2;
+      window.scrollTo({
+        top: section.offsetTop - offset,
         behavior: "smooth",
       });
     }
@@ -455,9 +459,10 @@ const Home = () => {
       } else {
         // Toggle BoxVisible based on the previous state
         setBoxVisible((prevVisible) => !prevVisible);
-      }}
-      test()
-    },[])
+      }
+    }
+    test()
+  }, [])
   const handleClose = () => {
     setAnchorEl(null);
   };
@@ -477,9 +482,10 @@ const Home = () => {
       } else {
         // Toggle BoxVisible based on the previous state
         setBoxVisible((prevVisible) => !prevVisible);
-      }}
-      test()
-  },[])
+      }
+    }
+    test()
+  }, [])
   const closePopup = () => {
     setIsPopupOpen(false);
   };
@@ -488,7 +494,7 @@ const Home = () => {
     console.log(`Clicked on ${option.label}`);
     handleClose();
   };
- 
+
 
   const options = [
     { label: "Profile", link: "/profile" },
@@ -516,9 +522,9 @@ const Home = () => {
       // Display alert when values are missing
       window.alert("Please select Brand, Model, Fuel and Location.");
     }
-  }; 
-  const userValuesPresent = userId ;
-  
+  };
+  const userValuesPresent = userId;
+
   const handleCardClick1 = (card) => {
     if (userValuesPresent) {
       // All required user-related values are present, navigate to the page
@@ -541,14 +547,14 @@ const Home = () => {
   };
 
   return (
-  
+
     <div style={{ textAlign: "center" }}>
-      
-       <img
-          src="https://img.freepik.com/premium-photo/crop-unrecognizable-businessman-showing-thumb-up-gesture-while-standing-with-auto-mechanic-with-wrench-hand-near-broken-car-garage_251859-2169.jpg?w=826"
-          alt="Cover"
-          style={{ width: "100%", height: "700px"}}
-        />
+
+      <img
+        src="https://img.freepik.com/premium-photo/crop-unrecognizable-businessman-showing-thumb-up-gesture-while-standing-with-auto-mechanic-with-wrench-hand-near-broken-car-garage_251859-2169.jpg?w=826"
+        alt="Cover"
+        style={{ width: "100%", height: "700px" }}
+      />
       <div>
 
         <Box
@@ -568,7 +574,7 @@ const Home = () => {
               justifyContent: "space-between",
               alignItems: "center",
               height: "50px",
-             
+
             }}
           >
 
@@ -605,7 +611,7 @@ const Home = () => {
         <Box>
           <div
             id="our-services"
-            style={{ height: "750px", width:"100%" , margin:"20px 10px 50px 0px", alignItems: "center" }}
+            style={{ height: "750px", width: "100%", margin: "20px 10px 50px 0px", alignItems: "center" }}
           >
             <h1 margin="20px">Our Services</h1>
             <Grid
@@ -637,21 +643,25 @@ const Home = () => {
           <div
             style={{
               margin: "50px 0px 40px 50px",
-              height:"410px",
-              width:"450px"
+              height: "410px",
+              width: "450px"
             }}
           >
-          <h1 style={{ margin: "20px" , display: "flex",paddingLeft:"10px",
-              justifyContent: "start",}}>Miles Membership</h1>
-               
-           <div style={{ display: "flex",
-              justifyContent: "start",cursor:"pointer",marginLeft:"35px"}}> <img
-              src="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Website/Warranty/miles.png"
-              alt="miles"
-              onClick={()=>handleCardClick2({link:"/membership"})}
-            />
+            <h1 style={{
+              margin: "20px", display: "flex", paddingLeft: "10px",
+              justifyContent: "start",
+            }}>Miles Membership</h1>
+
+            <div style={{
+              display: "flex",
+              justifyContent: "start", cursor: "pointer", marginLeft: "35px"
+            }}> <img
+                src="https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/Website/Warranty/miles.png"
+                alt="miles"
+                onClick={() => handleCardClick2({ link: "/membership" })}
+              />
             </div>
-          
+
           </div>
           <div id="curated-custom-service" style={{ margin: "50px" }}>
             <h1 style={{ margin: "20px" }}>Curated Custom Services</h1>
@@ -691,59 +701,59 @@ const Home = () => {
           <div id="monsoon-mist">
             <h1>Monsoon Mist</h1>
             <Grid
-  container
-  spacing={2}
-  sx={{
-    width: "100%",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  }}
->
-  <div onClick={() => handleCardClick({ link: "/Denting" })}>
-    <CardWithImage
-      imageSrc="https://gomechprod.blob.core.windows.net/retail-carousel/indianewperformance_banner10prob00.jpg%3Fv%3D1701168280.901539?version=1701168282.273009"
-      title="Denting"
-    />
-  </div>
-  <div onClick={() => handleCardClick({ link: "/CarCleaning" })}>
-    <CardWithImage
-      imageSrc="https://gomechprod.blob.core.windows.net/retail-carousel/indianewperformance_banner10prob01.jpg%3Fv%3D1701168217.603626?version=1701168218.98249"
-      title="Car Cleaning"
-    />
-  </div>
-  <div onClick={() => handleCardClick({ link: "/Periodic" })}>
-    <CardWithImage
-      imageSrc="https://gomechprod.blob.core.windows.net/retail-carousel/indianewperformance_banner10prob03.jpg%3Fv%3D1701168176.882829?version=1701168178.21381"
-      title="Periodic"
-    />
-  </div>
-  <div onClick={() => handleCardClick({ link: "/CarCleaning" })}>
-    <CardWithImage
-      imageSrc="https://gomechprod.blob.core.windows.net/retail-carousel/indianewperformance_banner10prob02.jpg%3Fv%3D1701168235.838224?version=1701168237.21907"
-      title="Car Cleaning"
-    />
-  </div>
-</Grid>
-
+              container
+              spacing={2}
+              sx={{
+                width: "100%",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <div onClick={() => handleCardClick({ link: "/Denting" })}>
+                <CardWithImage
+                  imageSrc="https://gomechprod.blob.core.windows.net/retail-carousel/indianewperformance_banner10prob00.jpg%3Fv%3D1701168280.901539?version=1701168282.273009"
+                  title="Denting"
+                />
+              </div>
+              <div onClick={() => handleCardClick({ link: "/CarCleaning" })}>
+                <CardWithImage
+                  imageSrc="https://gomechprod.blob.core.windows.net/retail-carousel/indianewperformance_banner10prob01.jpg%3Fv%3D1701168217.603626?version=1701168218.98249"
+                  title="Car Cleaning"
+                />
+              </div>
+              <div onClick={() => handleCardClick({ link: "/Periodic" })}>
+                <CardWithImage
+                  imageSrc="https://gomechprod.blob.core.windows.net/retail-carousel/indianewperformance_banner10prob03.jpg%3Fv%3D1701168176.882829?version=1701168178.21381"
+                  title="Periodic"
+                />
+              </div>
+              <div onClick={() => handleCardClick({ link: "/CarCleaning" })}>
+                <CardWithImage
+                  imageSrc="https://gomechprod.blob.core.windows.net/retail-carousel/indianewperformance_banner10prob02.jpg%3Fv%3D1701168235.838224?version=1701168237.21907"
+                  title="Car Cleaning"
+                />
+              </div>
+            </Grid>
+            </div>
             <h1>Choose the Workshop Near You</h1>
             <Grid container spacing={2} sx={{ width: "100%", padding: "40px" }}>
               <CardWithImage1 imageSrc="https://storage.googleapis.com/workshop_docs/staging/608/608_ihero.jpg" />
               <CardWithImage1 imageSrc="https://www.team-bhp.com/sites/default/files/styles/check_extra_large_for_review/public/car-service_0.jpg" />
               <CardWithImage1 imageSrc="https://lh5.googleusercontent.com/p/AF1QipNxbYSkcmYdVoLR-v8aPau8NMgkE_oLVdzhZxj4" />
               <CardWithImage1
-        imageSrc="https://cdni.autocarindia.com/ExtraImages/20210513053005_Renault_Duster_service.jpg"
-        onClick={handleImageClick}
-      />
-       </Grid>
-       {/* {isPopupOpen && ( */}
-        <Box component="main" sx={{ flexGrow: 1, p: 3  }}>
-          <div id="map" style={{ width: '100%', height: '700px'}}>
-          </div>
-        </Box>
-       {/* )} */}
-          </div>
-          <div id="how-go-mechanic-works">
+                imageSrc="https://cdni.autocarindia.com/ExtraImages/20210513053005_Renault_Duster_service.jpg"
+                onClick={handleImageClick}
+              />
+            </Grid>
+            {/* {isPopupOpen && ( */}
+            <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+              <div id="map" style={{ width: '100%', height: '700px' }}>
+              </div>
+            </Box>
+            {/* )} */}
+          
+          
             <h1>GoCarsmith Guarantee</h1>
             <Grid
               container
@@ -798,8 +808,9 @@ const Home = () => {
                 </Paper>
               </Grid>
             </Grid>
+            <div id="how-go-mechanic-works">
             <Container>
-              <h1 style={{marginBottom:"25px"}}>How GoCarsmith Works?</h1>
+              <h1 style={{ marginBottom: "25px" }}>How GoCarsmith Works?</h1>
               <Grid container spacing={5}>
                 {/* Left side with numbers 1, 2, 3, 4 */}
                 <Grid
@@ -819,10 +830,10 @@ const Home = () => {
                     style={{
                       marginBottom: "40px",
                       border: "1px solid #ccc",
-                      backgroundColor:"#e8e6df",
-                      padding:"0px",
+                      backgroundColor: "#e8e6df",
+                      padding: "0px",
                       width: "30px",
-                      textAlign:"center",
+                      textAlign: "center",
                     }}
                   >
                     1
@@ -876,28 +887,28 @@ const Home = () => {
                     >
                       <b>Select The Perfect Car Service</b>
                     </Typography>
-                    <p style={{paddingLeft:"15px"}}>From GoCarsmith board portfolio of Services</p>
+                    <p style={{ paddingLeft: "15px" }}>From GoCarsmith board portfolio of Services</p>
                     <Typography
                       variant="h6"
                       style={{ textAlign: "left", marginTop: "30px" }}
                     >
                       <b>Schedule Free Doorstep Pick-up</b>
                     </Typography>
-                    <p style={{paddingLeft:"15px"}}>We offer free pick up and drop for all service booked</p>
+                    <p style={{ paddingLeft: "15px" }}>We offer free pick up and drop for all service booked</p>
                     <Typography
                       variant="h6"
                       style={{ textAlign: "left", marginTop: "40px" }}
                     >
                       <b>Track Your Car Service Real-Time</b>
                     </Typography>
-                    <p style={{paddingLeft:"15px"}}>We Will take care of everything from here!</p>
+                    <p style={{ paddingLeft: "15px" }}>We Will take care of everything from here!</p>
                     <Typography
                       variant="h6"
                       style={{ textAlign: "left", marginTop: "45px" }}
                     >
                       <b>Earn While We Service</b>
                     </Typography>
-                    <p style={{paddingLeft:"15px"}}>
+                    <p style={{ paddingLeft: "15px" }}>
                       Spread the word! You get Rs.750. Your friends get Rs.750!
                     </p>
                   </div>
@@ -928,7 +939,7 @@ const Home = () => {
               </Grid>
             </Container>
           </div>
-          <div id="rating-and-reviews" style={{ height: "750px" }}>
+          <div id="rating-and-reviews">
             <h1>Rating and Reviews</h1>
             <Grid container spacing={3} style={{ marginBottom: "30px" }}>
               {cardData.map((card, index) => (
@@ -942,13 +953,21 @@ const Home = () => {
                 </Grid>
               ))}
             </Grid>
+            
+            </div>
+            <div>
+
             <Reviews />
-          </div>
-          <div style={{ zIndex:1,}} id="frequently-asked-questions">
-          <Typography variant="h4" style={{ marginBottom: "10px", fontWeight:"700"}}>
-            Frequently Asked Questions
-          </Typography>
+
+            </div>
+           
+           
           
+          <div style={{ zIndex: 1, }} id="frequently-asked-questions">
+            <Typography variant="h4" style={{ marginBottom: "10px", fontWeight: "700" }}>
+              Frequently Asked Questions
+            </Typography>
+
             <div
               style={{
                 marginTop: "60px",
@@ -963,8 +982,8 @@ const Home = () => {
                   style={{
                     width: "100%",
                     maxWidth: "900px",
-                    marginBottom: "15px", 
-                  
+                    marginBottom: "15px",
+
                     ...accordionStyles,
                   }}
                 >
@@ -977,9 +996,9 @@ const Home = () => {
                   </AccordionSummary>
 
                   <AccordionDetails >
-                    <Typography  style={{backgroundColor:"#ffffff" ,padding:"10px", textAlign:"justify"}}>{item.content}</Typography>
+                    <Typography style={{ backgroundColor: "#ffffff", padding: "10px", textAlign: "justify" }}>{item.content}</Typography>
                   </AccordionDetails>
-                  
+
                 </Accordion>
               ))}
             </div>
@@ -988,7 +1007,7 @@ const Home = () => {
             id="go-mechanic-service-guide"
             style={{ height: "auto", margin: "100px" }}
           >
-           <h1 style={{marginBottom:"10px"}}>Original Spare Parts</h1>
+            <h1 style={{ marginBottom: "10px" }}>Original Spare Parts</h1>
             <Grid container spacing={4}>
               <CardCardCard imageSrc="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhsbfxh6qiTtDHAcwclr0JatPSc-0lu6qwgg&usqp=CAU" />
               <CardCardCard imageSrc="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-lwXI5s04BSd7OwfZWqShgpnqikQ6YmM_HfCfr_jB7h2JPL1PhYCczh6WfDzH2N88JkQ&usqp=CAU" />
@@ -1055,11 +1074,11 @@ const Home = () => {
                       <li>
                         <b>Standard Car Service:</b> The most popular service
                         package. Benefits of the basic scheme with additional
-                        services
+                        services.
                       </li>
                       <li>
                         <b>Comprehensive Car Service:</b> GoCarsmith's signature
-                        package with bumper-to-bumper car servicing
+                        package with bumper-to-bumper car servicing.
                       </li>
                     </ul>
                   </div>
@@ -1093,7 +1112,7 @@ const Home = () => {
                     When you choose GoCarsmith, you get the GoCarsmith
                     Advantage. Your {BrandName} {modelName} service is assured under
                     our 1000kms/1 month warranty policy anywhere in
-                     {locationName}. Now, book with confidence.
+                    {locationName}. Now, book with confidence.
                   </Typography>
                 </div>
               </Paper>
@@ -1107,7 +1126,7 @@ const Home = () => {
                 padding: "20px",
               }}
             >
-             
+
               <Typography
                 variant="h4"
                 style={{
@@ -1207,13 +1226,13 @@ const Home = () => {
             position: "fixed",
             bottom: 16,
             right: 16,
-            cursor:"pointer",
+            cursor: "pointer",
             backgroundColor: "#D3D3D3",
             zIndex: 2, // Set a higher zIndex value}}
           }}
           onClick={handleIconClick}
         >
-          <TimeToLeaveIcon sx={{ fontSize: "60px", color: "red",cursor:"pointer"}}  />
+          <TimeToLeaveIcon sx={{ fontSize: "60px", color: "red", cursor: "pointer" }} />
         </IconButton>
         {isBoxVisible && (
           <div
@@ -1221,11 +1240,11 @@ const Home = () => {
               position: "fixed",
               bottom: 50,
               right: 16,
-              cursor:"pointer",
+              cursor: "pointer",
               zIndex: 3, // Set a higher zIndex value
             }}
           >
-            <Modal  onClose={() => setBoxVisible(false)} />
+            <Modal onClose={() => setBoxVisible(false)} />
           </div>
         )}
       </div>

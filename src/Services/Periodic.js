@@ -2069,13 +2069,13 @@ const PeriodicService = () => {
                                     <span sx={{ fontWeight: "normal", marginTop: "10px" }}>
                                         <b>Standard Car Service:</b> The most popular service
                                         package. Benefits of the basic scheme with additional
-                                        services
+                                        services.
                                     </span>
                                 </li>
                                 <li>
                                     <span sx={{ fontWeight: "normal", marginTop: "50px" }}>
                                         <b>Comprehensive Car Service:</b> GoCarsmith's signature
-                                        package with bumper-to-bumper car servicing
+                                        package with bumper-to-bumper car servicing.
                                     </span>
                                 </li>
                             </ul>
