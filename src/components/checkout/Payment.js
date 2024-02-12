@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Paypal.css";
 import axios from "axios";
+import {useNavigate} from "react-router-dom"
 
 // import phonepe from '../../image/phonepe.png'
 
@@ -8,6 +9,7 @@ const picture =
   "https://cdn.pnggallery.com/wp-content/uploads/phonepe-logo-01.png";
 
 const CheckoutComponent = (props) => {
+  const navigate=useNavigate()
   const { formData, subTotal, orderDetails } = props;
 
   const [loading2, setLoading2] = useState(false);
@@ -58,8 +60,9 @@ const CheckoutComponent = (props) => {
                 }
               );
               if (response.status === 200) {
-                console.log("clear cart data", 1);
+                
                 localStorage.setItem("Coins", 0);
+                
               } else {
                 console.log("fail to clear cart data");
               }

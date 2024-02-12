@@ -1886,8 +1886,8 @@ const Tyres = () => {
       </div>
 
       <div style={{ padding: '20px' }}>
-        <h1 style={{ textAlign: 'center' }}>Our Partner Workshop</h1>
-        <p style={{ textAlign: 'center' }}>Here's a sneak peek into the GoCarsmith Partner Workshop!</p>
+        <h1 style={{ textAlign: 'center' }}>Related Blogs</h1>
+        
 
         <div style={containerStyle}>
           <Slider {...settings1} ref={sliderRef}>

@@ -502,7 +502,7 @@ const Membership = () => {
                               padding: 2,
                               margin: 2,
                               borderRadius: "20px",
-                              cursor: "pointer",
+                              
                             }}
                           >
                             <img
