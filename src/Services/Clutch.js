@@ -1500,8 +1500,8 @@ const Clutch = () => {
                                                 &#8226; Recommended: In Case Corroded Door
                                             </Typography>
                                             <br />
-                                            {renderCheckboxListItem({ servicename: 'Right Front Door Replacemen (Single Unit)' }, 1)}
-                                            {renderCheckboxListItem({ servicename: 'Opening & Fitting of Right Front Door Replacemen' }, 2)}
+                                            {renderCheckboxListItem({ servicename: 'Right Front Door Replacement (Single Unit)' }, 1)}
+                                            {renderCheckboxListItem({ servicename: 'Opening & Fitting of Right Front Door Replacement' }, 2)}
                                             {renderCheckboxListItem({ servicename: 'Hinges, Weatherstrip, Handle, Cost Additional' }, 3)}
                                         </CardContent>
                                     </Grid>

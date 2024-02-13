@@ -3199,7 +3199,7 @@ const Suspension = () => {
                           1
                         )}
                         {renderCheckboxListItem(
-                          { servicename: "Boot/Trunk Hinges Additionel" },
+                          { servicename: "Boot/Trunk Hinges Additional" },
                           2
                         )}
                       </CardContent>

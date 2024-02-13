@@ -1237,7 +1237,7 @@ return (<>
 
 
     <div style={{ padding: '20px' }}>
-      <h1 style={{ textAlign: 'center' }}>Releated Blogs</h1>
+      <h1 style={{ textAlign: 'center' }}>Related Blogs</h1>
 
       <div style={containerStyle}>
         <Slider {...settings1} ref={sliderRef}>
@@ -1293,7 +1293,7 @@ return (<>
         </div>
         <Typography variant="h6" sx={{ textAlign: 'left', marginTop: '50px' }}><b>Premium car care products</b></Typography>
         <Typography variant="body1" sx={{ textAlign: 'left', marginTop: '5px' }}>
-          Every GoCarsmith workshop across {locationName} uses the highest quality, specially formulated, PH neutral car care products from global brands like 3M, Wurth and Extra Armor to give your {BrandName}  {modelName}  the best possible shine.
+          Every GoCarsmith workshop across {locationName} uses the highest quality, specially formulated, PH neutral car care products from global brands like 3M, Wuerth and Extra Armor to give your {BrandName}  {modelName}  the best possible shine.
         </Typography>
 
         <Typography variant="h6" sx={{ textAlign: 'left', marginTop: '20px' }}><b> Specialised car care equipment </b></Typography>

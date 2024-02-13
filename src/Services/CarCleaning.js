@@ -75,7 +75,7 @@ const accordionData = [
   },
   {
     title: 'Which products do you use for car care services like rubbing, waxing, polishing etc?',
-    content: `We use only the best car care products from 3M and Wurth for your ${BrandName} which offer excellent performance and great results. With GoCarsmith, you get the best car care treatment at the best prices in ${locationName}`,
+    content: `We use only the best car care products from 3M and Wuerth for your ${BrandName} which offer excellent performance and great results. With GoCarsmith, you get the best car care treatment at the best prices in ${locationName}`,
   },
   {
     title: 'What is the difference between Teflon coating vs Anti-rust coating?',
@@ -87,7 +87,7 @@ const accordionData = [
   },
   {
     title: `What products do you use for interior cleaning on my ${BrandName} ${modelName} ? `,
-    content: `For interior car care services like dashboard polishing and detailing, leather and upholstery cleaning we use top quality car care products from 3M, Wurth and Xxtra armor which are specifically developed for interior car care on your ${BrandName} ${modelName}.`,
+    content: `For interior car care services like dashboard polishing and detailing, leather and upholstery cleaning we use top quality car care products from 3M, Wuerth and Xxtra armor which are specifically developed for interior car care on your ${BrandName} ${modelName}.`,
   },
 ];
 
@@ -1276,7 +1276,7 @@ const CarSpaCleaning = () => {
       </div>
      
       <div style={{ padding: '20px' }}>
-        <h1 style={{ textAlign: 'center' }}>Releated Blogs</h1>
+        <h1 style={{ textAlign: 'center' }}>Related Blogs</h1>
         <div style={containerStyle}>
           <Slider {...settings1} ref={sliderRef}>
             {images.map((image, index) => (
@@ -1331,7 +1331,7 @@ const CarSpaCleaning = () => {
           </div>
           <Typography variant="h6" sx={{ textAlign: 'left', marginTop: '50px' }}><b>Premium car care products</b></Typography>
           <Typography variant="body1" sx={{ textAlign: 'left', marginTop: '5px' }}>
-            Every GoCarsmith workshop across {locationName} uses the highest quality, specially formulated, PH neutral car care products from global brands like 3M, Wurth and Extra Armor to give your {BrandName} {modelName}  the best possible shine.
+            Every GoCarsmith workshop across {locationName} uses the highest quality, specially formulated, PH neutral car care products from global brands like 3M, Wuerth and Extra Armor to give your {BrandName} {modelName}  the best possible shine.
           </Typography>
 
           <Typography variant="h6" sx={{ textAlign: 'left', marginTop: '20px' }}><b> Specialised car care equipment </b></Typography>

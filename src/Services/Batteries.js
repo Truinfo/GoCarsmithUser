@@ -48,13 +48,6 @@ import {
   FormControlLabel,
   Box,
 } from "@mui/material";
-// const locationName = localStorage.getItem('locationName');
-//   const location = localStorage.getItem('location');
-//   const modelId =  localStorage.getItem('modelId');
-//   const fuelType = localStorage.getItem('fuelType');
-//   const BrandId = localStorage.getItem('BrandId')
-//   const BrandName = localStorage.getItem('BrandName')
-//   const modelName = localStorage.getItem('modelName')
 
 
 const userString = localStorage.getItem("userCars");
@@ -1513,7 +1506,27 @@ const Batteries = () => {
         ))}
       </div>
 
-
+      <div style={{ padding: "20px" }}>
+        <h1 style={{ textAlign: "center" }}>Related Blogs</h1>
+        <div style={containerStyle}>
+          <Slider {...settings1} ref={sliderRef}>
+            {images.map((image, index) => (
+              <div key={index}>
+                <img
+                  src={image}
+                  alt={`slide-${index + 1}`}
+                  style={{
+                    width: "98%",
+                    height: "300px",
+                    objectFit: "cover",
+                    borderRadius: "15px",
+                  }}
+                />
+              </div>
+            ))}
+          </Slider>
+        </div>
+      </div>
       <Typography variant="h4" sx={{ textAlign: 'left', marginBottom: '20px' }}>
         <b>Why Choose GoCarsmith in {locationName} ?</b>
       </Typography>

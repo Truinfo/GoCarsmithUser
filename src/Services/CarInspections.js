@@ -1306,7 +1306,7 @@ const CarInspections = () => {
                         &#8226; 	1 Month Warranty
                       </Typography>
                       {renderCheckboxListItem({ servicename: 'Radiator Fan Motor Replacement (OES)' }, 1)}
-                      {renderCheckboxListItem({ servicename: 'Coolant and Radiant Flush Caot Additional' }, 2)}
+                      {renderCheckboxListItem({ servicename: 'Coolant and Radiant Flush Cost Additional' }, 2)}
                     </CardContent>
                   </Grid>
                   {/* Fourth Container */}
@@ -1711,7 +1711,7 @@ const CarInspections = () => {
       </div>
    
       <div style={{ padding: '20px' }}>
-        <h1 style={{ textAlign: 'center' }}>Releated Blogs</h1>
+        <h1 style={{ textAlign: 'center' }}>Related Blogs</h1>
 
         <div style={containerStyle}>
           <Slider {...settings1} ref={sliderRef}>

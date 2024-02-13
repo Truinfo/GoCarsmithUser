@@ -5,10 +5,6 @@ import {
   Typography,
   TextField,
   Button,
-  Dialog,
-  DialogTitle,
-  DialogContent,
-  DialogActions,
   Snackbar,
   Alert,
 } from "@mui/material";
@@ -21,7 +17,7 @@ function ForgottPassword() {
   const [email, setEmail] = useState("");
   const navigate = useNavigate();
   
-  const [loading, setLoading] = useState(false);
+
   const [openSnackbar, setOpenSnackbar] = useState(false);
   const [emailRequiredError, setEmailRequiredError] = useState(false);
   const [invalidEmailError, setInvalidEmailError] = useState(false);

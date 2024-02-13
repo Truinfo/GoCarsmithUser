@@ -51,7 +51,7 @@ const Partners = () => {
       place: "GoCarsmith Wheelscart  - Vijayanagar, Bangalore",
       name: "Arjun Kapoor",
       content:
-        "My garage was going at a sustainable pace. But there wasn’t much growth in the business, but a partnership with GoCarsmith proved to be really beneficial for me. Despite the global recession, my garage maintained a good pace. The incentives earned are pretty good, something I may not have achieved independently..",
+        "My garage was going at a sustainable pace. But there wasn’t much growth in the business, but a partnership with GoCarsmith proved to be really beneficial for me. Despite the global recession, my garage maintained a good pace. The incentives earned are pretty good, something I may not have achieved independently.",
     },
     {
       place: "GoCarsmith Car Mechanic Garge - Aadheri West, Mumbai",
@@ -227,9 +227,10 @@ const Partners = () => {
             display: "flex",
             alignItems: "center",
             color: "white",
+            paddingTop:"25px"
           }}
         >
-          <EmailIcon style={{ marginLeft: "20px" }} />
+          <EmailIcon style={{ marginLeft: "20px", }} />
           <a href="mailto:partners@gocarsmith.in" style={{ marginLeft: "8px", textDecoration: "none", color: "inherit" }}>
   <h4>partners@gocarsmith.in</h4>
 </a>

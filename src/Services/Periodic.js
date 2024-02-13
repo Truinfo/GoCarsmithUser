@@ -1874,7 +1874,7 @@ const PeriodicService = () => {
                                                     &#8226; 1 Month warranty on Labor
                                                 </Typography>
                                                 {renderCheckboxListItem(
-                                                    { servicename: "Brake Shoe & Vrake Fluid Cost Additional" },
+                                                    { servicename: "Brake Shoe & Brake Fluid Cost Additional" },
                                                     3
                                                 )}
                                                 {renderCheckboxListItem(

@@ -648,7 +648,7 @@ const navigate=useNavigate()
                           &#8226; Call Within 2 Hour
                         </Typography>
                         {renderCheckboxListItem(
-                          { servicename: "Complete Information abour your Policy" },
+                          { servicename: "Complete Information about your Policy" },
                           1
                         )}
                         {renderCheckboxListItem(
@@ -1101,7 +1101,7 @@ const navigate=useNavigate()
                           1
                         )}
                         {renderCheckboxListItem(
-                          { servicename: "Co-ordination with Insurance Company" },
+                          { servicename: "Co-rdination with Insurance Company" },
                           2
                         )}
                         {renderCheckboxListItem(

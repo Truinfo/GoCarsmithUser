@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+
+
 const Token = () => {
   const [logoutTimer, setLogoutTimer] = useState(null);
   const [showModal, setShowModal] = useState(false);
@@ -39,32 +41,33 @@ const Token = () => {
     setShowModal(false);
   };
 
-  useEffect(() => {
-    const activityEvents = ['mousemove', 'keydown', 'mousedown', 'touchstart'];
+  // useEffect(() => {
+  //   const activityEvents = ['mousemove', 'keydown', 'mousedown', 'touchstart'];
 
-    const handleUserActivityWrapper = () => {
-      handleUserActivity();
-    };
+  //   const handleUserActivityWrapper = () => {
+  //     handleUserActivity();
+  //   };
 
-    activityEvents.forEach((event) => {
-      window.addEventListener(event, handleUserActivityWrapper);
-    });
+  //   activityEvents.forEach((event) => {
+  //     window.addEventListener(event, handleUserActivityWrapper);
+  //   });
 
-    window.addEventListener('beforeunload', handleBeforeUnload);
-    window.addEventListener('unload', handleBeforeUnload);
+  //   window.addEventListener('beforeunload', handleBeforeUnload);
+  //   window.addEventListener('unload', handleBeforeUnload);
 
-    return () => {
-      activityEvents.forEach((event) => {
-        window.removeEventListener(event, handleUserActivityWrapper);
-      });
-      window.removeEventListener('beforeunload', handleBeforeUnload);
-      window.removeEventListener('unload', handleBeforeUnload);
+  //   return () => {
+  //     activityEvents.forEach((event) => {
+  //       window.removeEventListener(event, handleUserActivityWrapper);
+  //     });
+  //     window.removeEventListener('beforeunload', handleBeforeUnload);
+  //     window.removeEventListener('unload', handleBeforeUnload);
 
-      if (logoutTimer) {
-        clearTimeout(logoutTimer);
-      }
-    };
-  }, [logoutTimer]);
+  //     if (logoutTimer) {
+  //       clearTimeout(logoutTimer);
+  //     }
+  //   };
+  // }, [logoutTimer]);
+  
 
   return (
     <div>

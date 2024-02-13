@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { TextField, Button, Grid, Paper, Typography, Snackbar } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
@@ -14,10 +14,9 @@ const Signup = () => {
     confirmPassword: '',
   });
 
-  const [isEmailEditable, setIsEmailEditable] = useState(true);
+
   const [signupErrorMessage, setSignupErrorMessage] = useState('');
   const [backendResponse, setBackendResponse] = useState('');
-  const [showAdditionalInput, setShowAdditionalInput] = useState(false);
   const [missingFields, setMissingFields] = useState([]);
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   const navigate = useNavigate();

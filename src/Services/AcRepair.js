@@ -596,7 +596,7 @@ useEffect(() => {
                 <Typography
                   variant="h5"
                   gutterBottom
-                  style={{ marginRight: "270px" }}
+                  style={{ marginRight: "210px" }}
                 >
                   Regular AC Service
                 </Typography>

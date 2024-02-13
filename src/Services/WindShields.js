@@ -1523,7 +1523,7 @@ const WindSheilds = () => {
                 All the GoCarsmith workshops across {locationName} have specialised
                 tools, modern equipment and best-in-class glass adhesives which
                 ensure that the windshield or glass replacement on your {BrandName} {modelName}
-                is done perfectly and lasts long. Our trained mechanics also
+                 is done perfectly and lasts long. Our trained mechanics also
                 ensure that the glass fits well in place and test it for its
                 endurance before delivering your vehicle.
               </p>
